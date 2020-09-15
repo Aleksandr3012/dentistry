@@ -142,14 +142,6 @@ var JSCCommon = {
 		// });
 	},
 	// /табы
-	inputMask: function inputMask() {
-		// mask for input
-		var InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
-		InputTel.forEach(function (element) {
-			element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}");
-		});
-		Inputmask("+9(999)999-99-99").mask(InputTel);
-	},
 	// /inputMask
 	ifie: function ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;

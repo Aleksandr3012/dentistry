@@ -1,0 +1,32 @@
+// start .sAdvantages
+.sAdvantages {
+	padding-top: rem(45);
+	padding-bottom: rem(35);
+	margin-top: -1px;
+	background: #1F1F1F;
+
+	&__item {
+		display: flex;
+		align-items: center;
+	}
+
+	.h5 {
+		margin-bottom: 0;
+		color: #fff;
+		// max-width: rem(200);
+	}
+
+	.icon {
+		color: $secondary;
+		font-size: rem(50);
+		margin-right: rem(40);
+	}
+
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sAdvantages

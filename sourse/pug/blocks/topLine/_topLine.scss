@@ -1,6 +1,7 @@
 // start .topLine
 .topLine {
-	
+	padding-top: 3px;
+	padding-bottom: 3px;
 
 	&__col {
 		display: flex;
@@ -10,6 +11,7 @@
 
 	.toggle-menu-mobile {
 		margin-right: rem(50);
+		margin-left: rem(11);
 	}
 
 	&__location {
@@ -56,6 +58,7 @@
 	&__btn {
 		@extend .btn;
 		@extend .btn-primary;
+		min-width: rem(235);
 	}
 
 

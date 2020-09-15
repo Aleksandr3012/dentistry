@@ -1,18 +1,37 @@
 // start .headerBlock
 .headerBlock {
+	overflow: hidden;
+	position: relative;
 	margin-bottom: 1px;
 	min-height: 100vh;
+	padding-top: rem(320);
+	padding-bottom: rem(90);
 	min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
 
-	h1 {
-		margin-bottom: 1px;
+	&__videoWrap {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100%;
+		z-index: -1;
+		video {
+			width: 100vw;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 
-	h2 {
-		margin-bottom: 1px;
+	h1 {
+		color: #ffffff;
+		max-width: 580px;
+		text-shadow: 0px 1px 1px $dark;
+
+		
 	}
+
 
 	@include media-breakpoint-up(xl) {}
 

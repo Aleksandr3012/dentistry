@@ -1,12 +1,9 @@
 .top-nav {
-	padding-top: 15px;
 	// position: absolute;
 	top: 100%;
 	// @include clearfix;ss
 	z-index: 20;
-	padding-top: 3px;
 	@include mt;
-	padding-bottom: 10px;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -26,6 +23,29 @@
 	&__item {
 		display: inline-block;
 		list-style-type: none;
+	}
+
+	.navMenu {
+		border-top: 1px solid rgba($color:#3f3f3f, $alpha: 0.2);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 0;
+		padding-bottom: 15px;
+		padding-top: 15px;
+
+	}
+
+	li {
+		list-style: none;
+
+		a {
+			color: $dark;
+			font-weight: 700;
+			&:hover {
+				color: $primary;
+			}
+		}
 	}
 
 	// 

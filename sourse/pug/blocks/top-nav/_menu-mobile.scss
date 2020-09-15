@@ -4,10 +4,11 @@
 $h: em(2);
 
 .toggle-menu-mobile {
+	cursor: pointer;
 	display: block;
 	height: $h* 12;
 	position: relative;
-	color: $primary;
+	color: $secondary;
 	font-size: 32px;
 
 	&.on {
@@ -18,7 +19,7 @@ $h: em(2);
 	span:before {
 		content: "";
 		position: absolute;
-		left: 0;
+		right: 0;
 	}
 
 	span {
@@ -35,21 +36,22 @@ $h: em(2);
 		bottom: $h * 2;
 	}
 
-	span {
-		position: relative;
-		display: block;
-	}
-
 	span,
 	span:after,
 	span:before {
 		// width: 32px;
-		width: 1em;
+		width: rem(40);
 		height: $h;
 		background-color: currentColor;
 		transition: all 0.3s;
 		backface-visibility: hidden;
 		border-radius: 6px;
+	}
+	
+	span {
+		position: relative;
+		display: block;
+		width: rem(29);
 	}
 
 	// &.on {

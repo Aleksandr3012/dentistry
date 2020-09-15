@@ -1,10 +1,12 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
+		+e.videoWrap
+			video.headerVideo(autoplay="autoplay" muted="muted" loop="loop" id="headerVideo" poster="img/@2x/header-bg.jpg")
+				source(src="img/video/video.mp4")
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
+			+b.section-title
+				h1 #[strong Роботизированная стоматология] в Харькове- работаем без малейшей боли, часто с пожизненной гарантией
 
-			.row
 						
 	// end headerBlock

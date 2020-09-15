@@ -39,3 +39,17 @@ mixin mnu()
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 //- /menu
+
+mixin mnu-sm()
+	-
+		var nav= {
+			"Чистка зубов":"#",
+			"Отбеливание":"#",
+			"Лечение зубов":"#",
+			"Виниры":"#",
+			"Имплантация":"#",
+
+			}
+	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		each linkPatch, linkName in nav
+			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
