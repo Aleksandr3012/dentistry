@@ -1,0 +1,20 @@
+mixin topLine()
+	// start topLine
+	+b.topLine#topLine&attributes(attributes)
+		.container
+			.row.justify-content-between.align-items-center
+				+e.col.col-auto
+					+mob-mnu()
+					+e.logo
+						img(src="img/@2x/logo.png", alt="")
+				.col-auto
+					+e.location
+						+icon('location')
+						span #[b Адрес:] г.Харьков, ул. Юри Зойфера, д.3
+				.col-auto
+					+e.phone(href='tel:+380577628733')
+						+icon('phone')
+						span +38 (057) 762 87 33
+				.col-auto
+					+e.btn(href="#") Записаться на прием
+	// end topLine

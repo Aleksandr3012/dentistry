@@ -1,0 +1,38 @@
+mixin mob-mnu()
+	-
+		//- let path = require('path');
+		//- let fs = require('fs');
+		//- var requestURL = 'top-nav.json';
+		//- var request = new XMLHttpRequest();
+		//- request.open('GET', requestURL);
+		//- request.responseType = 'json';
+		//- let dataJson = JSON.parse(json);
+	//- h1= dataJson['lala'] 
+	+b.toggle-menu-mobile--js
+		span
+	+b.menu-mobile--js
+		+b.toggle-menu-mobile--js
+			span
+		+e.inner
+			.container
+				.row.justify-content-between
+					.col-sm-auto
+						+e.title Меню
+						+mnu()
+					+e.col.col-sm-auto
+						+e.title Контакты
+						+e.phone(href="tel:+380577628733") +38 (057) 762 87 33
+						+e.phone(href="tel:+380986333595") +38 (098) 633 35 95
+						+e.location г.Харьков, ул. Юри Зойфера, д.3 (Анри Барбюса, д. 3)
+						p Это центр города, выход метро Держпром. Метро Университет и Научная в 10 мин ходьбы.
+						p Много парковочных мест возле клиники, особенно после 12.00 дня и до вечера 20.00.
+						p Вы не попадёте в серьёзную пробку, если поедите к нам с 7.00 до 8.00, с 11.00 до 14.00 и вечером после 18.00.
+
+	//  мобильное меню
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		.container
+			+mnu()
+					
+	// end top-nav
