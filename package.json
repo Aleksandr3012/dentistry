@@ -46,7 +46,7 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-tabify": "0.0.2",
     "gulp-uglify": "^3.0.2",
-    "postcss": "^7.0.32",
+    "postcss": "^7.0.34",
     "postcss-nested": "^4.2.3"
   },
   "optionalDependencies": {},
