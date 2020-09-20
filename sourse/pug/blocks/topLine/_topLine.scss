@@ -1,16 +1,22 @@
 // start .topLine
 .topLine {
 	padding-top: 3px;
-	padding-bottom: 3px;
+	// padding-bottom: 3px;
 
 	&__col {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@include media-breakpoint-up(xl) {
+			padding-right: rem(50);
+		}
 	}
 
 	.toggle-menu-mobile {
-		margin-right: rem(50);
+		margin-right: 10px;
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(50);
+		}
 		margin-left: rem(11);
 	}
 
@@ -18,34 +24,47 @@
 		display: flex;
 		align-items: center;
 		color: $dark;
-		font-size: $small;
+		margin-bottom: 10px;
 
 		.icon {
 			color: $secondary;
 			font-size: rem(40);
-			margin-right: rem(24);
+			margin-right: 5px;
+			@include media-breakpoint-up(xl) {
+				margin-right: rem(24);
+			}
 		}
 
 		span {
-			max-width: rem(145);
+			max-width: rem(155);
+			font-size: $small;
+
 		}
 	}
 
 	&__phone {
 		display: flex;
 		align-items: center;
-		font-size: $h2-font-size;
+		font-size: 23px;
+		@include media-breakpoint-up(xl) {
+			font-size: $h2-font-size;
+		}
+		margin-bottom: 11px;
 
 		span {
 			color: $dark;
 			font-weight: 700;
 			@include mt;
+			letter-spacing: rem(-0.5);
 		}
 
 		.icon {
-			font-size: rem(22);
+			font-size: rem(42);
 			color: $secondary;
-			margin-right: rem(38);
+			margin-right: 5px;
+			@include media-breakpoint-up(xl) {
+				margin-right: rem(35);
+			}
 		}
 
 		&:hover {
@@ -59,6 +78,8 @@
 		@extend .btn;
 		@extend .btn-primary;
 		min-width: rem(235);
+		margin-bottom: 10px;
+		letter-spacing: rem(-0.5);
 	}
 
 

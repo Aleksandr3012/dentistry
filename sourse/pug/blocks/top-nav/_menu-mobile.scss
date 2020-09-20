@@ -29,11 +29,11 @@ $h: em(2);
 	span:before {
 
 
-		top: $h * 2;
+		top: $h * 2.5;
 	}
 
 	span:after {
-		bottom: $h * 2;
+		bottom: $h * 2.5;
 	}
 
 	span,
@@ -108,6 +108,52 @@ $h: em(2);
 			opacity: 1;
 		}
 	}
+
+	&__col {
+		max-width: 344px;
+	}
+
+	&__title {
+		color: $secondary;
+		// padding-bottom: calc(var(--sPB) - 10px);
+		@extend .h2;
+		margin-bottom: rem(40);
+	}
+
+	&__phone {
+		display: block;
+		color: #fff;
+		margin-bottom: 20px;
+		font-size: rem(25);
+		&:hover {
+			color:  $secondary;
+		}
+	}
+
+	.navMenu {
+		&__item {
+			border: none;
+		}
+
+		&__link {
+			line-height: 300%;
+			font-size: rem(18px);
+			color: #fff;
+			text-transform: uppercase;
+		}
+	}
+
+	p {
+		line-height: 226.4%;
+
+	}
+
+	&__location {
+		max-width: 200px;
+		line-height: 143.8%;
+		margin-bottom: 40px;
+	}
+
 
 	.toggle-menu-mobile {
 		// position: relative;
