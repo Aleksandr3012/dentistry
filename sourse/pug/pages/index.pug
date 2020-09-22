@@ -1,12 +1,11 @@
 extends layout/main.pug
 
-
-include ../blocks/sContent/_sContent.pug
-include ../blocks/sContact/_sContact.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sTechnology/_sTechnology.pug
 include ../blocks/sProblem/_sProblem.pug
 include ../blocks/sQualification/_sQualification.pug
+include ../blocks/sLocation/_sLocation.pug
+include ../blocks/sSlider/_sSlider.pug
 
 block variables
 	- let  mainPage= null
@@ -76,8 +75,9 @@ block pagecontent
 				p #[strong Пчельник Лариса Викторовна] Главный врач
 	+sProblem()
 	+sQualification()
+	+sSlider()
 	+sForm()
-	+sContact()
+	+sLocation()
 	+footer()
 
 

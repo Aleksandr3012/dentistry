@@ -158,10 +158,10 @@ $h: em(2);
 	.toggle-menu-mobile {
 		// position: relative;
 		cursor: pointer;
-		margin-left: 85%;
+		margin-left: 85% !important;
 		position: absolute;
 		opacity: 0;
-		left: 0;
+		right: 0;
 		right: auto;
 		color: #FFF;
 		top: 10px;

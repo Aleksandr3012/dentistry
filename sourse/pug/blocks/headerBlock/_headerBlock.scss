@@ -6,7 +6,10 @@
 	// min-height: 100vh;
 	padding-top: rem(320);
 	padding-bottom: rem(35);
-	// min-height: calc(var(--vh, 1vh) * 100);
+	min-height: calc(100vh - #{rem(95)});
+	@include media-breakpoint-up(md) {
+		min-height: calc(100vh - #{rem(139)});
+	}
 	// background-image: url(../img);
 	// background-color: #000000;
 
@@ -16,18 +19,27 @@
 		left: 0;
 		width: 100vw;
 		height: 100%;
-		z-index: -1;
+		z-index: -2;
 		video {
 			width: 100vw;
 			height: 100%;
 			object-fit: cover;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(26, 25, 85, 0.64) 0%, rgba(65, 65, 65, 0.43) 100%);
+
 		}
 	}
 
 	h1 {
 		color: #ffffff;
 		max-width: 580px;
-		text-shadow: 0px 1px 1px $dark;
+		// text-shadow: 0px 1px 1px $dark;
 		letter-spacing: rem(-1);
 		font-weight: 500;
 		line-height: calc(48.76 / 40);

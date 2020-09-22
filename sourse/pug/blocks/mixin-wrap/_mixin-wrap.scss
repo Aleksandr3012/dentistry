@@ -1,11 +1,12 @@
  
 	  
 .soc{
-	margin: 0 rem(-5px);
+	margin: 0 rem(-25px);
 	display: flex;
 	&__item{
+		color: #fff !important;
 		text-decoration: none !important;
-		margin: 0 rem(5px);
+		margin: 0 rem(25px);
 		vertical-align: middle;
 		@include mt;
 		display: block;

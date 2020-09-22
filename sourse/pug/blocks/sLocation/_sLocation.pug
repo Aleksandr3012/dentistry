@@ -1,0 +1,22 @@
+mixin sLocation()
+	// start sLocation
+	+b.SECTION.sLocation#sLocation&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-5
+					+b.section-title
+						h2 3D clinic
+					.h5 Харьков,<br> ул. Юри Зойфера, д.3 (Анри Барбюса, д.&nbsp;3)
+					+e.contactWrap
+						+e.time Пн-Пт: с 9:00 до 20:00<br>Сб-Вс: с 10:00 до 18:00
+						+e.phone(href="tel:380986333595") +38 (098) 633 35 95
+						+e.phone(href="tel:380577628733") +38 (057) 762 87 33
+					p Это центр города, выход метро &laquo;Держпром&raquo;. Метро &laquo;Университет&raquo; и&nbsp;&laquo;Научная&raquo;&nbsp;&mdash; в&nbsp;10&nbsp;минутах ходьбы.
+					p Много парковочных мест возле клиники, особенно после 12:00 и&nbsp;до&nbsp;20:00.
+					p В&nbsp;будние дни лучше приезжать с&nbsp;утра, к&nbsp;открытию&nbsp;&mdash; в&nbsp;09:00. А&nbsp;ещё лучше даже немного заранее, чтобы не&nbsp;попасть в&nbsp;пробки. Около нас нет пробок и&nbsp;с&nbsp;11:00 до&nbsp;14:00, и&nbsp;вечером после 18:00.
+
+				.col
+					+e.mapWrap
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.260884706492!2d36.222477515988366!3d50.00646522713663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a11fbb0aafbb%3A0xf1c5c471b09aed29!2z0YPQuy4g0K7RgNGLINCX0L7QudGE0LXRgNCwLCAzLCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1600716826626!5m2!1sru!2sua" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+	// end sLocation

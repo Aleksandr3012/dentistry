@@ -35,6 +35,10 @@
 	padding: rem(70) 0 0 rem(38);
 	&:hover {
 		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+
+		.problemItem__btn {
+			transform: translateX(10px);
+		}
 	}
 
 	//Большой блок
@@ -116,10 +120,6 @@
 
 		.icon {
 			font-size: rem(20);
-		}
-
-		&:hover {
-			transform: translateX(10px);
 		}
 	}
 }

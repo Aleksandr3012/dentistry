@@ -30,7 +30,7 @@
 			<div class="topLine" id="topLine">
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
-						<div class="topLine__col col-auto">
+						<div class="col-auto">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 							</div>
 							<div class="menu-mobile menu-mobile--js">
@@ -70,28 +70,33 @@
 									</div>
 								</div>
 							</div>
-							<!--  мобильное меню--><a class="topLine__logo" href="/"><img src="img/@2x/logo.png" alt=""/></a>
+							<!--  мобильное меню-->
+						</div>
+						<div class="topLine__col col-auto"><a class="topLine__logo" href="/"><img src="img/@2x/logo.png" alt=""/></a>
 						</div>
 						<div class="col-auto">
-							<div class="topLine__location">
+							<div class="topLine__location d-none d-lg-flex">
 								<svg class="icon icon-location ">
 									<use xlink:href="img/svg/sprite.svg#location"></use>
 								</svg><span><b>Адрес:</b> г.Харьков, ул.&nbsp;Юри Зойфера, д.3</span>
 							</div>
 						</div>
-						<div class="col-auto"><a class="topLine__phone" href="tel:+380577628733">
+						<div class="col-auto"><a class="topLine__phone d-none d-lg-flex" href="tel:+380577628733">
 							<svg class="icon icon-phone ">
 								<use xlink:href="img/svg/sprite.svg#phone"></use>
-							</svg><span>+38 (057) 762 87 33</span></a>
+							</svg><span>+38 (057) 762 87 33</span></a><a class="topLine__phone d-lg-none" href="tel:+380577628733">
+							<svg class="icon icon-call ">
+								<use xlink:href="img/svg/sprite.svg#call"></use>
+							</svg></a>
 						</div>
-						<div class="col-auto"><a class="topLine__btn" href="#">Записаться на прием</a>
+						<div class="col-auto d-none d-md-block"><a class="topLine__btn" href="#">Записаться на прием</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end topLine-->
 			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
+			<div class="top-nav block-with-lazy d-none d-md-flex">
 				<div class="container">
 					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Чистка зубов</a>
@@ -386,21 +391,125 @@
 		</section>
 		<!-- end sProblem-->
 		<!-- start sQualification-->
-		<section class="sQualification section" id="sQualification">
+		<section class="sQualification" id="sQualification">
 			<div class="container">
-				<div class="section-title">
-					<h2>sQualification</h2>
-				</div>
 				<div class="row">
-					<div class="section-title">
-						<h2>Работаем только <span class="text-primary">со стоматологами высочайшей квалификации</span></h2>
+					<div class="sQualification__textCol col-lg-6">
+						<div class="section-title">
+							<h2>Работаем только <span class="text-primary">со стоматологами высочайшей квалификации</span></h2>
+						</div>
+						<p>Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.</p>
+						<p>Наш врач Шевцов А. А. — лектор компании Neodent (Straumann Groupe). Это помогает нам первыми узнавать обо всех исследованиях и проверенных инновациях в стоматологии..</p>
+						<div class="sQualification__tumbs">
+							<div class="sQualification__tumbWrap">
+								<div class="qualification-thumb-prev">
+									<svg class="icon icon-sliderArrow ">
+										<use xlink:href="img/svg/sprite.svg#sliderArrow"></use>
+									</svg>
+								</div>
+								<div class="swiper-container qualification-thumb-js">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="sQualification__thumb-img"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/qualification-thumb-1.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sQualification__thumb-img"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/qualification-thumb-2.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sQualification__thumb-img"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/qualification-thumb-3.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sQualification__thumb-img"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/qualification-thumb-4.jpg" alt=""/>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="sQualification__thumb-img"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/qualification-thumb-1.jpg" alt=""/>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="qualification-thumb-next">
+									<svg class="icon icon-sliderArrow ">
+										<use xlink:href="img/svg/sprite.svg#sliderArrow"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
 					</div>
-					<p>Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.</p>
-					<p>Наш врач Шевцов А. А. — лектор компании Neodent (Straumann Groupe). Это помогает нам первыми узнавать обо всех исследованиях и проверенных инновациях в стоматологии..</p>
+					<div class="sQualification__col col-lg-6">
+						<div class="sQualification__slider">
+							<div class="swiper-container sQualification-slider-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="sQualification__slide-img"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/technology-3.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sQualification__slide-img"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/technology-3.jpg" alt=""/>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sQualification__slide-img"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/technology-3.jpg" alt=""/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<!-- end sQualification-->
+		<!-- start sSlider-->
+		<section class="sSlider section" id="sSlider">
+			<div class="container">
+				<div class="section-title">
+					<h2>А это наши пациенты</h2>
+					<div class="section-title__nav">
+						<div class="slider-prev">
+							<svg class="icon icon-sliderArrow ">
+								<use xlink:href="img/svg/sprite.svg#sliderArrow"></use>
+							</svg>
+						</div>
+						<div class="slider-next">
+							<svg class="icon icon-sliderArrow ">
+								<use xlink:href="img/svg/sprite.svg#sliderArrow"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sSlider__slieder">
+				<div class="swiper-container slider-js">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a class="sSlider__slide" href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video"><span class="sSlider__imgWrap picture-bg"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slider-1.jpg" alt="alt"/></span><span class="sSlider__play">
+							<svg class="icon icon-play ">
+								<use xlink:href="img/svg/sprite.svg#play"></use>
+							</svg></span><span class="sSlider__text">Альбина Викторова</span></a>
+						</div>
+						<div class="swiper-slide"><a class="sSlider__slide" href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video"><span class="sSlider__imgWrap picture-bg"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slider-2.jpg" alt="alt"/></span><span class="sSlider__play">
+							<svg class="icon icon-play ">
+								<use xlink:href="img/svg/sprite.svg#play"></use>
+							</svg></span><span class="sSlider__text">Альбина Викторова</span></a>
+						</div>
+						<div class="swiper-slide"><a class="sSlider__slide" href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video"><span class="sSlider__imgWrap picture-bg"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slider-3.jpg" alt="alt"/></span><span class="sSlider__play">
+							<svg class="icon icon-play ">
+								<use xlink:href="img/svg/sprite.svg#play"></use>
+							</svg></span><span class="sSlider__text">Альбина Викторова</span></a>
+						</div>
+						<div class="swiper-slide"><a class="sSlider__slide" href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video"><span class="sSlider__imgWrap picture-bg"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/slider-1.jpg" alt="alt"/></span><span class="sSlider__play">
+							<svg class="icon icon-play ">
+								<use xlink:href="img/svg/sprite.svg#play"></use>
+							</svg></span><span class="sSlider__text">Альбина Викторова</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sSlider-->
 		<!-- start sForm-->
 		<section class="sForm section" id="sForm">
 			<div class="container">
@@ -411,19 +520,86 @@
 			</div>
 		</section>
 		<!-- end sForm-->
-		<!-- start sContact-->
-		<section class="sContact section" id="sContact">
+		<!-- start sLocation-->
+		<section class="sLocation" id="sLocation">
 			<div class="container">
-				<div class="section-title text-center">
-					<h2>sContact</h2>
+				<div class="row">
+					<div class="sLocation__col col-lg-5">
+						<div class="section-title">
+							<h2>3D clinic</h2>
+						</div>
+						<div class="h5">Харьков,<br> ул. Юри Зойфера, д.3 (Анри Барбюса, д.&nbsp;3)</div>
+						<div class="sLocation__contactWrap">
+							<div class="sLocation__time">Пн-Пт: с 9:00 до 20:00<br>Сб-Вс: с 10:00 до 18:00
+							</div><a class="sLocation__phone" href="tel:380986333595">+38 (098) 633 35 95</a><a class="sLocation__phone" href="tel:380577628733">+38 (057) 762 87 33</a>
+						</div>
+						<p>Это центр города, выход метро &laquo;Держпром&raquo;. Метро &laquo;Университет&raquo; и&nbsp;&laquo;Научная&raquo;&nbsp;&mdash; в&nbsp;10&nbsp;минутах ходьбы.</p>
+						<p>Много парковочных мест возле клиники, особенно после 12:00 и&nbsp;до&nbsp;20:00.</p>
+						<p>В&nbsp;будние дни лучше приезжать с&nbsp;утра, к&nbsp;открытию&nbsp;&mdash; в&nbsp;09:00. А&nbsp;ещё лучше даже немного заранее, чтобы не&nbsp;попасть в&nbsp;пробки. Около нас нет пробок и&nbsp;с&nbsp;11:00 до&nbsp;14:00, и&nbsp;вечером после 18:00.</p>
+					</div>
+					<div class="col">
+						<div class="sLocation__mapWrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.260884706492!2d36.222477515988366!3d50.00646522713663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a11fbb0aafbb%3A0xf1c5c471b09aed29!2z0YPQuy4g0K7RgNGLINCX0L7QudGE0LXRgNCwLCAzLCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1600716826626!5m2!1sru!2sua" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						</div>
+					</div>
 				</div>
-				<div class="row"></div>
 			</div>
 		</section>
-		<!-- end sContact-->
+		<!-- end sLocation-->
 		<footer class="footer block-with-lazy">
 			<div class="container">
-				<h2>footer</h2>
+				<div class="row justify-content-between">
+					<div class="col-auto"><a class="footer__logo" href="/">
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/logo.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/logo.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/logo.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+								<source srcset="img/@1x/logo.png" loading="lazy" type="image/png"/><img src="img/@2x/logo.png" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture--></a>
+						<div class="footer__descr">Роботизированная стоматология в Харькове — работаем без малейшей боли, часто с пожизненной гарантией
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="footer__nav">
+							<div class="footer__navTitle">Навигация
+							</div>
+							<ul>
+								<li><a href="#">ЧИСТКА ЗУБОВ</a></li>
+								<li><a href="#">ЛЕЧЕНИЕ ЗУБОВ</a></li>
+								<li><a href="#">ОТБЕЛИВАНИЕ ЗУБОВ</a></li>
+								<li><a href="#">ВИНИРЫ</a></li>
+								<li><a href="#">ИМПЛОНТАЦИЯ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-auto"><a class="footer__tel" href="tel:380577628733">+38 (057) 762 87 33</a>
+						<div class="footer__location">г.Харьков,<br> ул. Юри Зойфера, д.3
+						</div>
+						<div class="soc"><a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-fb ">
+								<use xlink:href="img/svg/sprite.svg#fb"></use>
+							</svg></a><a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-instagram ">
+								<use xlink:href="img/svg/sprite.svg#instagram"></use>
+							</svg></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__foot">
+					<div class="row justify-content-between">
+						<div class="col-auto">
+							<div class="footer__copyright">3D Clinic ® 2020. Любое использование либо копирование материалов или подборки материалов сайта допускается лишь с разрешения правообладателя и только со ссылкой на источник: 3dclinic.com.ua.
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="footer__copyright">2020 © стоматология - 3D Clinic<a class="footer__polite" href="#">Политика конфиденциальности</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<!--  start modals-->
