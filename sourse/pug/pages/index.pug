@@ -6,6 +6,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sTechnology/_sTechnology.pug
 include ../blocks/sProblem/_sProblem.pug
+include ../blocks/sQualification/_sQualification.pug
 
 block variables
 	- let  mainPage= null
@@ -74,6 +75,7 @@ block pagecontent
 						+icon('play')
 				p #[strong Пчельник Лариса Викторовна] Главный врач
 	+sProblem()
+	+sQualification()
 	+sForm()
 	+sContact()
 	+footer()

@@ -2,10 +2,10 @@ mixin sProblem()
 	// start sProblem
 	+b.SECTION.sProblem.section#sProblem&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sProblem
+			+b.section-title
+				h2 С&nbsp;этими проблемами к&nbsp;нам&nbsp;приходят чаще всего
 				
-			+problemItem('1','Лозовая Анна Романовна')(class="bg-primary problemItem--lg")
+			+problemItem('1','Лозовая Анна Романовна')(class="bg-primary problemItem-lg")
 				.h6 Сохраните зубы на долгие годы
 				.h4 Комплексная чистка
 			.row
@@ -29,10 +29,10 @@ mixin sProblem()
 
 mixin problemItem(i,name)
 	+b.problemItem(href="#")&attributes(attributes)
-		+e.imgWrap
+		+e.bgWrap
 			img(src="img/svg/problemItem-bg.svg", alt="alt")
 		.row
-			.col-sm-6
+			.col-sm-7
 				block
 				.h5 от X XXX грн
 				+e.btn
