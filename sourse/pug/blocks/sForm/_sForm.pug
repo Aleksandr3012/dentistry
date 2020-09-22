@@ -1,9 +1,21 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
+	+b.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
+
+			p Стоматология доказательной медицины #[span.text-primary Харькова]
+
+			+form-h(`Оставьте свой номер телефона и&nbsp;запишитесь на&nbsp;консультацию по&nbsp;имплантации`, `Гарантируем решение проблемы один раз и&nbsp;на&nbsp;всю жизнь`)
+
 				
-			.row
 	// end sForm
+
+
+
+mixin form-h(h,t)
+	+form-wrap()(class="--form-h")
+		+e.headline!= h
+		+e.text!= t
+		+input("+380 (___) ___-__-__",'tel')
+		+e.small Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+		+e.btn.link-modal(href="#" type="submit") Записаться на&nbsp;консультацию
