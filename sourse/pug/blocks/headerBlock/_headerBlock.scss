@@ -5,7 +5,7 @@
 	margin-bottom: 1px;
 	// min-height: 100vh;
 	padding-top: rem(320);
-	padding-bottom: rem(24);
+	padding-bottom: rem(35);
 	// min-height: calc(var(--vh, 1vh) * 100);
 	// background-image: url(../img);
 	// background-color: #000000;
@@ -28,12 +28,17 @@
 		color: #ffffff;
 		max-width: 580px;
 		text-shadow: 0px 1px 1px $dark;
-		letter-spacing: rem(-0.7);
+		letter-spacing: rem(-1);
 		font-weight: 500;
 		line-height: calc(48.76 / 40);
-
 		
 	}
+
+	
+	.section-title {
+		padding-bottom: rem(40);
+	}
+
 
 
 	@include media-breakpoint-up(xl) {}

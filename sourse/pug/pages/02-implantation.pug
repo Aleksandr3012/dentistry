@@ -3,8 +3,7 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
-include ../blocks/sAdvantages/_sAdvantages.pug
-include ../blocks/sTechnology/_sTechnology.pug
+include ../blocks/sForm/_sForm.pug
 
 block variables
 	- let  mainPage= null
@@ -15,65 +14,14 @@ block pagecontent
 	+header()
 		+topLine()
 		+top-nav(class='d-none d-lg-block')
-	+headerBlock()
-	+sAdvantages()
-	+sTechnology(class="sTechnology-bgLight")
-		.row
-			.col-md-6
-				+b.section-title
-					h2 Используем прорывные #[span.text-primary цифровые технологии] и зарубежные материалы
-				.row
-					.col-6
-						p Делаем компьютерную диагностику, моделирование и&nbsp;планирование лечения в&nbsp;3D, работаем в&nbsp;роботизированной зуботехнической лаборатории.
-					.col-6
-						p Прототип будущего протеза или пломбы моделируется программным обеспечением и&nbsp;создаётся роботизированным фрезерным станком с&nbsp;ЧПУ
-				p За счёт этого:
-				ul
-					li 
-						strong Снизили цены на 15—20%
-					li #[strong Уменьшили сроки] создания протезов в среднем до 1 дня
-					li 
-						strong Расширили гарантии на изделия: пожизненная гарантия на импланты и 5 лет на лечение
-			.col-md-6.order-md-first
-				+e.imgWrap(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
-					+pic('technology-1','bg','')
-					+e.iconWrap
-						+icon('play')
-	+sTechnology(class="")
-		.row
-			.col-md-6
-				+b.section-title
-					h2 Лечим по #[span.text-primary протоколам лучших европейских университетов]
-				p Используем компьютерную анестезию. Работаем только с&nbsp;высококлассным микроскопом Carl Zeiss, коффердамом, эндомоторами, швейцарскими пломбировочными материалами и&nbsp;имплантами.
-				ul
-					li #[strong Исключили боль] во время введения обезболивающего и во время лечения. Ничего не чувствуется, даже когда вводим имплант.
-					li #[strong Перелечивать ничего не придётся] — микроскоп позволяет удалить весь кариес, коффердам не даёт попасть жидкости в зуб во время лечения.
-					li #[strong Диагностируем микротрещины,]  незаметные при обычном осмотре, #[strong выявляем кариес на ранних стадиях,] полностью #[strong обрабатываем и пломбируем корневые каналы.] Благодаря микроскопу видим то, что не видно невооруженным глазом.
-			.col-md-6
-				+e.imgWrap(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
-					+pic('technology-2','bg','')
-					+e.iconWrap
-						+icon('play')
-	+sTechnology(class="sTechnology-bgLight")
-		.row
-			.col-md-6
-				+b.section-title
-					h2 Предлагаем только #[span.text-primary честные цены] для пациентов 
-				p #[strong Фиксируем цену] в документе «План лечения» — меняться она уже не будет. То есть после презентации лечения вы сразу знаете, сколько заплатите, за что и почему именно столько.
-				p Мы не экономим на материалах. Но нам удаётся снизить цены за счёт собственной зуботехнической лаборатории и прямых поставок от производителей.
-				p #[strong А ещё мы не лечим никогда то, что лечить не нужно] Стоматологи за это не получают бонусы — мы таких давно уволили. У нас работают только те врачи, которых пациенты рекомендуют своим родственникам.
-				ul
-					li 
-						strong Вы не переплатите ни гривны
+	.container
+		p Стоматология доказательной медицины #[span.text-primary Харькова]
 
-			.col-md-6.order-md-first
-				+e.imgWrap(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
-					+pic('technology-3','bg','')
-					+e.iconWrap
-						+icon('play')
-				p #[strong Пчельник Лариса Викторовна] Главный врач
+		+form-h(`Оставьте свой номер телефона и&nbsp;запишитесь на&nbsp;консультацию по&nbsp;имплантации`, `Гарантируем решение проблемы один раз и&nbsp;на&nbsp;всю жизнь`)
+	
+	
 	+sForm()
-	+sContact()
+	//- +sContact()
 	+footer()
 
 

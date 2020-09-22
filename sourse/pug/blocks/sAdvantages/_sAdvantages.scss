@@ -1,16 +1,17 @@
 // start .sAdvantages
 .sAdvantages {
-	padding-top: rem(45);
-	padding-bottom: rem(35);
+	padding-top: rem(52);
+	padding-bottom: rem(37);
 	margin-top: -1px;
 	background: #1F1F1F;
 
 	&__item {
 		display: flex;
 		align-items: center;
+		margin-bottom: rem(20);
 	}
 
-	.h5 {
+	.h6 {
 		margin-bottom: 0;
 		color: #fff;
 		// max-width: rem(200);
@@ -18,8 +19,22 @@
 
 	.icon {
 		color: $secondary;
-		font-size: rem(50);
-		margin-right: rem(40);
+		font-size: rem(53);
+		margin-right: rem(35);
+	}
+
+	.row {
+		@include roww(10px);
+	}
+
+	&__col {
+		&:nth-child(1) {
+			padding-left: 17px;
+			padding-right: 20px;
+		}
+		&:nth-last-child(1) {
+			padding-right: 0;
+		}
 	}
 
 	@include media-breakpoint-up(sm) {}

@@ -1,6 +1,16 @@
 // start .sTechnology
 .sTechnology {
 
+	padding-bottom: calc(var(--sPB) / 3);
+	&-lastBlock {
+		padding-bottom: calc(var(--sPB) / 1.8);
+	}
+
+	h2 {
+		max-width: 545px;
+		letter-spacing: rem(-0.7);
+	}
+
 	&-bgLight {
 		background: rgba(65, 65, 65, 0.05);
 	}
@@ -10,7 +20,7 @@
 		display: block;
 		margin-bottom: rem(25);
 		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(50);
+			margin-bottom: rem(45);
 		}
 		&::after {
 			content: '';
@@ -27,6 +37,12 @@
 			.sTechnology__iconWrap {
 				transform: scale(1.1);
 			}
+		}
+		@include block(467,521);
+		img {
+			width: 100%;
+			height: 100%;
+			@include a-cent;
 		}
 	}
 
@@ -57,8 +73,13 @@
 	li {
 		list-style: none;
 		padding-left: rem(49);
-		margin-bottom: rem(30);
+		&:not(:last-child) {
+			margin-bottom: rem(24);
+		}
 		position: relative;
+		letter-spacing: rem(-0.4);
+		line-height: 163.54%;
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -74,8 +95,23 @@
 	}
 
 	p {
+		line-height: 163.54%;
+		margin-bottom: 1.3rem;
+		letter-spacing: rem(-0.5);
+		max-width: 605px;
+	}
 
+	.section-title {
+		margin-top: rem(-5);
+	}
 
+	&__row {
+		@include roww(32px);
+		letter-spacing: rem(-0.7);
+	}
+
+	&__col {
+		max-width: 296px;
 	}
 
 

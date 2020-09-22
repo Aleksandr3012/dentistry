@@ -1,0 +1,48 @@
+// start .sProblem
+.sProblem {
+	
+
+
+
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sProblem
+
+.problemItem {
+	display: block;
+	color: #fff !important;
+	position: relative;
+	overflow: hidden;
+	height: calc(100% - #{rem(31)});
+	margin-bottom: rem(31);
+	border-radius: 10px;
+	padding: rem(70) 0 0 rem(40);
+	&:hover {
+		box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+	}
+
+	&__imgWrap {
+		position: absolute;
+		right: 0;
+		top: -10px;
+		height: 120%;
+		img {
+			height: 100%;
+		}
+	}
+
+	&__col {
+		position: relative;
+		z-index: 1;
+	}
+}
