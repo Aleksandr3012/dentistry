@@ -131,7 +131,15 @@ const JSCCommon = {
 
 	},
 	// /табы
-
+	inputMask() { 
+		var input = document.querySelectorAll('[type="tel"]');
+		input.forEach(function (element) { 
+			window.intlTelInput(element, {
+				preferredCountries: ["ua", "by","ru"], 
+				// any initialisation options go here
+			}); 
+		}); 
+},
 	// /inputMask
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
@@ -220,7 +228,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	JSCCommon.ifie();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -303,7 +311,7 @@ function eventHandler() {
 
 	let qualificationThumb = new Swiper('.sQualification .qualification-thumb-js', {
 		slidesPerView: 'auto',
-		spaceBetween: 5,
+		spaceBetween: 20,
 		loop: true,
 		//nav
 		navigation: {

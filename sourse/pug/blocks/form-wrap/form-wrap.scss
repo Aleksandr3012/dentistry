@@ -30,11 +30,17 @@
 		background: #D97014;
 		// border-radius: 10px 10px 0px 0px;
 		padding: 31px 19px;
-		margin-bottom: 50px;
+		// margin-bottom: 50px;
 		color: $white;
 		font-weight: bold;
-		font-size: rem(15);
+		// font-size: rem(15);
 		line-height: (25 / 15);
+		// text-transform: capitalize;
+
+	}
+
+	&__body {
+		padding: rem(50) rem(31) rem(70);
 	}
 }
 
@@ -255,4 +261,30 @@
 }
 .select2-container--default .select2-results__option--highlighted[aria-selected]{
 	background-color: $success;
+}
+
+.iti{
+	display: block;
+}
+.iti__selected-flag{
+		@include media-breakpoint-up(sm) {
+
+			width: rem(104);
+		}
+		width: rem(64);
+	border-right: 1px solid #DADADA;
+}
+.iti--allow-dropdown input,
+.iti--allow-dropdown input[type=tel]{
+		@include media-breakpoint-up(sm){
+
+			padding-left: rem(120);
+		}
+		padding-left: rem(80);
+}
+.iti__selected-flag{
+	justify-content: center;
+}
+.iti__flag{
+	// transform: scale(1.2);
 }

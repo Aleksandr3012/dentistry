@@ -142,6 +142,15 @@ var JSCCommon = {
 		// });
 	},
 	// /табы
+	inputMask: function inputMask() {
+		var input = document.querySelectorAll('[type="tel"]');
+		input.forEach(function (element) {
+			window.intlTelInput(element, {
+				preferredCountries: ["ua", "by", "ru"] // any initialisation options go here
+
+			});
+		});
+	},
 	// /inputMask
 	ifie: function ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
@@ -232,8 +241,8 @@ function eventHandler() {
 
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu(); // JSCCommon.inputMask();
-
+	JSCCommon.mobileMenu();
+	JSCCommon.inputMask();
 	JSCCommon.ifie();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -299,7 +308,7 @@ function eventHandler() {
 	});
 	var qualificationThumb = new Swiper('.sQualification .qualification-thumb-js', {
 		slidesPerView: 'auto',
-		spaceBetween: 5,
+		spaceBetween: 20,
 		loop: true,
 		//nav
 		navigation: {

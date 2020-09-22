@@ -21,6 +21,11 @@
 		bottom: 0;
 	}
 
+	&__thumb-img {
+		height: 100%;
+		width: 100%;
+	}
+
 	&__tumbWrap {
 		position: relative;
 		max-width: 808px;
@@ -101,6 +106,7 @@
 }
 
 .qualification-thumb-js {
+	padding-bottom: rem(20);
 	// position: absolute;
 	// bottom: 0;
 	.swiper-slide{

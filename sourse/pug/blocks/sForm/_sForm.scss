@@ -1,8 +1,60 @@
 	// start .sForm
 .sForm {
 
-	
-		 
+	h2 {
+		margin-bottom: rem(30);
+	}
+
+	.section-title {
+		padding-bottom: calc(var(--sTPB) * 2);
+	}
+	&__col {
+		padding-right: rem(170);
+		position: relative;
+		max-width: rem(740) !important;
+	}
+
+	&__arrow {
+		position: absolute;
+		right: 0;
+		bottom: 10%;
+	}
+
+	&__date {
+		position: absolute;
+		right: 0;
+		top: 0;
+		color: #fff;
+		background-image: url('../img/@2x/date-bg.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		padding: 15px 25px 15px 40px;
+	}
+
+	&__formCol {
+		padding-top: rem(200);
+	}
+
+	.h5 {
+		margin-bottom: rem(27);
+		// font-weight: 400;
+	}
+
+	ol {
+		list-style-type: none;
+		counter-reset: num;
+		padding-left: 0;
+
+		li {
+			line-height: calc(26/16);
+			&::before {
+				content: counter(num) '. ';
+				counter-increment: num;
+				color: $secondary;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

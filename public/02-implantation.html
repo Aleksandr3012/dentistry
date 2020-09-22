@@ -21,6 +21,7 @@
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="libs/intl-tel-input/build/css/intlTelInput.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
@@ -118,27 +119,48 @@
 		<!-- start sForm-->
 		<div class="sForm section" id="sForm">
 			<div class="container">
-				<p>Стоматология доказательной медицины <span class="text-primary">Харькова</span></p>
-				<div class="form-wrap form-wrap--form-h">
-					<form>
-						<input type="hidden" name="example-input-field"/>
-						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-						<input class="utm_source" type="hidden" name="utm_source"/>
-						<input class="utm_term" type="hidden" name="utm_term"/>
-						<input class="utm_medium" type="hidden" name="utm_medium"/>
-						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-						<div class="form-wrap__headline">Оставьте свой номер телефона и&nbsp;запишитесь на&nbsp;консультацию по&nbsp;имплантации
+				<div class="row">
+					<div class="sForm__col col-lg-auto">
+						<div class="section-title">
+							<h2><span class="text-primary">Записаться на развёрнутую консультацию</span>, даже если вас ничего не беспокоит. Скидка 20%</h2><strong>Многие заболевания вначале проходят незаметно, а&nbsp;потом доставляют много проблем. Большая часть лечится безболезненно на&nbsp;начальной стадии. Главное&nbsp;&mdash; вовремя обнаружить.</strong>
 						</div>
-						<div class="form-wrap__text">Гарантируем решение проблемы один раз и&nbsp;на&nbsp;всю жизнь
+						<div class="h5">За 1 час консультации:</div>
+						<ol>
+							<li>Исследуем ротовую полость по&nbsp;передовым протоколам Бернского университета (Швейцария)&nbsp;&mdash; никаких заболеваний не&nbsp;пропустим</li>
+							<li>Приглашаем ортодонтов или имплантологов, делаем снимок, 3D-визуализацию вашей улыбки (при необходимости)</li>
+							<li><strong>Презентуем план лечения или гигиены</strong>, даём развернутые ответы на&nbsp;все ваши вопросы. И&nbsp;всё это понятным языком.</li>
+							<li><strong>Консилиум наших врачей исследует влияние</strong> всех систем организма на&nbsp;проблему. Комплексно. Составляем план лечения и&nbsp;фиксируем стоимость.</li>
+						</ol>
+						<div class="sForm__date">до 16 сентября
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+380 (___) ___-__-__" name="tel"/>
+						<div class="sForm__arrow"><img loading="lazy" src="img/svg/formArrow.svg" alt=""/>
 						</div>
-						<!-- +e.input-wrap-->
-						<div class="form-wrap__small">Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+					</div>
+					<div class="sForm__formCol col-lg">
+						<div class="form-wrap form-wrap--form-h">
+							<form>
+								<input type="hidden" name="example-input-field"/>
+								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+								<input class="utm_source" type="hidden" name="utm_source"/>
+								<input class="utm_term" type="hidden" name="utm_term"/>
+								<input class="utm_medium" type="hidden" name="utm_medium"/>
+								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+								<div class="form-wrap__headline">Запишитесь на проффесиональную консультацию к стоматологу прямо сейчас
+								</div>
+								<div class="form-wrap__body">
+									<div class="form-wrap__text h6">Улыбнитесь, <span class="text-primary">вы невероятны!|</span>
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__small">Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+									</div>
+									<button class="form-wrap__btn" type="submit">Записаться на&nbsp;консультацию
+									</button>
+								</div>
+							</form>
 						</div>
-						<button class="form-wrap__btn link-modal" href="#" type="submit">Записаться на&nbsp;консультацию
-						</button>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -237,7 +259,7 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<!-- /slider libs-->
-		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
