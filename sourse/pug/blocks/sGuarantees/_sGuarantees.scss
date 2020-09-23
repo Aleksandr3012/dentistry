@@ -45,9 +45,9 @@
 			@include media-breakpoint-up(lg) {
 				content: '';
 				position: absolute;
-				// background: #2A03CC;
-				background: black;
-				// opacity: 0.1;
+				background: #2A03CC;
+				// background: black;
+				opacity: 0.1;
 				transform: rotate(34.22deg);
 				transform-origin: top left;
 				width: 450px;
@@ -60,9 +60,11 @@
 	}
 	&__item:not(:last-child):nth-child(even) &__img-wrap2{
 		&:before{
-			transform: rotate(137.1deg);
-			top: 300px;
-    	left: 77px;
+			@include media-breakpoint-up(lg) {
+				transform: rotate(137.1deg);
+				top: 300px;
+				left: 77px;
+			}
 		}
 	}
 
