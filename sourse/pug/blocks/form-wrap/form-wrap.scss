@@ -280,3 +280,8 @@
 .iti__flag{
 	// transform: scale(1.2);
 }
+
+.iti__country-list, .iti__country.iti__highlight {
+	max-width: rem(345);
+	overflow-x: hidden;
+}

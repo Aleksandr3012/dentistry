@@ -5,6 +5,23 @@ mixin sExamples()
 				
 			.row
 				.col-6
+					+e.slider
+						mixin slide(i)
+							.swiper-slide
+								+e.slide.ba-slider.swiper-no-swiping
+									picture
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
+										img.swiper-lazy(src="#" data-src=`img/@2x/examples-${i}.jpg`, alt="")
+									.resize
+										picture
+											source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
+											img.swiper-lazy(src="#" data-src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
+						.examples-prev
+							+icon('sliderArrow')
+						.swiper-container.examplesSlider-js
+							.swiper-wrapper
+						.examples-next
+							+icon('sliderArrow')
 				.col
 					+b.section-title
 						h2 Приживаемость наших имплантов — 99,2%, а не 75—80%
