@@ -2,8 +2,13 @@
 .topLine {
 	padding-top: 3px;
 	// padding-bottom: 3px;
+	@include media-breakpoint-down(md) {
+		padding-top: rem(5);
+		padding-bottom: rem(5);
+	}
 
 	&__col {
+		padding-left: 0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -21,7 +26,7 @@
 	}
 
 	&__location {
-		display: flex;
+		// display: flex;
 		align-items: center;
 		color: $dark;
 		margin-bottom: 10px;
@@ -60,11 +65,17 @@
 
 		.icon {
 			font-size: rem(42);
-			color: $secondary;
+			@include media-breakpoint-up(lg) {
+				color: $secondary;
+			}
 			margin-right: 5px;
 			@include media-breakpoint-up(xl) {
 				margin-right: rem(35);
 			}
+		}
+
+		img {
+			max-width: 32px;
 		}
 
 		&:hover {

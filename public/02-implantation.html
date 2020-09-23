@@ -21,6 +21,7 @@
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="libs/intl-tel-input/build/css/intlTelInput.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
 	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
@@ -30,7 +31,7 @@
 			<div class="topLine" id="topLine">
 				<div class="container">
 					<div class="row justify-content-between align-items-center">
-						<div class="topLine__col col-auto">
+						<div class="col-auto">
 							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 							</div>
 							<div class="menu-mobile menu-mobile--js">
@@ -70,28 +71,33 @@
 									</div>
 								</div>
 							</div>
-							<!--  мобильное меню--><a class="topLine__logo" href="/"><img src="img/@2x/logo.png" alt=""/></a>
+							<!--  мобильное меню-->
+						</div>
+						<div class="topLine__col col-auto"><a class="topLine__logo" href="/"><img src="img/@2x/logo.png" alt=""/></a>
 						</div>
 						<div class="col-auto">
-							<div class="topLine__location">
+							<div class="topLine__location d-none d-lg-flex">
 								<svg class="icon icon-location ">
 									<use xlink:href="img/svg/sprite.svg#location"></use>
 								</svg><span><b>Адрес:</b> г.Харьков, ул.&nbsp;Юри Зойфера, д.3</span>
 							</div>
 						</div>
-						<div class="col-auto"><a class="topLine__phone" href="tel:+380577628733">
+						<div class="col-auto"><a class="topLine__phone d-none d-lg-flex" href="tel:+380577628733">
 							<svg class="icon icon-phone ">
 								<use xlink:href="img/svg/sprite.svg#phone"></use>
-							</svg><span>+38 (057) 762 87 33</span></a>
+							</svg><span>+38 (057) 762 87 33</span></a><a class="topLine__phone d-lg-none" href="tel:+380577628733">
+							<svg class="icon icon-call ">
+								<use xlink:href="img/svg/sprite.svg#call"></use>
+							</svg></a>
 						</div>
-						<div class="col-auto"><a class="topLine__btn" href="#">Записаться на прием</a>
+						<div class="col-auto d-none d-md-block"><a class="topLine__btn" href="#">Записаться на прием</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end topLine-->
 			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
+			<div class="top-nav block-with-lazy d-none d-md-flex">
 				<div class="container">
 					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Чистка зубов</a>
@@ -113,27 +119,48 @@
 		<!-- start sForm-->
 		<div class="sForm section" id="sForm">
 			<div class="container">
-				<p>Стоматология доказательной медицины <span class="text-primary">Харькова</span></p>
-				<div class="form-wrap form-wrap--form-h">
-					<form>
-						<input type="hidden" name="example-input-field"/>
-						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-						<input class="utm_source" type="hidden" name="utm_source"/>
-						<input class="utm_term" type="hidden" name="utm_term"/>
-						<input class="utm_medium" type="hidden" name="utm_medium"/>
-						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-						<div class="form-wrap__headline">Оставьте свой номер телефона и&nbsp;запишитесь на&nbsp;консультацию по&nbsp;имплантации
+				<div class="row">
+					<div class="sForm__col col-lg-auto">
+						<div class="section-title">
+							<h2><span class="text-primary">Записаться на развёрнутую консультацию</span>, даже если вас ничего не беспокоит. Скидка 20%</h2><strong>Многие заболевания вначале проходят незаметно, а&nbsp;потом доставляют много проблем. Большая часть лечится безболезненно на&nbsp;начальной стадии. Главное&nbsp;&mdash; вовремя обнаружить.</strong>
 						</div>
-						<div class="form-wrap__text">Гарантируем решение проблемы один раз и&nbsp;на&nbsp;всю жизнь
+						<div class="h5">За 1 час консультации:</div>
+						<ol>
+							<li>Исследуем ротовую полость по&nbsp;передовым протоколам Бернского университета (Швейцария)&nbsp;&mdash; никаких заболеваний не&nbsp;пропустим</li>
+							<li>Приглашаем ортодонтов или имплантологов, делаем снимок, 3D-визуализацию вашей улыбки (при необходимости)</li>
+							<li><strong>Презентуем план лечения или гигиены</strong>, даём развернутые ответы на&nbsp;все ваши вопросы. И&nbsp;всё это понятным языком.</li>
+							<li><strong>Консилиум наших врачей исследует влияние</strong> всех систем организма на&nbsp;проблему. Комплексно. Составляем план лечения и&nbsp;фиксируем стоимость.</li>
+						</ol>
+						<div class="sForm__date">до 16 сентября
 						</div>
-						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+380 (___) ___-__-__" name="tel"/>
+						<div class="sForm__arrow"><img loading="lazy" src="img/svg/formArrow.svg" alt=""/>
 						</div>
-						<!-- +e.input-wrap-->
-						<div class="form-wrap__small">Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+					</div>
+					<div class="sForm__formCol col-lg">
+						<div class="form-wrap form-wrap--form-h">
+							<form>
+								<input type="hidden" name="example-input-field"/>
+								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+								<input class="utm_source" type="hidden" name="utm_source"/>
+								<input class="utm_term" type="hidden" name="utm_term"/>
+								<input class="utm_medium" type="hidden" name="utm_medium"/>
+								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+								<div class="form-wrap__headline">Запишитесь на проффесиональную консультацию к стоматологу прямо сейчас
+								</div>
+								<div class="form-wrap__body">
+									<div class="form-wrap__text h6">Улыбнитесь, <span class="text-primary">вы невероятны!|</span>
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__small">Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+									</div>
+									<button class="form-wrap__btn" type="submit">Записаться на&nbsp;консультацию
+									</button>
+								</div>
+							</form>
 						</div>
-						<button class="form-wrap__btn link-modal" href="#" type="submit">Записаться на&nbsp;консультацию
-						</button>
-					</form>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -153,7 +180,7 @@
 						<div class="col-lg-6">
 							<div class="sGuarantees__text-block">
 								<div class="h4">Не&nbsp;причиняем боль&nbsp;&mdash; работаем с&nbsp;компьютерной анестезией или наркозом</div>
-								<p>Мы&nbsp;первые в&nbsp;Харькове, кто стал использовать компьютерную анестезию. Аппарат со&nbsp;специальным программным обеспечением дозирует обезболивающее со&nbsp;скоростью 1&nbsp;капля в&nbsp;две секунды. Сам укол не&nbsp;чувствуется совсем, обезболивается конкретный зуб, а&nbsp;<strong>не</strong>&nbsp;вся челюсть и&nbsp;щёки, как раньше.</p><br/>
+								<p>Мы&nbsp;первые в&nbsp;Харькове, кто стал использовать компьютерную анестезию. Аппарат со&nbsp;специальным программным обеспечением дозирует обезболивающее со&nbsp;скоростью 1&nbsp;капля в&nbsp;две секунды. Сам укол не&nbsp;чувствуется совсем, обезболивается конкретный зуб, а&nbsp;<strong>не</strong>&nbsp;вся челюсть и&nbsp;щёки, как раньше.</p>
 								<p>Иногда используем наркоз. Но&nbsp;только вместе с&nbsp;анестезиологами, с&nbsp;пульсоксиметром, кардиомониторами и&nbsp;готовым аппаратом ИВЛ.</p>
 							</div>
 						</div>
@@ -168,8 +195,8 @@
 						<div class="col-lg-6 order-lg-first">
 							<div class="sGuarantees__text-block left">
 								<div class="h4">Исключаем риски и&nbsp;увеличиваем точность установки благодаря 3D-моделированию</div>
-								<p>Проводим КТ&nbsp;верхних и&nbsp;нижних челюстей, <strong>создаём цифровые оттиски зубов</strong>&nbsp;&mdash; компьютерную 3D-модель всей полости рта.</p><br/>
-								<p>Дальше виртуально устанавливаем будущие импланты, обходя нервы, сосуды и&nbsp;истончённые места кости. <br>Ещё до&nbsp;начала операции мы&nbsp;выбираем точное местоположение будущего импланта и&nbsp;угол его наклона.</p><br/>
+								<p>Проводим КТ&nbsp;верхних и&nbsp;нижних челюстей, <strong>создаём цифровые оттиски зубов</strong>&nbsp;&mdash; компьютерную 3D-модель всей полости рта.</p>
+								<p>Дальше виртуально устанавливаем будущие импланты, обходя нервы, сосуды и&nbsp;истончённые места кости. <br>Ещё до&nbsp;начала операции мы&nbsp;выбираем точное местоположение будущего импланта и&nbsp;угол его наклона.</p>
 								<p>В&nbsp;планировании принимают участие врачи разных специализаций: хирурги, ортодонты, ортопеды и&nbsp;иногда пародонтологи.</p>
 							</div>
 						</div>
@@ -185,8 +212,8 @@
 						<div class="col-lg-6">
 							<div class="sGuarantees__text-block">
 								<div class="h4">Можем поставить имплант за&nbsp;1&nbsp;день</div>
-								<p>О&nbsp;такой скорости мечтают все пациенты и&nbsp;протоколы одномоментной имплантации это позволяют. Ещё процедуру называют бесшовной, бескровной и&nbsp;моментальной.</p><br/>
-								<p>То&nbsp;есть после первой консультации, где был осмотр и&nbsp;сделаны снимки, в&nbsp;нашей лаборатории производится и&nbsp;рассчитывается всё необходимое для имплантации. А&nbsp;на&nbsp;следующей консультации устанавливается абатмент, коронка, и&nbsp;человек сразу&nbsp;же уходит со&nbsp;&laquo;своим&raquo; зубом, полностью готовым к&nbsp;работе.</p><br/>
+								<p>О&nbsp;такой скорости мечтают все пациенты и&nbsp;протоколы одномоментной имплантации это позволяют. Ещё процедуру называют бесшовной, бескровной и&nbsp;моментальной.</p>
+								<p>То&nbsp;есть после первой консультации, где был осмотр и&nbsp;сделаны снимки, в&nbsp;нашей лаборатории производится и&nbsp;рассчитывается всё необходимое для имплантации. А&nbsp;на&nbsp;следующей консультации устанавливается абатмент, коронка, и&nbsp;человек сразу&nbsp;же уходит со&nbsp;&laquo;своим&raquo; зубом, полностью готовым к&nbsp;работе.</p>
 								<p>Но&nbsp;у&nbsp;этой процедуры есть большой список противопоказаний, поэтому многим людям она не&nbsp;подходит. Возможно, вы&nbsp;будете исключением.</p>
 							</div>
 						</div>
@@ -196,7 +223,59 @@
 		</section>
 		<footer class="footer block-with-lazy">
 			<div class="container">
-				<h2>footer</h2>
+				<div class="row justify-content-between">
+					<div class="col-auto"><a class="footer__logo" href="/">
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/logo.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/logo.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/logo.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+								<source srcset="img/@1x/logo.png" loading="lazy" type="image/png"/><img src="img/@2x/logo.png" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture--></a>
+						<div class="footer__descr">Роботизированная стоматология в Харькове — работаем без малейшей боли, часто с пожизненной гарантией
+						</div>
+					</div>
+					<div class="col-auto">
+						<div class="footer__nav">
+							<div class="footer__navTitle">Навигация
+							</div>
+							<ul>
+								<li><a href="#">ЧИСТКА ЗУБОВ</a></li>
+								<li><a href="#">ЛЕЧЕНИЕ ЗУБОВ</a></li>
+								<li><a href="#">ОТБЕЛИВАНИЕ ЗУБОВ</a></li>
+								<li><a href="#">ВИНИРЫ</a></li>
+								<li><a href="#">ИМПЛОНТАЦИЯ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-auto"><a class="footer__tel" href="tel:380577628733">+38 (057) 762 87 33</a>
+						<div class="footer__location">г.Харьков,<br> ул. Юри Зойфера, д.3
+						</div>
+						<div class="soc"><a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-fb ">
+								<use xlink:href="img/svg/sprite.svg#fb"></use>
+							</svg></a><a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-instagram ">
+								<use xlink:href="img/svg/sprite.svg#instagram"></use>
+							</svg></a>
+						</div>
+					</div>
+				</div>
+				<div class="footer__foot">
+					<div class="row justify-content-between">
+						<div class="col-auto">
+							<div class="footer__copyright">3D Clinic ® 2020. Любое использование либо копирование материалов или подборки материалов сайта допускается лишь с разрешения правообладателя и только со ссылкой на источник: 3dclinic.com.ua.
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="footer__copyright">2020 © стоматология - 3D Clinic<a class="footer__polite" href="#">Политика конфиденциальности</a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
 		<!--  start modals-->
@@ -236,7 +315,7 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<!-- /slider libs-->
-		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

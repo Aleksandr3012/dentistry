@@ -1,14 +1,15 @@
 	// start .sGuarantees
 .sGuarantees {
 
+	padding-bottom: rem(50);
 	&-bgLight {
 		background: rgba(65, 65, 65, 0.05);
 	}
 	
 	.section-title{
-		padding-bottom: calc(var(--sTPB) + #{rem(17)});
+		padding-bottom: calc(var(--sTPB) + #{rem(4)});
 		h2{
-			max-width: 570px;
+			max-width: rem(570);
 		}
 	}
 
@@ -19,20 +20,36 @@
 	}
 
 	.left{
-		text-align: right;
-		margin-left: auto;
+		@include media-breakpoint-up(lg) {
+			text-align: right;
+			margin-left: auto;
+		}
 	}
 
 	&__col{
 		display: flex;
 		justify-content: center;
+		position: relative;
+	}
+
+	&__img-line{
+		@include media-breakpoint-up(lg) {
+			width: rem(396);
+			left: 71%;
+			bottom: -28%;
+			position: absolute;
+		}
 	}
 
 	&__img-wrap{
 		display: block;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(50);
 		// position: relative;
-		max-width: 370px;
-		height: 370px;
+		max-width: rem(370);
+		height: rem(370);
 		border-radius: 50%;
 		overflow: hidden;
 		img{
@@ -43,13 +60,20 @@
 	}
 
 	.h4{
-		margin-bottom: 50px;
+		margin-bottom: rem(36);
 		font-weight: bold;
 		line-height: (41 / 25);
 	}
 
 	&__text-block{
 		max-width: rem(472);
+		p{
+			line-height: (26 / 16);
+		}
+		@include media-breakpoint-down(lg) {
+			margin-right: auto;
+			margin-left: auto;
+		}
 	}
 
 

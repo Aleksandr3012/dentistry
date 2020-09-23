@@ -1,4 +1,29 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row.justify-content-between
+				.col-auto
+					+e.logo(href="/")
+						+pic('logo.png')
+					+e.descr Роботизированная стоматология в Харькове — работаем без малейшей боли, часто с пожизненной гарантией
+				.col-auto
+					+e.nav
+						+e.navTitle Навигация
+						ul
+							li: a(href="#") ЧИСТКА ЗУБОВ
+							li: a(href="#") ЛЕЧЕНИЕ ЗУБОВ
+							li: a(href="#") ОТБЕЛИВАНИЕ ЗУБОВ
+							li: a(href="#") ВИНИРЫ
+							li: a(href="#") ИМПЛОНТАЦИЯ
+				.col-auto
+					+e.tel(href="tel:380577628733") +38 (057) 762 87 33
+					+e.location г.Харьков,<br> ул. Юри Зойфера, д.3
+					+soc()
+			+e.foot
+				.row.justify-content-between
+					.col-auto
+						+e.copyright 3D Clinic ® 2020. Любое использование либо копирование материалов или подборки материалов сайта допускается лишь с разрешения правообладателя и только со ссылкой на источник: 3dclinic.com.ua.
+					.col-auto
+						+e.copyright 2020 © стоматология - 3D Clinic
+							+e.polite(href="#") Политика конфиденциальности
+

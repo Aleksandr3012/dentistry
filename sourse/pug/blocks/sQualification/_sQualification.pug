@@ -1,13 +1,45 @@
+mixin qualification-thumb(imgNum)
+	.swiper-slide
+		+e.thumb-img
+			img.res-i.swiper-lazy(src="#" data-src=`img/@2x/qualification-thumb-${imgNum}.jpg` alt="")
+
+mixin sQualification-slide()
+	.swiper-slide
+		+e.slide-img
+			img.res-i.swiper-lazy(src="#" data-src=`img/@2x/technology-3.jpg` alt="")
+
 mixin sQualification()
 	// start sQualification
-	+b.SECTION.sQualification.section#sQualification&attributes(attributes)
+	+b.SECTION.sQualification#sQualification&attributes(attributes)
 		.container
-			+b.section-title
-				h2 sQualification
 				
 			.row
-				+b.section-title
-					h2 Работаем только #[span.text-primary со стоматологами высочайшей квалификации]
-				p Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.
-				p Наш врач Шевцов А. А. — лектор компании Neodent (Straumann Groupe). Это помогает нам первыми узнавать обо всех исследованиях и проверенных инновациях в стоматологии..
+				+e.textCol.col-lg-6
+					+b.section-title
+						h2 Работаем только #[span.text-primary со стоматологами высочайшей квалификации]
+					p Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.
+					p Наш врач Шевцов А. А. — лектор компании Neodent (Straumann Groupe). Это помогает нам первыми узнавать обо всех исследованиях и проверенных инновациях в стоматологии..
+					+e.tumbs
+						+e.tumbWrap
+							.qualification-thumb-prev
+								+icon('sliderArrow')
+							.swiper-container.qualification-thumb-js
+								.swiper-wrapper
+									+qualification-thumb(1)
+									+qualification-thumb(2)
+									+qualification-thumb(3)
+									+qualification-thumb(4)
+									+qualification-thumb(1)
+							.qualification-thumb-next
+								+icon('sliderArrow')
+				+e.col.col-lg-6
+					+e.slider
+						.swiper-container.sQualification-slider-js
+							.swiper-wrapper
+								+sQualification-slide()
+								+sQualification-slide()
+								+sQualification-slide()
+								+sQualification-slide()
+								+sQualification-slide()
+
 	// end sQualification

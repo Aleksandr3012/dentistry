@@ -1,0 +1,29 @@
+mixin sSlider()
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		.container
+			+b.section-title
+				h2 А это наши пациенты
+				+e.nav
+					.slider-prev
+						+icon('sliderArrow')
+					.slider-next
+						+icon('sliderArrow')
+		+e.slieder
+			mixin slide(i,t)
+				.swiper-slide
+					+e.slide(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
+						+e.imgWrap.picture-bg
+							img.res-i.swiper-lazy(src="#" data-src=`img/@2x/slider-${i}.jpg`, alt="alt")
+						+e.play
+							+icon('play')
+						+e.text= t
+
+			.swiper-container.slider-js
+				.swiper-wrapper
+					+slide('1','Альбина Викторова')
+					+slide('2','Альбина Викторова')
+					+slide('3','Альбина Викторова')
+					+slide('1','Альбина Викторова')
+				
+	// end sSlider

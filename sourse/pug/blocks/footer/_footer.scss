@@ -1,5 +1,85 @@
 .footer {
-		
+	padding-top: var(--sPT);
+	background-color: $dark;
+	color: #fff;
+
+	&__logo {
+		display: block;
+		margin-bottom: rem(30);
+	}
+
+	&__descr {
+		font-size: $small;
+		font-weight: 700;
+		line-height: 163.5%;
+		max-width: rem(320);
+	}
+
+	&__nav{
+		ul {
+			column-count: 2;
+			line-height: 300%;
+			column-gap: rem(118px);
+
+			li {
+				list-style: none;
+			}
+
+			a {
+				font-size: 11px;
+				color: #fff !important;
+				border-bottom: solid 1px transparent;
+				&:hover {
+					border-bottom: solid 1px #fff;
+				}
+			}
+
+		}
+	}
+	&__navTitle{
+		color: #b5b5b5;
+		margin-bottom: rem(80);
+		font-size: $small;
+	}
+
+	&__tel{
+		font-size: rem(24px);
+		color: #fff !important;
+		font-weight: 600;
+		display: block;
+		margin-bottom: rem(73);
+		&:hover {
+			opacity: .6;
+		}
+	}
+
+	&__location{
+		color: #ffffff;
+		font-size: 11px;
+		font-weight: 400;
+		margin-bottom: rem(30);
+	}
+
+	&__foot{
+		margin-top: rem(100);
+		padding-top: rem(20);
+		padding-bottom: rem(50);
+		border-top: solid 1px #fff;
+	}
+	&__copyright{
+		max-width: rem(800);
+		line-height: 122%;
+		font-size: 13px;
+
+	}
+	&__polite{
+		display: block;
+		color: #fff !important;
+		border-bottom: solid 1px transparent;
+		&:hover {
+			border-bottom: solid 1px #fff;
+		}
+	}
 
 
 // 

@@ -131,7 +131,15 @@ const JSCCommon = {
 
 	},
 	// /табы
-
+	inputMask() { 
+		var input = document.querySelectorAll('[type="tel"]');
+		input.forEach(function (element) { 
+			window.intlTelInput(element, {
+				preferredCountries: ["ua", "by","ru"], 
+				// any initialisation options go here
+			}); 
+		}); 
+},
 	// /inputMask
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
@@ -220,7 +228,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 	JSCCommon.ifie();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
@@ -282,6 +290,53 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
 
+	});
+
+	let sSlider = new Swiper('.sSlider .slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		loop: true,
+
+		//nav
+		navigation: {
+			nextEl: '.sSlider .slider-next',
+			prevEl: '.sSlider .slider-prev',
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+	});
+
+	let qualificationThumb = new Swiper('.sQualification .qualification-thumb-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		loop: true,
+		//nav
+		navigation: {
+			nextEl: '.sQualification .qualification-thumb-next',
+			prevEl: '.sQualification .qualification-thumb-prev',
+		},
+
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6,
+		},
+	});
+
+	let sQualification = new Swiper('.sQualification .sQualification-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		loop: true,
+
+		thumbs: {
+			swiper: qualificationThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
 	});
 	// modal window
 
