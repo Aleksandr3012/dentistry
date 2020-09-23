@@ -1,10 +1,16 @@
 // start .sSlider
 .sSlider {
-	
+	padding-top: calc(var(--sPT) -4px);
+	padding-bottom: 0;
+	h2 {
+		letter-spacing: rem(-0.7);
+	}
 	.section-title {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		max-width: rem(1110);
+		padding-bottom: calc(var(--sTPB) * 2.55);
 
 		&__nav {
 			display: flex;
@@ -20,6 +26,9 @@
 		align-items: center;
 		justify-content: center;
 		outline: none;
+		.icon {
+			font-size: rem(18);
+		}
 	}
 
 	.slider-prev {
@@ -27,7 +36,10 @@
 		.icon {
 			margin-right: 2px;
 		}
-		margin-right: rem(26);
+		margin-right: rem(15);
+		@include media-breakpoint-up(sm) {
+			margin-right: rem(26);
+		}
 	}
 
 	.slider-next {
@@ -40,7 +52,12 @@
 	}
 
 	.swiper-slide {
-		max-width: calc(100vw / 3.2);
+		@include media-breakpoint-up(sm) {
+			max-width: calc(100vw / 2.2);
+		}
+		@include media-breakpoint-up(lg) {
+			max-width: calc(100vw / 3.2);
+		}
 	}
 
 	&__slide {

@@ -19,7 +19,6 @@
 		cursor: pointer;
 		@extend .btn;
 		@extend .btn-primary;
-		min-width: 341px;
  	}
  	label{
  		width: 100%;
@@ -29,18 +28,19 @@
 	&__headline{
 		background: #D97014;
 		// border-radius: 10px 10px 0px 0px;
-		padding: 31px 19px;
+		padding: 28px 19px 20px;
 		// margin-bottom: 50px;
 		color: $white;
 		font-weight: bold;
 		// font-size: rem(15);
 		line-height: (25 / 15);
+		letter-spacing: rem(-0.7);
 		// text-transform: capitalize;
 
 	}
 
 	&__body {
-		padding: rem(50) rem(31) rem(70);
+		padding: rem(50) rem(28) rem(70);
 	}
 }
 
@@ -267,20 +267,12 @@
 	display: block;
 }
 .iti__selected-flag{
-		@include media-breakpoint-up(sm) {
-
-			width: rem(104);
-		}
-		width: rem(64);
-	border-right: 1px solid #DADADA;
+			width: rem(58);
+	// border-right: 1px solid #DADADA;
 }
 .iti--allow-dropdown input,
 .iti--allow-dropdown input[type=tel]{
-		@include media-breakpoint-up(sm){
-
-			padding-left: rem(120);
-		}
-		padding-left: rem(80);
+		padding-left: rem(58);
 }
 .iti__selected-flag{
 	justify-content: center;

@@ -50,17 +50,30 @@
 
 		.problemItem__col {
 			padding-left: 0;
-			margin-top: rem(-125);
+			@include media-breakpoint-up(lg) {
+				margin-top: rem(-125);
+			}
+			@include media-breakpoint-up(xl) {
+				margin-top: rem(-175);
+			}
 			height: 100%;
+			
 		}
 		.problemItem__name {
-			left: rem(-113);
+			left: 0;
+			@include media-breakpoint-up(sm) {
+				left: rem(-100);
+			}
 		}
 
 	}
 
 	.row {
 		height: 100%;
+	}
+	.h6, .h5, .h4 {
+		position: relative;
+		z-index: 1;
 	}
 
 	&__bgWrap {
@@ -78,6 +91,9 @@
 		z-index: 1;
 		padding-left: 0;
 		// padding-right: 0;
+		picture {
+			text-align: right;
+		}
 	}
 
 	.h4, h4 {
@@ -101,7 +117,10 @@
 	&__name {
 		letter-spacing: rem(-0.7);
 		position: absolute;
-		left: rem(-150);
+		left: 0;
+		@include media-breakpoint-up(sm) {
+			left: rem(-150);
+		}
 		bottom: rem(20);
 		max-width: rem(170);
 		font-size: $small;
@@ -120,6 +139,13 @@
 
 		.icon {
 			font-size: rem(20);
+		}
+	}
+
+	
+	&--h6sm {
+		h6, .h6 {
+			max-width: rem(200);
 		}
 	}
 }

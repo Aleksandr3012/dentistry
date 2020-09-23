@@ -1,12 +1,12 @@
  
 	  
 .soc{
-	margin: 0 rem(-25px);
+	margin: 0 rem(-12px);
 	display: flex;
 	&__item{
 		color: #fff !important;
 		text-decoration: none !important;
-		margin: 0 rem(25px);
+		margin: 0 rem(12px);
 		vertical-align: middle;
 		@include mt;
 		display: block;
@@ -17,7 +17,7 @@
 		
 	}
 	.icon{
-	font-size: rem(30);
+	font-size: rem(20);
 	}
 	 
 

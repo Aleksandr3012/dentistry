@@ -4,6 +4,7 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sExamples/_sExamples.pug
 
 block variables
 	- let  mainPage= null
@@ -14,10 +15,10 @@ block pagecontent
 	+header()
 		+topLine()
 		+top-nav(class='d-none d-lg-block')
+	+sForm-02(class='bg-light')
+	+sExamples()
 	
 	
-	
-	+sForm()
 	//- +sContact()
 	+footer()
 

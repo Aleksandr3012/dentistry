@@ -1,9 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var JSCCommon = {
@@ -237,7 +233,7 @@ var JSCCommon = {
 var $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl;
+	var _defaultSl, _Swiper;
 
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
@@ -283,14 +279,6 @@ function eventHandler() {
 		// }
 
 	}), _defaultSl);
-	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
-	}));
 	var sSlider = new Swiper('.sSlider .slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
@@ -306,32 +294,78 @@ function eventHandler() {
 			loadPrevNextAmount: 5
 		}
 	});
-	var qualificationThumb = new Swiper('.sQualification .qualification-thumb-js', {
-		slidesPerView: 'auto',
-		spaceBetween: 20,
+	var qualificationThumb = new Swiper('.qualification-thumb-js', {
+		slidesPerView: 1,
+		spaceBetween: 5,
 		loop: true,
+		freeMode: true,
+		loopedSlides: 6,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 2
+			},
+			768: {
+				slidesPerView: 3
+			},
+			992: {
+				spaceBetween: 20,
+				slidesPerView: 5
+			},
+			1200: {}
+		},
 		//nav
 		navigation: {
-			nextEl: '.sQualification .qualification-thumb-next',
-			prevEl: '.sQualification .qualification-thumb-prev'
+			nextEl: '.qualification-thumb-next',
+			prevEl: '.qualification-thumb-prev'
 		},
 		lazy: {
 			loadPrevNext: true,
 			loadPrevNextAmount: 6
 		}
 	});
-	var sQualification = new Swiper('.sQualification .sQualification-slider-js', {
+	var sQualification = new Swiper('.sQualification-slider-js', (_Swiper = {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
+		loop: true
+	}, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "loopedSlides", 6), _defineProperty(_Swiper, "thumbs", {
+		swiper: qualificationThumb
+	}), _defineProperty(_Swiper, "lazy", {
+		loadPrevNext: true,
+		loadPrevNextAmount: 2
+	}), _Swiper)); // modal window
+
+	var options = {
+		strings: ['вы невероятны!', 'жизнь прекрасна!', 'вы офигенны!'],
+		typeSpeed: 70,
 		loop: true,
-		thumbs: {
-			swiper: qualificationThumb
+		backSpeed: 50
+	};
+	$('.ba-slider').each(function () {
+		$(this).beforeAfter();
+	});
+	var swiper4 = new Swiper('.slider-sr-js', {
+		// slidesPerView: 5,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		effect: "fade",
+		loadPrevNext: true,
+		shortSwipes: false,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			// dynamicBullets: true,
+			renderBullet: function renderBullet(index, className) {
+				return '<span class="' + className + '"><span class="' + className + '__inner"></span></span>';
+			}
 		},
-		lazy: {
-			loadPrevNext: true,
-			loadPrevNextAmount: 2
-		}
-	}); // modal window
+		preloadImages: false,
+		// Enable lazy loading
+		lazy: true
+	});
+	var typed = new Typed('.typed-js', options);
 }
 
 ;

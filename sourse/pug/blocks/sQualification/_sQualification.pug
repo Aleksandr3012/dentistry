@@ -1,7 +1,8 @@
-mixin qualification-thumb(imgNum)
+mixin qualification-thumb(imgNum,t)
 	.swiper-slide
 		+e.thumb-img
 			img.res-i.swiper-lazy(src="#" data-src=`img/@2x/qualification-thumb-${imgNum}.jpg` alt="")
+		+e.name= t
 
 mixin sQualification-slide()
 	.swiper-slide
@@ -14,7 +15,7 @@ mixin sQualification()
 		.container
 				
 			.row
-				+e.textCol.col-lg-6
+				+e.textCol.col-lg-7
 					+b.section-title
 						h2 Работаем только #[span.text-primary со стоматологами высочайшей квалификации]
 					p Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.
@@ -25,14 +26,14 @@ mixin sQualification()
 								+icon('sliderArrow')
 							.swiper-container.qualification-thumb-js
 								.swiper-wrapper
-									+qualification-thumb(1)
-									+qualification-thumb(2)
-									+qualification-thumb(3)
-									+qualification-thumb(4)
-									+qualification-thumb(1)
+									+qualification-thumb('1','ГРИГОРЯН АРТЁМ РОМАНОВИЧ')
+									+qualification-thumb('2','ГРИГОРЯН АРТЁМ РОМАНОВИЧ')
+									+qualification-thumb('3','АГАФОНОВА АННА ВЛАДИМИРОВНА')
+									+qualification-thumb('4','АГАФОНОВА АННА ВЛАДИМИРОВНА')
+									+qualification-thumb('1','АГАФОНОВА АННА ВЛАДИМИРОВНА')
 							.qualification-thumb-next
 								+icon('sliderArrow')
-				+e.col.col-lg-6
+				+e.col.col-lg
 					+e.slider
 						.swiper-container.sQualification-slider-js
 							.swiper-wrapper
