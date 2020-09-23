@@ -312,8 +312,7 @@ function eventHandler() {
 			992: {
 				spaceBetween: 20,
 				slidesPerView: 5
-			},
-			1200: {}
+			}
 		},
 		//nav
 		navigation: {
@@ -353,17 +352,13 @@ function eventHandler() {
 		effect: "fade",
 		loadPrevNext: true,
 		shortSwipes: false,
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-			// dynamicBullets: true,
-			renderBullet: function renderBullet(index, className) {
-				return '<span class="' + className + '"><span class="' + className + '__inner"></span></span>';
-			}
-		},
 		preloadImages: false,
 		// Enable lazy loading
-		lazy: true
+		lazy: true,
+		navigation: {
+			nextEl: '.qualification-thumb-next',
+			prevEl: '.qualification-thumb-prev'
+		}
 	});
 	var typed = new Typed('.typed-js', options);
 }

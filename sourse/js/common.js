@@ -317,8 +317,6 @@ function eventHandler() {
 				spaceBetween: 20,
 				slidesPerView: 5,
 			},
-			1200: {
-			},
 
 		},
 		//nav
@@ -357,9 +355,9 @@ function eventHandler() {
 	};
 
 	$('.ba-slider').each(function () {
-
 		$(this).beforeAfter();
 	})
+
 	var swiper4 = new Swiper('.slider-sr-js', {
 		// slidesPerView: 5,
 		slidesPerView: 1,
@@ -368,19 +366,14 @@ function eventHandler() {
 		effect: "fade",
 		loadPrevNext: true,
 		shortSwipes: false,
-		pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-				// dynamicBullets: true,
-				renderBullet: function (index, className) {
-						return '<span class="' + className + '"><span class="' + className + '__inner"></span></span>';
-				},
-		},
 		preloadImages: false,
 		// Enable lazy loading
-		lazy: true
-
-});
+		lazy: true,
+		navigation: {
+			nextEl: '.qualification-thumb-next',
+			prevEl: '.qualification-thumb-prev',
+		},
+	});
 	
 	var typed = new Typed('.typed-js', options);
 	
