@@ -4,6 +4,7 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
+include ../blocks/sGuarantees/_sGuarantees.pug
 
 block variables
 	- let  mainPage= null
@@ -19,6 +20,7 @@ block pagecontent
 	
 	+sForm()
 	//- +sContact()
+	+sGuarantees(class="sGuarantees-bgLight")
 	+footer()
 
 

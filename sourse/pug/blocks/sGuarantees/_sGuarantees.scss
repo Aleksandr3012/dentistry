@@ -1,0 +1,66 @@
+	// start .sGuarantees
+.sGuarantees {
+
+	&-bgLight {
+		background: rgba(65, 65, 65, 0.05);
+	}
+	
+	.section-title{
+		padding-bottom: calc(var(--sTPB) + #{rem(17)});
+		h2{
+			max-width: 570px;
+		}
+	}
+
+	&__item{
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: rem(34);
+	}
+
+	.left{
+		text-align: right;
+		margin-left: auto;
+	}
+
+	&__col{
+		display: flex;
+		justify-content: center;
+	}
+
+	&__img-wrap{
+		display: block;
+		// position: relative;
+		max-width: 370px;
+		height: 370px;
+		border-radius: 50%;
+		overflow: hidden;
+		img{
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.h4{
+		margin-bottom: 50px;
+		font-weight: bold;
+		line-height: (41 / 25);
+	}
+
+	&__text-block{
+		max-width: rem(472);
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sGuarantees
