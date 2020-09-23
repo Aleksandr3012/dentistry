@@ -1,0 +1,43 @@
+mixin sExamples()
+	// start sExamples
+	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
+		.container
+				
+			.row
+				.col-6
+					+e.slider
+						mixin slide(i)
+							.swiper-slide
+								+e.slide.ba-slider.swiper-no-swiping
+									picture
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
+										img.swiper-lazy(src="#" data-src=`img/@2x/examples-${i}.jpg`, alt="")
+									.resize
+										picture
+											source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
+											img.swiper-lazy(src="#" data-src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
+						.examples-prev
+							+icon('sliderArrow')
+						.swiper-container.examplesSlider-js
+							.swiper-wrapper
+						.examples-next
+							+icon('sliderArrow')
+				.col
+					+b.section-title
+						h2 Приживаемость наших имплантов — 99,2%, а не 75—80%
+					.h5 А всё потому, что мы работаем только с #[span.text-primary премиум-имплантами,] только по передовым протоколам #[span.text-primary Бернского университета] и доверяем эту работу только #[span.text-primary стоматологам экстра-класса]
+					.row
+						.col-6
+							p У&nbsp;каждого нашего импланта есть паспорт с&nbsp;идентификационным номером, что исключает подделку. Можно узнать всю историю своего импланта.
+							p Они созданы из&nbsp;роксолида&nbsp;&mdash; смеси титана и&nbsp;циркония. Он&nbsp;на&nbsp;40% прочнее титана, а&nbsp;сращение импланта с&nbsp;живой костью происходит в&nbsp;2&nbsp;раза быстрее!
+							p Роксолид биоинертен, то&nbsp;есть организм его не&nbsp;видит, поэтому и&nbsp;отторгнуть не&nbsp;может.
+						+e.col.col
+							mixin item(i,t)
+								+e.item
+									+pic(`examples-sm-${i}.png`)
+									+e.text= t
+							+item('1','сам имплант')
+							+item('2','абатмент')
+							+item('3','коронка')
+
+	// end sExamples

@@ -1,43 +1,73 @@
 	// start .sForm
 .sForm {
-
+	padding-top: calc(var(--sPT) / 1.05);
+	padding-bottom: calc(var(--sPB) / 1.8);
 	h2 {
-		margin-bottom: rem(30);
+		margin-bottom: rem(13);
+		letter-spacing: rem(-0.7);
 	}
 
 	.section-title {
-		padding-bottom: calc(var(--sTPB) * 2);
+		padding-bottom: calc(var(--sTPB) * 1.9);
+
+		strong {
+			letter-spacing:  rem(-0.5);
+			max-width: rem(480);
+			display: block;
+			line-height: 163.54%;
+
+		}
 	}
+
 	&__col {
-		padding-right: rem(170);
 		position: relative;
-		max-width: rem(740) !important;
+		@include media-breakpoint-up(lg) {
+			max-width: rem(580) !important;
+			padding-right: rem(100);
+		}
+		@include media-breakpoint-up(xl) {
+			padding-right: rem(170);
+			max-width: rem(765) !important;
+		}
 	}
 
 	&__arrow {
 		position: absolute;
-		right: 0;
-		bottom: 10%;
+		right: rem(20);
+		top: rem(555);
 	}
 
 	&__date {
 		position: absolute;
-		right: 0;
-		top: 0;
+		top: rem(120);
+		right: rem(0);
+		@include media-breakpoint-up(lg) {
+			right: rem(-100);
+			top: rem(95);
+		}
+		@include media-breakpoint-up(xl) {
+			right: rem(-20);
+		}
 		color: #fff;
 		background-image: url('../img/@2x/date-bg.png');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 100%;
 		padding: 15px 25px 15px 40px;
+		@extend .h5;
+		letter-spacing: rem(-0.7);
 	}
 
 	&__formCol {
-		padding-top: rem(200);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(210);
+			padding-right: rem(5);
+		}
 	}
 
 	.h5 {
 		margin-bottom: rem(27);
+		letter-spacing: rem(-0.7);
 		// font-weight: 400;
 	}
 
@@ -45,9 +75,18 @@
 		list-style-type: none;
 		counter-reset: num;
 		padding-left: 0;
+		max-width: rem(520);
+		letter-spacing: rem(-0.7);
 
 		li {
 			line-height: calc(26/16);
+			margin-bottom: rem(23);
+			&:nth-child(1) {
+				max-width: rem(430);
+			}
+			&:nth-last-child(1) {
+				max-width: rem(420);
+			}
 			&::before {
 				content: counter(num) '. ';
 				counter-increment: num;
@@ -55,6 +94,34 @@
 			}
 		}
 	}
+
+	.form-wrap {
+		&__text {
+			margin-bottom: rem(26);
+			letter-spacing: rem(-0.6);
+		}
+
+		&__input-wrap {
+			margin-bottom: rem(27);
+		}
+
+		&__small {
+			font-size: 13px;
+			line-height: 163.5%;
+			letter-spacing: rem(-0.4);
+			margin-bottom: rem(26);
+		}
+
+
+		&__btn {
+			display: block;
+			max-width: 290px;
+			width: 100%;
+			margin: 0 auto;
+			letter-spacing: rem(-0.4);
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -2,11 +2,15 @@ mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
 			.row.justify-content-between
-				.col-auto
+				.col-sm-auto.order-first
 					+e.logo(href="/")
 						+pic('logo.png')
 					+e.descr Роботизированная стоматология в Харькове — работаем без малейшей боли, часто с пожизненной гарантией
-				.col-auto
+				.col-sm-auto
+					+e.tel(href="tel:380577628733") +38 (057) 762 87 33
+					+e.location г.Харьков,<br> ул. Юри Зойфера, д.3
+					+soc()
+				.col-lg-auto.order-lg-first
 					+e.nav
 						+e.navTitle Навигация
 						ul
@@ -15,10 +19,6 @@ mixin footer()
 							li: a(href="#") ОТБЕЛИВАНИЕ ЗУБОВ
 							li: a(href="#") ВИНИРЫ
 							li: a(href="#") ИМПЛОНТАЦИЯ
-				.col-auto
-					+e.tel(href="tel:380577628733") +38 (057) 762 87 33
-					+e.location г.Харьков,<br> ул. Юри Зойфера, д.3
-					+soc()
 			+e.foot
 				.row.justify-content-between
 					.col-auto

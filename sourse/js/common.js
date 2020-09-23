@@ -280,18 +280,6 @@ function eventHandler() {
 		},
 	}
 
-	const swiper4 = new Swiper('.sBanners__slider--js', {
-		// slidesPerView: 5,
-		...defaultSl,
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true,
-
-	});
-
 	let sSlider = new Swiper('.sSlider .slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
@@ -309,14 +297,32 @@ function eventHandler() {
 		},
 	});
 
-	let qualificationThumb = new Swiper('.sQualification .qualification-thumb-js', {
-		slidesPerView: 'auto',
-		spaceBetween: 20,
+	let qualificationThumb = new Swiper('.qualification-thumb-js', {
+		slidesPerView: 1,
+		spaceBetween: 5,
 		loop: true,
+		freeMode: true,
+		loopedSlides: 6,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+
+			},
+			992: {
+				spaceBetween: 20,
+				slidesPerView: 5,
+			},
+
+		},
 		//nav
 		navigation: {
-			nextEl: '.sQualification .qualification-thumb-next',
-			prevEl: '.sQualification .qualification-thumb-prev',
+			nextEl: '.qualification-thumb-next',
+			prevEl: '.qualification-thumb-prev',
 		},
 
 		lazy: {
@@ -325,10 +331,12 @@ function eventHandler() {
 		},
 	});
 
-	let sQualification = new Swiper('.sQualification .sQualification-slider-js', {
+	let sQualification = new Swiper('.sQualification-slider-js', {
 		slidesPerView: 'auto',
 		spaceBetween: 0,
 		loop: true,
+		loop: true,
+		loopedSlides: 6,
 
 		thumbs: {
 			swiper: qualificationThumb,
@@ -339,7 +347,35 @@ function eventHandler() {
 		},
 	});
 	// modal window
+	var options = {
+		strings: ['вы невероятны!', 'жизнь прекрасна!', 'вы офигенны!'],
+		typeSpeed: 70,
+		loop: true,
+		backSpeed: 50
+	};
 
+	$('.ba-slider').each(function () {
+		$(this).beforeAfter();
+	})
+
+	var swiper4 = new Swiper('.slider-sr-js', {
+		// slidesPerView: 5,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		effect: "fade",
+		loadPrevNext: true,
+		shortSwipes: false,
+		preloadImages: false,
+		// Enable lazy loading
+		lazy: true,
+		navigation: {
+			nextEl: '.qualification-thumb-next',
+			prevEl: '.qualification-thumb-prev',
+		},
+	});
+	
+	var typed = new Typed('.typed-js', options);
 	
 };
 if (document.readyState !== 'loading') {

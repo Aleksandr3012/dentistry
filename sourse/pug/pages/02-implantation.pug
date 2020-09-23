@@ -4,7 +4,11 @@ extends layout/main.pug
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
+<<<<<<< HEAD
 include ../blocks/sGuarantees/_sGuarantees.pug
+=======
+include ../blocks/sExamples/_sExamples.pug
+>>>>>>> 46b2972e887f0ce3f99a52e01142cd83df656d30
 
 block variables
 	- let  mainPage= null
@@ -15,10 +19,10 @@ block pagecontent
 	+header()
 		+topLine()
 		+top-nav(class='d-none d-lg-block')
+	+sForm-02(class='bg-light')
+	+sExamples()
 	
 	
-	
-	+sForm()
 	//- +sContact()
 	+sGuarantees(class="sGuarantees-bgLight")
 	+footer()

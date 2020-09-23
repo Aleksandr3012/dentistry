@@ -1,13 +1,15 @@
 // start .sAdvantages
 .sAdvantages {
-	padding-top: rem(52);
-	padding-bottom: rem(37);
+	padding-top: rem(40);
+	padding-bottom: rem(18);
 	margin-top: -1px;
 	background: #1F1F1F;
 
 	&__item {
-		display: flex;
-		align-items: center;
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			align-items: center;
+		}
 		margin-bottom: rem(20);
 	}
 
@@ -20,12 +22,15 @@
 	.icon {
 		color: $secondary;
 		width: rem(45);
+		flex-shrink: 0;
 		// font-size: rem(53);
 		margin-right: rem(35);
 	}
 
 	.row {
-		@include roww(10px);
+		@include media-breakpoint-up(xl) {
+			@include roww(30px);
+		}
 	}
 
 	&__col {

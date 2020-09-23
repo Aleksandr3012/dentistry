@@ -2,52 +2,61 @@
 .sLocation {
 	background-color: #393b4a;
 	color: #fff;
+	letter-spacing: rem(-0.5);
 
 	h2 {
 		text-transform: uppercase;
 	}
 
+	.section-title {
+		padding-bottom: calc(var(--sTPB) * 1.2);
+	}
+
 	.h5 {
 		max-width: 239px;
 		font-weight: bold;
+		line-height: 163.5%;
+
 	}
 
 	&__contactWrap {
 		padding-left: 24px;
-		padding-bottom: rem(60);
+		padding-bottom: rem(45);
 		padding-top: rem(20);
 	}
 
 	&__time {
 		font-weight: 400;
-		margin-bottom: rem(60);
+		margin-bottom: rem(65);
 	}
 
 	&__phone {
 		@extend .h5;
 		display: block;
 		color: #fff !important;
+		margin-bottom: .9rem;
 		&:hover {
 			opacity: .6;
 		}
 	}
 
 	p {
-		margin-bottom: rem(20);
+		margin-bottom: rem(18);
 		line-height: calc(20/16);
 	}
 
 	&__col {
-		padding-top: calc(var(--sPT));
-		padding-bottom: calc(var(--sPB));
+		padding-top: calc(var(--sPT) / 1.09);
+		padding-bottom: calc(var(--sPB) / 1.5);
 	}
 
 	&__mapWrap {
+		min-height: rem(320);
 		height: 100%;
 		// width: 100%;
 		position: relative;
 		@include media-breakpoint-up(lg) {
-			margin-right: calc(-1 * (100vw - 177%) / 2);
+			margin-right: calc(-1 * (100vw - 208%) / 2);
 		}
 
 		iframe {

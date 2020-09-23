@@ -1,25 +1,37 @@
 .footer {
-	padding-top: var(--sPT);
+	padding-top: calc(var(--sPT) / 1.1);
 	background-color: $dark;
 	color: #fff;
 
 	&__logo {
 		display: block;
-		margin-bottom: rem(30);
+		max-width: rem(60);
+		margin-bottom: rem(35);
 	}
 
 	&__descr {
 		font-size: $small;
 		font-weight: 700;
-		line-height: 163.5%;
+		line-height: 165%;
+		// max-width: rem(300);
 		max-width: rem(320);
+		@include media-breakpoint-up(xl) {
+		}
+		letter-spacing: rem(-0.4);
 	}
 
 	&__nav{
+		@include media-breakpoint-down(lg) {
+			padding-top: rem(30);
+		}
 		ul {
 			column-count: 2;
-			line-height: 300%;
-			column-gap: rem(118px);
+			line-height: 200%;
+			column-gap: rem(50px);
+			@include media-breakpoint-up(xl) {
+				column-gap: rem(118px);
+			}
+			letter-spacing: rem(-0.4);
 
 			li {
 				list-style: none;
@@ -38,16 +50,22 @@
 	}
 	&__navTitle{
 		color: #b5b5b5;
-		margin-bottom: rem(80);
+		margin-bottom: rem(30);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(70);
+		}
 		font-size: $small;
 	}
 
 	&__tel{
 		font-size: rem(24px);
+		@include media-breakpoint-up(xl) {
+			margin-right: rem(30);
+		}
 		color: #fff !important;
 		font-weight: 600;
 		display: block;
-		margin-bottom: rem(73);
+		margin-bottom: rem(64);
 		&:hover {
 			opacity: .6;
 		}
@@ -57,19 +75,26 @@
 		color: #ffffff;
 		font-size: 11px;
 		font-weight: 400;
-		margin-bottom: rem(30);
+		margin-bottom: rem(24);
+		letter-spacing: rem(-0.4);
 	}
 
 	&__foot{
-		margin-top: rem(100);
+		margin-top: rem(70);
 		padding-top: rem(20);
 		padding-bottom: rem(50);
 		border-top: solid 1px #fff;
 	}
 	&__copyright{
-		max-width: rem(800);
+		max-width: rem(550);
+		@include media-breakpoint-up(xl) {
+			max-width: rem(800);
+		}
 		line-height: 122%;
 		font-size: 13px;
+		letter-spacing: rem(-0.4);
+		margin-right: rem(50);
+		margin-bottom: rem(20);
 
 	}
 	&__polite{

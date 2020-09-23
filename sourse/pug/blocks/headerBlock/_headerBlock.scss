@@ -4,7 +4,14 @@
 	position: relative;
 	margin-bottom: 1px;
 	// min-height: 100vh;
-	padding-top: rem(320);
+	padding-top: rem(200);
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(320);
+	}
+	@media (min-width: 1200px) and (max-width: 1440px) {
+		padding-top: rem(200);
+	}
+	
 	padding-bottom: rem(35);
 	min-height: calc(100vh - #{rem(95)});
 	@include media-breakpoint-up(md) {
