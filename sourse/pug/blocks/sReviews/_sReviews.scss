@@ -1,0 +1,141 @@
+	// start .sReviews
+.sReviews {
+	
+	overflow: hidden;
+	position: relative;
+
+	&__imgWrap{
+		position: relative;
+		display: block;
+		margin-bottom: rem(25);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(45);
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(180deg, rgba(26, 25, 85, 0.64) 0%, rgba(65, 65, 65, 0.43) 100%);
+			@include mt;
+		}
+
+		&:hover {
+			.sReviews__iconWrap {
+				transform: scale(1.1);
+			}
+		}
+
+	}
+
+	&__iconWrap {
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		margin: auto;
+		background-color: $red;
+		border-radius: 50%;
+		width: 86px;
+		height: 86px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include mt;
+		.icon {
+			color: #fff;
+			font-size: rem(30);
+			margin-left: 3px;
+
+		}
+	}
+
+	.h2{
+		color: $white;
+		line-height: (49 / 30);
+		margin-bottom: 30px;
+	}
+
+
+
+	&__feedback{
+		position: relative;
+		color: $white;
+		line-height: (20 / 16);
+		margin-left: 20px;
+		max-width: 335px;
+	}
+
+	&__feedback::before, 
+	&__feedback::after {
+		position: absolute; 
+		font-size: 30px; 
+		color: #aaa; 
+	}
+	&__feedback::before {
+		content: '\301F';
+		top: -24px;
+    left: -21px;
+		color: $secondary;
+	}
+
+	&__feedback::after {
+		content: '\301F';
+		bottom: -1px;
+    right: -26px;
+		color: $secondary;
+	}
+
+	&__item {
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			align-items: center;
+		}
+		margin-bottom: rem(20);
+	}
+
+	.h6 {
+		margin-bottom: 0;
+		color: black;
+		// max-width: rem(200);
+	}
+
+	.icon {
+		color: $secondary;
+		width: rem(45);
+		flex-shrink: 0;
+		// font-size: rem(53);
+		margin-right: rem(35);
+	}
+
+	.row {
+		@include media-breakpoint-up(xl) {
+			@include roww(30px);
+		}
+	}
+
+	&__col {
+		&:nth-child(1) {
+			padding-left: 17px;
+			padding-right: 20px;
+		}
+		&:nth-last-child(1) {
+			padding-right: 0;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sReviews

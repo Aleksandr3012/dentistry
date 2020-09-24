@@ -6,6 +6,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sGuarantees/_sGuarantees.pug
 include ../blocks/sExamples/_sExamples.pug
+include ../blocks/sReviews/_sReviews.pug
 
 block variables
 	- let  mainPage= null
@@ -22,6 +23,8 @@ block pagecontent
 	
 	//- +sContact()
 	+sGuarantees(class="sGuarantees-bgLight")
+
+	+sReviews()
 	+footer()
 
 
