@@ -358,7 +358,7 @@ function eventHandler() {
 		$(this).beforeAfter();
 	})
 
-	var swiper4 = new Swiper('.slider-sr-js', {
+	var swiper4 = new Swiper('.examplesSlider-js', {
 		// slidesPerView: 5,
 		slidesPerView: 1,
 		spaceBetween: 0,
@@ -370,8 +370,8 @@ function eventHandler() {
 		// Enable lazy loading
 		lazy: true,
 		navigation: {
-			nextEl: '.qualification-thumb-next',
-			prevEl: '.qualification-thumb-prev',
+			nextEl: '.examples-next',
+			prevEl: '.examples-prev',
 		},
 	});
 	
