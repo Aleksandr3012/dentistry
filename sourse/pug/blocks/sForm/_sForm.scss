@@ -17,6 +17,16 @@
 			line-height: 163.54%;
 
 		}
+
+		&__small {
+			font-size: $small;
+		}
+
+		p {
+			strong {
+				display: inline;
+			}
+		}
 	}
 
 	&__col {

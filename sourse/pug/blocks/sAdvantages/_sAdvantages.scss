@@ -17,6 +17,9 @@
 		margin-bottom: 0;
 		color: #fff;
 		// max-width: rem(200);
+		@include media-breakpoint-down(sm) {
+			font-size: $em-base;
+		}
 	}
 
 	.icon {
