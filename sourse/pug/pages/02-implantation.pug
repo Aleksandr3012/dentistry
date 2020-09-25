@@ -6,6 +6,10 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sGuarantees/_sGuarantees.pug
 include ../blocks/sExamples/_sExamples.pug
+include ../blocks/sWithFamily/_sWithFamily.pug
+include ../blocks/sLocation/_sLocation.pug
+include ../blocks/sSpecialist/_sSpecialist.pug
+include ../blocks/sMyths/_sMyths.pug
 
 block variables
 	- let  mainPage= null
@@ -22,6 +26,10 @@ block pagecontent
 	
 	//- +sContact()
 	+sGuarantees(class="sGuarantees-bgLight")
+	+sWithFamily()
+	+sSpecialist('sl')
+	+sMyths(class="bg-dark")
+	+sLocation()
 	+footer()
 
 

@@ -238,7 +238,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '02.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -297,6 +297,21 @@ function eventHandler() {
 		},
 	});
 
+	let specialistSlider = new Swiper('.sSpecialist .specialistSlider-js', {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		//nav
+		navigation: {
+			nextEl: '.sSpecialist .specialistSlider-next',
+			prevEl: '.sSpecialist .specialistSlider-prev',
+		},
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 5,
+		},
+	});
+
 	let qualificationThumb = new Swiper('.qualification-thumb-js', {
 		slidesPerView: 1,
 		spaceBetween: 5,
@@ -347,16 +362,18 @@ function eventHandler() {
 		},
 	});
 	// modal window
-	var options = {
-		strings: ['вы невероятны!', 'жизнь прекрасна!', 'вы офигенны!'],
-		typeSpeed: 70,
-		loop: true,
-		backSpeed: 50
-	};
 
-	$('.ba-slider').each(function () {
-		$(this).beforeAfter();
-	})
+	//typed
+	// let options = {
+	// 	strings: ['вы невероятны!', 'жизнь прекрасна!', 'вы офигенны!'],
+	// 	typeSpeed: 70,
+	// 	loop: true,
+	// 	backSpeed: 50
+	// };
+	// let typed = new Typed('.typed-js', options);
+	//
+
+	$('.ba-slider').beforeAfter();
 
 	var swiper4 = new Swiper('.examplesSlider-js', {
 		// slidesPerView: 5,
@@ -368,14 +385,16 @@ function eventHandler() {
 		shortSwipes: false,
 		preloadImages: false,
 		// Enable lazy loading
-		lazy: true,
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 1,
+		},
 		navigation: {
 			nextEl: '.examples-next',
 			prevEl: '.examples-prev',
 		},
 	});
 	
-	var typed = new Typed('.typed-js', options);
 	
 };
 if (document.readyState !== 'loading') {
