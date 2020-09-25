@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>3DCLINIC</title>
+		<meta name="description" content="о чем страница">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+		<link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png"><meta name="format-detection" content="telephone=no">
+		<link rel="image_src" href="http://genrif.ru/assets/i/soc-logo.png">
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="content">
+		<meta property="og:title" content="content">
+		<meta property="og:description" content="content">
+		<meta property="og:url" content="content">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:image" content="path/to/image.jpg">
+		<meta property="og:image:width" content="968">
+		<meta property="og:image:height" content="504">
+		<!-- Custom Browsers Color-->
+		<meta name="theme-color" content="#3361d8">
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
+		<link rel="stylesheet" href="libs2/baslider-master/css/baslider.css"/>
+		<link rel="stylesheet" href="libs/intl-tel-input/build/css/intlTelInput.min.css"/>
+		<link rel="stylesheet" href="css/main.min.css"/>
+	</head>
+	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+		<!-- start header-->
+		<header class="header" id="header">
+			<!-- start topLine-->
+			<div class="topLine" id="topLine">
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-auto">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+							</div>
+							<div class="menu-mobile menu-mobile--js">
+								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+								</div>
+								<div class="menu-mobile__inner">
+									<div class="container">
+										<div class="row justify-content-between">
+											<div class="col-sm-auto">
+												<div class="menu-mobile__title">Меню
+												</div>
+												<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+													<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">ГЛАВНАЯ</a>
+													</li>
+													<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Чистка зубов</a>
+													</li>
+													<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Отбеливание</a>
+													</li>
+													<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">ЛЕЧЕНИЕ ЗУБОВ</a>
+													</li>
+													<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">ВИНИРЫ</a>
+													</li>
+													<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">ИМПЛАНТАЦИЯ</a>
+													</li>
+												</ul>
+											</div>
+											<div class="menu-mobile__col col-sm-auto">
+												<div class="menu-mobile__title">Контакты
+												</div><a class="menu-mobile__phone" href="tel:+380577628733">+38 (057) 762 87 33</a><a class="menu-mobile__phone" href="tel:+380986333595">+38 (098) 633 35 95</a>
+												<div class="menu-mobile__location">г.Харьков, ул. Юри Зойфера, д.3 (Анри Барбюса, д. 3)
+												</div>
+												<p>Это центр города, выход метро Держпром. Метро Университет и Научная в 10 мин ходьбы.</p>
+												<p>Много парковочных мест возле клиники, особенно после 12.00 дня и до вечера 20.00.</p>
+												<p>Вы не попадёте в серьёзную пробку, если поедите к нам с 7.00 до 8.00, с 11.00 до 14.00 и вечером после 18.00.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--  мобильное меню-->
+						</div>
+						<div class="topLine__col col-auto"><a class="topLine__logo" href="/"><img src="img/@2x/logo.png" alt=""/></a>
+						</div>
+						<div class="col-auto">
+							<div class="topLine__location d-none d-lg-flex">
+								<svg class="icon icon-location ">
+									<use xlink:href="img/svg/sprite.svg#location"></use>
+								</svg><span><b>Адрес:</b> г.Харьков, ул.&nbsp;Юри Зойфера, д.3</span>
+							</div>
+						</div>
+						<div class="col-auto"><a class="topLine__phone d-none d-lg-flex" href="tel:+380577628733">
+							<svg class="icon icon-phone ">
+								<use xlink:href="img/svg/sprite.svg#phone"></use>
+							</svg><span>+38 (057) 762 87 33</span></a><a class="topLine__phone d-lg-none" href="tel:+380577628733">
+							<svg class="icon icon-call ">
+								<use xlink:href="img/svg/sprite.svg#call"></use>
+							</svg></a>
+						</div>
+						<div class="col-auto d-none d-md-block"><a class="topLine__btn" href="#">Записаться на прием</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end topLine-->
+			<!-- start top-nav-->
+			<div class="top-nav block-with-lazy d-none d-md-flex">
+				<div class="container">
+					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Чистка зубов</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Отбеливание</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Лечение зубов</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Виниры</a>
+						</li>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Имплантация</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- end top-nav-->
+		</header>
+		<!-- end header-->
+		<!-- start sForm-->
+		<div class="sForm section bg-light" id="sForm">
+			<div class="container">
+				<div class="row">
+					<div class="sForm__col col-lg-auto">
+						<div class="section-title">
+							<div class="section-title__small">Стоматология доказательной медицины <span class="text-primary">Харькова</span>
+							</div>
+							<h2><span class="text-primary">Имплантация зубов под ключ — </span>установим импланты № 1 в мире. Без боли, с пожизненной гарантией и с 20% скидкой</h2><strong>Возможна экспресс-имплантация за 1 день</strong>
+						</div>
+						<div class="h5">На первых двух консультациях:</div>
+						<ol>
+							<li>Проведём <strong>обследование вашей ротовой</strong> полости по передовым протоколам Бернского университета (Швейцария). Сделаем КТ и все необходимые анализы.</li>
+							<li><strong>Создадим цифровые оттиски зубов</strong> — компьютерную 3D-модель всей полости рта.</li>
+							<li>Виртуально <strong>поставим импланты на вашу 3D модель.</strong> То есть ещё до лечения вы увидите, как будет выглядеть результат.</li>
+							<li>Составим поэтапный план лечения и <strong>укажем фиксированную стоимость.</strong> Меняться она не будет.</li>
+						</ol>
+						<div class="sForm__date d-none d-sm-block">до 16 сентября
+						</div>
+						<div class="sForm__arrow d-none d-lg-block"><img loading="lazy" src="img/svg/formArrow.svg" alt=""/>
+						</div>
+					</div>
+					<div class="sForm__formCol col-lg">
+						<div class="form-wrap form-wrap--form-h">
+							<form>
+								<input type="hidden" name="example-input-field"/>
+								<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+								<input class="utm_source" type="hidden" name="utm_source"/>
+								<input class="utm_term" type="hidden" name="utm_term"/>
+								<input class="utm_medium" type="hidden" name="utm_medium"/>
+								<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+								<div class="form-wrap__headline">Запишитесь на проффесиональную консультацию к стоматологу прямо сейчас
+								</div>
+								<div class="form-wrap__body">
+									<div class="form-wrap__text h6">Гарантируем решение проблемы один раз и на всю жизнь
+									</div>
+									<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+380 (99) 999-99-99" name="tel"/>
+									</div>
+									<!-- +e.input-wrap-->
+									<div class="form-wrap__small">Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+									</div>
+									<button class="form-wrap__btn" type="submit">Записаться на&nbsp;консультацию
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- start sExamples-->
+		<section class="sExamples section" id="sExamples">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<div class="sExamples__slider">
+							<div class="examples-prev">
+								<svg class="icon icon-sliderArrow ">
+									<use xlink:href="img/svg/sprite.svg#sliderArrow"></use>
+								</svg>
+							</div>
+							<div class="swiper-container examplesSlider-js">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide swiper-no-swiping">
+										<div class="sExamples__slide ba-slider">
+											<picture>
+												<source srcset="img/@2x/webp/examples-1.webp" type="image/webp"/><img src="img/@2x/examples-1.jpg" alt=""/>
+											</picture>
+											<div class="resize">
+												<picture>
+													<source srcset="img/@2x/webp/examples-1-1.webp" type="image/webp"/><img src="img/@2x/examples-1-1.jpg" alt=""/>
+												</picture>
+											</div><span class="handle"></span>
+										</div>
+									</div>
+									<div class="swiper-slide swiper-no-swiping">
+										<div class="sExamples__slide ba-slider">
+											<picture>
+												<source srcset="img/@2x/webp/examples-2.webp" type="image/webp"/><img src="img/@2x/examples-2.jpg" alt=""/>
+											</picture>
+											<div class="resize">
+												<picture>
+													<source srcset="img/@2x/webp/examples-2-2.webp" type="image/webp"/><img src="img/@2x/examples-2-2.jpg" alt=""/>
+												</picture>
+											</div><span class="handle"></span>
+										</div>
+									</div>
+									<div class="swiper-slide swiper-no-swiping">
+										<div class="sExamples__slide ba-slider">
+											<picture>
+												<source srcset="img/@2x/webp/examples-1.webp" type="image/webp"/><img src="img/@2x/examples-1.jpg" alt=""/>
+											</picture>
+											<div class="resize">
+												<picture>
+													<source srcset="img/@2x/webp/examples-1-1.webp" type="image/webp"/><img src="img/@2x/examples-1-1.jpg" alt=""/>
+												</picture>
+											</div><span class="handle"></span>
+										</div>
+									</div>
+									<div class="swiper-slide swiper-no-swiping">
+										<div class="sExamples__slide ba-slider">
+											<picture>
+												<source srcset="img/@2x/webp/examples-2.webp" type="image/webp"/><img src="img/@2x/examples-2.jpg" alt=""/>
+											</picture>
+											<div class="resize">
+												<picture>
+													<source srcset="img/@2x/webp/examples-2-2.webp" type="image/webp"/><img src="img/@2x/examples-2-2.jpg" alt=""/>
+												</picture>
+											</div><span class="handle"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="examples-next">
+								<svg class="icon icon-sliderArrow ">
+									<use xlink:href="img/svg/sprite.svg#sliderArrow"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="section-title">
+							<h2>Приживаемость наших имплантов — 99,2%, а не 75—80%</h2>
+						</div>
+						<div class="h5">А всё потому, что мы работаем только с <span class="text-primary">премиум-имплантами,</span> только по передовым протоколам <span class="text-primary">Бернского университета</span> и доверяем эту работу только <span class="text-primary">стоматологам экстра-класса</span></div>
+						<div class="row">
+							<div class="col-xl-6">
+								<p>У&nbsp;каждого нашего импланта есть паспорт с&nbsp;идентификационным номером, что исключает подделку. Можно узнать всю историю своего импланта.</p>
+								<p>Они созданы из&nbsp;роксолида&nbsp;&mdash; смеси титана и&nbsp;циркония. Он&nbsp;на&nbsp;40% прочнее титана, а&nbsp;сращение импланта с&nbsp;живой костью происходит в&nbsp;2&nbsp;раза быстрее!</p>
+								<p>Роксолид биоинертен, то&nbsp;есть организм его не&nbsp;видит, поэтому и&nbsp;отторгнуть не&nbsp;может.</p>
+							</div>
+							<div class="sExamples__col col">
+								<div class="sExamples__row row">
+									<div class="col-xl-5">
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/examples-sm-1.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="img/@1x/webp/examples-sm-1.webp" loading="lazy" type="image/webp"/>
+												<source srcset="img/@2x/examples-sm-1.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+												<source srcset="img/@1x/examples-sm-1.png" loading="lazy" type="image/png"/><img src="img/@2x/examples-sm-1.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="col align-self-center">
+										<div class="sExamples__text">сам имплант
+										</div>
+									</div>
+									<div class="col-xl-5">
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/examples-sm-2.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="img/@1x/webp/examples-sm-2.webp" loading="lazy" type="image/webp"/>
+												<source srcset="img/@2x/examples-sm-2.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+												<source srcset="img/@1x/examples-sm-2.png" loading="lazy" type="image/png"/><img src="img/@2x/examples-sm-2.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="col align-self-center">
+										<div class="sExamples__text">абатмент
+										</div>
+									</div>
+									<div class="col-xl-5">
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/examples-sm-3.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="img/@1x/webp/examples-sm-3.webp" loading="lazy" type="image/webp"/>
+												<source srcset="img/@2x/examples-sm-3.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+												<source srcset="img/@1x/examples-sm-3.png" loading="lazy" type="image/png"/><img src="img/@2x/examples-sm-3.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="col align-self-center">
+										<div class="sExamples__text">коронка
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sExamples-->
+		<!-- start sGuarantees-->
+		<section class="sGuarantees section sGuarantees-bgLight" id="sGuarantees">
+			<div class="container">
+				<div class="section-title">
+					<h2>Посмотрите, почему мы уверены в <span class="text-primary">пожизненной гарантии</span> наших имплантов, а пациенты довольны результатом</h2>
+				</div>
+				<div>
+							<div class="sGuarantees__item">
+								<div class="row">
+									<div class="sGuarantees__col col-lg-6">
+										<div class="sGuarantees__img-wrap2">
+											<div class="sGuarantees__img-wrap"><img src="img/gif/sGuarantees-1.gif" loading="lazy" alt=""/>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="sGuarantees__text-block">
+											<div class="h4">Не&nbsp;причиняем боль&nbsp;&mdash; работаем с&nbsp;компьютерной анестезией или наркозом</div>
+											<p>Мы&nbsp;первые в&nbsp;Харькове, кто стал использовать компьютерную анестезию. Аппарат со&nbsp;специальным программным обеспечением дозирует обезболивающее со&nbsp;скоростью 1&nbsp;капля в&nbsp;две секунды. Сам укол не&nbsp;чувствуется совсем, обезболивается конкретный зуб, а&nbsp;<strong>не</strong>&nbsp;вся челюсть и&nbsp;щёки, как раньше.</p>
+											<p>Иногда используем наркоз. Но&nbsp;только вместе с&nbsp;анестезиологами, с&nbsp;пульсоксиметром, кардиомониторами и&nbsp;готовым аппаратом ИВЛ.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sGuarantees__item">
+								<div class="row">
+									<div class="sGuarantees__col col-lg-6">
+										<div class="sGuarantees__img-wrap2">
+											<div class="sGuarantees__img-wrap"><img src="img/gif/sGuarantees-2.gif" loading="lazy" alt=""/>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="sGuarantees__text-block">
+											<div class="h4">Исключаем риски и&nbsp;увеличиваем точность установки благодаря 3D-моделированию</div>
+											<p>Проводим КТ&nbsp;верхних и&nbsp;нижних челюстей, <strong>создаём цифровые оттиски зубов</strong>&nbsp;&mdash; компьютерную 3D-модель всей полости рта.</p>
+											<p>Дальше виртуально устанавливаем будущие импланты, обходя нервы, сосуды и&nbsp;истончённые места кости. <br>Ещё до&nbsp;начала операции мы&nbsp;выбираем точное местоположение будущего импланта и&nbsp;угол его наклона.</p>
+											<p>В&nbsp;планировании принимают участие врачи разных специализаций: хирурги, ортодонты, ортопеды и&nbsp;иногда пародонтологи.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="sGuarantees__item">
+								<div class="row">
+									<div class="sGuarantees__col col-lg-6">
+										<div class="sGuarantees__img-wrap2">
+											<div class="sGuarantees__img-wrap"><img src="img/gif/sGuarantees-3.gif" loading="lazy" alt=""/>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="sGuarantees__text-block">
+											<div class="h4">Можем поставить имплант за&nbsp;1&nbsp;день</div>
+											<p>О&nbsp;такой скорости мечтают все пациенты и&nbsp;протоколы одномоментной имплантации это позволяют. Ещё процедуру называют бесшовной, бескровной и&nbsp;моментальной.</p>
+											<p>То&nbsp;есть после первой консультации, где был осмотр и&nbsp;сделаны снимки, в&nbsp;нашей лаборатории производится и&nbsp;рассчитывается всё необходимое для имплантации. А&nbsp;на&nbsp;следующей консультации устанавливается абатмент, коронка, и&nbsp;человек сразу&nbsp;же уходит со&nbsp;&laquo;своим&raquo; зубом, полностью готовым к&nbsp;работе.</p>
+											<p>Но&nbsp;у&nbsp;этой процедуры есть большой список противопоказаний, поэтому многим людям она не&nbsp;подходит. Возможно, вы&nbsp;будете исключением.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sGuarantees-->
+		<!-- start sWithFamily-->
+		<section class="sWithFamily section" id="sWithFamily">
+			<!-- picture-->
+			<picture class="picture-bg"> 
+				<noscript class="loading-lazy">
+					<source srcset="img/@2x/webp/whithFamily-bg.webp" loading="lazy" type="image/webp"/><img class="object-fit-js" src="img/@2x/whithFamily-bg.jpg" loading="lazy" alt=""/>
+				</noscript>
+			</picture>
+			<!-- /picture-->
+			<div class="container">
+				<div class="section-title">
+					<h2>Ви&#769;дите, в&nbsp;нашу цифровую стоматологию нового поколения 3D Clinic не&nbsp;страшно ходить всей семьёй</h2>
+				</div>
+				<div class="sWithFamily__row row">
+					<div class="col-md-5">
+						<p><strong>Новое поколение в&nbsp;стоматологии 3D&nbsp;Clinic&nbsp;&mdash;</strong> это, когда анестезию делает аппарат со специальным программным обеспечением, дозируя обезболивающее со&nbsp;скоростью 1&nbsp;капля в&nbsp;две секунды. Сам укол не&nbsp;чувствуется совсем.</p>
+						<p>Это компьютерная томография, сканирование полости рта и&nbsp;лица, виртуальный дизайн улыбки, лечение только под микроскопом CARL ZEISS, печать 3D&nbsp;шаблонов и&nbsp;фрезеровка будущих зубов.</p>
+					</div>
+					<div class="col-md-5">
+						<p><strong>Комфорт в&nbsp;3D&nbsp;Clinic&nbsp;&mdash;</strong> это, когда утопаешь в 8&#8209;позиционном кресле с&nbsp;дополнительными валиками для спины и&nbsp;шеи, а&nbsp;во&nbsp;время процедур смотришь интересный фильм в&nbsp;очках.</p>
+						<p>Самая частая фраза в&nbsp;нашей<br> стоматологии: &laquo;Уже всё??&raquo;.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="sWithFamily__col col-lg-3">
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/WithFamily-1.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/WithFamily-1.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/WithFamily-1.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+								<source srcset="img/@1x/WithFamily-1.png" loading="lazy" type="image/png"/><img src="img/@2x/WithFamily-1.png" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+						<div class="sWithFamily__text"><strong>3D-принтер</strong> с&nbsp;точностью печати в&nbsp;25&nbsp;микрон работает с&nbsp;безвредными материалами, сертифицированными в&nbsp;Европе
+						</div>
+					</div>
+					<div class="sWithFamily__col col-lg-5">
+						<div class="sWithFamily__text">То самое удобное 8-позиционное <strong>кресло</strong> Sirona C2+
+						</div>
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/WithFamily-2.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/WithFamily-2.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/WithFamily-2.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+								<source srcset="img/@1x/WithFamily-2.png" loading="lazy" type="image/png"/><img src="img/@2x/WithFamily-2.png" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+					</div>
+					<div class="sWithFamily__col col-lg-4">
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/WithFamily-3.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/WithFamily-3.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/WithFamily-3.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+								<source srcset="img/@1x/WithFamily-3.png" loading="lazy" type="image/png"/><img src="img/@2x/WithFamily-3.png" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+						<div class="sWithFamily__text"><strong>Микроскоп CARL ZEISS</strong> увеличивает изображения в 12,5 раз — не пропустит остатки кариеса
+						</div>
+					</div>
+					<div class="sWithFamily__col col-lg-6">
+					</div>
+					<div class="sWithFamily__col col-lg-6">
+						<div class="sWithFamily__text">Томограф ORTHOPHOS SL 3D&nbsp;даёт самую полную и высокоточную диагностику всей зубочелюстной системы
+						</div>
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/WithFamily-4.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/WithFamily-4.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/WithFamily-4.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+								<source srcset="img/@1x/WithFamily-4.png" loading="lazy" type="image/png"/><img src="img/@2x/WithFamily-4.png" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sWithFamily-->
+		<!-- start sReviews-->
+		<div class="sReviews section" id="sReviews">
+			<div class="sReviews__bgcWrap"><img src="img/@2x/sReviews.jpg" alt=""/>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="h2">Пациенты нам как семья.<br>Послушайте их&nbsp;истории.</div>
+						<div class="sReviews__feedback">Тут будет яркий отрывок из всего отзыва. Самая суть сказанного. Лучшая цитата, т.к. далеко не все будут нажимать на plаy, но главное из отзыва они должны понять.
+						</div>
+						<div class="sReviews__row row">
+							<div class="sReviews__col col-6 col-md-12 col-lg-6">
+								<div class="sReviews__item">
+									<svg class="icon icon-advantages-1 ">
+										<use xlink:href="img/svg/sprite.svg#advantages-1"></use>
+									</svg>
+									<div class="h6"><b>8</b> лет <br>работает 3D Clinic</div>
+								</div>
+							</div>
+							<div class="sReviews__col col-6 col-md-12 col-lg-6">
+								<div class="sReviews__item">
+									<svg class="icon icon-advantages-2 ">
+										<use xlink:href="img/svg/sprite.svg#advantages-2"></use>
+									</svg>
+									<div class="h6"><b>6 000</b> зубов<br> спасли от удаления</div>
+								</div>
+							</div>
+							<div class="sReviews__col col-6 col-md-12 col-lg-6">
+								<div class="sReviews__item">
+									<svg class="icon icon-advantages-3 ">
+										<use xlink:href="img/svg/sprite.svg#advantages-3"></use>
+									</svg>
+									<div class="h6"><b>15 000</b> зубов реставрировано</div>
+								</div>
+							</div>
+							<div class="sReviews__col col-6 col-md-12 col-lg-6">
+								<div class="sReviews__item">
+									<svg class="icon icon-advantages-4 ">
+										<use xlink:href="img/svg/sprite.svg#advantages-4"></use>
+									</svg>
+									<div class="h6"><b>20 000</b> <br>анестезий</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 order-md-first"><a class="sReviews__imgWrap" href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video"><span class="sReviews__iconWrap">
+						<svg class="icon icon-play ">
+							<use xlink:href="img/svg/sprite.svg#play"></use>
+						</svg></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end sReviews-->
+		<!-- start sSpecialist-->
+		<section class="sSpecialist section" id="sSpecialist">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="sSpecialist__slider swiper-container specialistSlider-js">
+							<div class="specialistSlider-prev">
+								<svg class="icon icon-sliderArrow ">
+									<use xlink:href="img/svg/sprite.svg#sliderArrow"></use>
+								</svg>
+							</div>
+							<div class="swiper-wrapper">
+											<div class="swiper-slide"><a class="sSpecialist__slide" href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video">
+												<picture>
+													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/technology-3.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/technology-3.jpg" alt=""/>
+												</picture><span class="sSpecialist__play">
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg></span></a>
+											</div>
+											<div class="swiper-slide"><a class="sSpecialist__slide" href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video">
+												<picture>
+													<source class="swiper-lazy" srcset="#" data-srcset="img/@2x/webp/technology-3.webp" type="image/webp"/><img class="swiper-lazy" src="#" data-src="img/@2x/technology-3.jpg" alt=""/>
+												</picture><span class="sSpecialist__play">
+												<svg class="icon icon-play ">
+													<use xlink:href="img/svg/sprite.svg#play"></use>
+												</svg></span></a>
+											</div>
+							</div>
+							<div class="specialistSlider-next">
+								<svg class="icon icon-sliderArrow ">
+									<use xlink:href="img/svg/sprite.svg#sliderArrow"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="section-title">
+							<h2>Имплантацию проведёт Шевцов Александр Александрович</h2>
+						</div>
+						<div class="row">
+							<div class="sSpecialist__col col-md-8 col-xl-auto">
+								<div class="h5">Стоматолог-хирург</div>
+								<p><strong>Стаж:</strong> 9 лет</p>
+								<div class="sSpecialist__text"><strong>Специализация:</strong> челюстно-лицевая хирургия, имплантация. Установка имплантатов, костная и&nbsp;мягкотканная пластика, мукогингивальная хирургия (пластические операции на&nbsp;слизистой полости рта), атравматическое удаление зубов повышенной степени сложности.
+								</div>
+								<div class="sSpecialist__interests">Интересы:
+								</div>
+								<ul>
+									<li>Активно занимается хоккеем;</li>
+									<li>Любит красивые и быстрые машины</li>
+								</ul>
+							</div>
+							<div class="col-5 col-md"><a class="sSpecialist__certificate" href="img/@2x/certificate.jpg" data-fancybox="certificate">
+								<!-- picture-->
+								<picture> 
+									<noscript class="loading-lazy">
+										<source srcset="img/@2x/webp/certificate.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+										<source srcset="img/@1x/webp/certificate.webp" loading="lazy" type="image/webp"/>
+										<source srcset="img/@2x/certificate.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+										<source srcset="img/@1x/certificate.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/certificate.jpg" loading="lazy" alt=""/>
+									</noscript>
+								</picture>
+								<!-- /picture--></a><a class="sSpecialist__allCertificate" href="#">
+								<svg class="icon icon-document ">
+									<use xlink:href="img/svg/sprite.svg#document"></use>
+								</svg><span>Все 24 сертификата</span></a>
+							</div>
+							<div class="col col-md-12">
+								<div class="sSpecialist__partners">
+									<div class="sSpecialist__partnerItem">
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/partner-1.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="img/@1x/webp/partner-1.webp" loading="lazy" type="image/webp"/>
+												<source srcset="img/@2x/partner-1.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+												<source srcset="img/@1x/partner-1.png" loading="lazy" type="image/png"/><img src="img/@2x/partner-1.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="sSpecialist__partnerItem">
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/partner-2.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="img/@1x/webp/partner-2.webp" loading="lazy" type="image/webp"/>
+												<source srcset="img/@2x/partner-2.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+												<source srcset="img/@1x/partner-2.png" loading="lazy" type="image/png"/><img src="img/@2x/partner-2.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="sSpecialist__partnerItem">
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/partner-3.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="img/@1x/webp/partner-3.webp" loading="lazy" type="image/webp"/>
+												<source srcset="img/@2x/partner-3.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+												<source srcset="img/@1x/partner-3.png" loading="lazy" type="image/png"/><img src="img/@2x/partner-3.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="sSpecialist__partnerItem">
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/partner-4.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="img/@1x/webp/partner-4.webp" loading="lazy" type="image/webp"/>
+												<source srcset="img/@2x/partner-4.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+												<source srcset="img/@1x/partner-4.png" loading="lazy" type="image/png"/><img src="img/@2x/partner-4.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="sSpecialist__partnerItem">
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/partner-5.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+												<source srcset="img/@1x/webp/partner-5.webp" loading="lazy" type="image/webp"/>
+												<source srcset="img/@2x/partner-5.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+												<source srcset="img/@1x/partner-5.png" loading="lazy" type="image/png"/><img src="img/@2x/partner-5.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+								</div>
+							</div>
+						</div><a class="sSpecialist__btn" href="#">Записаться на консультацию</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sSpecialist-->
+		<!-- start sMyths-->
+		<section class="sMyths section bg-dark" id="sMyths">
+			<div class="container">
+				<div class="section-title">
+					<h2>А теперь бонус для тех, кто прочитал почти до конца, — мифы про импланты</h2>
+				</div>
+				<div class="row">
+					<div class="sMyths__col col-lg-8">
+						<div class="sMyths__text">
+							<div class="sMyths__title">01 миф
+							</div>
+							<div class="h5">Импланты редко приживаются</div><a class="sMyths__link" href="#"> <span>А на самом деле</span>
+							<svg class="icon icon-arrow-r-long ">
+								<use xlink:href="img/svg/sprite.svg#arrow-r-long"></use>
+							</svg></a>
+						</div>
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/myths-1.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/myths-1.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/myths-1.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+								<source srcset="img/@1x/myths-1.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/myths-1.jpg" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+					</div>
+					<div class="sMyths__col col-lg-4">
+						<div class="sMyths__text">
+							<div class="sMyths__title">02 миф
+							</div>
+							<div class="h5">Импланты долго устанавливаются</div><a class="sMyths__link" href="#"> <span>А на самом деле</span>
+							<svg class="icon icon-arrow-r-long ">
+								<use xlink:href="img/svg/sprite.svg#arrow-r-long"></use>
+							</svg></a>
+						</div>
+					</div>
+					<div class="sMyths__col col-lg-8">
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/myths-2.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/myths-2.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/myths-2.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+								<source srcset="img/@1x/myths-2.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/myths-2.jpg" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+						<div class="sMyths__text">
+							<div class="sMyths__title">03 миф
+							</div>
+							<div class="h5">Импланты — это дорого, их могут себе позволить только богатые люди</div><a class="sMyths__link" href="#"> <span>А на самом деле</span>
+							<svg class="icon icon-arrow-r-long ">
+								<use xlink:href="img/svg/sprite.svg#arrow-r-long"></use>
+							</svg></a>
+						</div>
+					</div>
+					<div class="sMyths__col col-lg-4">
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/myths-3.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/myths-3.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/myths-3.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+								<source srcset="img/@1x/myths-3.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/myths-3.jpg" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+						<div class="sMyths__text">
+							<div class="sMyths__title">04 миф
+							</div>
+							<div class="h5">Импланты устанавливать больно</div><a class="sMyths__link" href="#"> <span>А на самом деле</span>
+							<svg class="icon icon-arrow-r-long ">
+								<use xlink:href="img/svg/sprite.svg#arrow-r-long"></use>
+							</svg></a>
+						</div>
+					</div>
+					<div class="sMyths__col col-lg-5">
+					</div>
+					<div class="sMyths__col col-lg-4">
+						<div class="sMyths__text">
+							<div class="sMyths__title">05 миф
+							</div>
+							<div class="h5">Потеряли зуб — не страшно, можно установить импланты когда-нибудь потом</div><a class="sMyths__link" href="#"> <span>А на самом деле</span>
+							<svg class="icon icon-arrow-r-long ">
+								<use xlink:href="img/svg/sprite.svg#arrow-r-long"></use>
+							</svg></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sMyths-->
+		<!-- start sLocation-->
+		<section class="sLocation" id="sLocation">
+			<div class="container">
+				<div class="row">
+					<div class="sLocation__col col-lg-6">
+						<div class="section-title">
+							<h2>3D clinic</h2>
+						</div>
+						<div class="h5">Харьков,<br> ул. Юри Зойфера, д.3 (Анри Барбюса, д.&nbsp;3)</div>
+						<div class="sLocation__contactWrap">
+							<div class="sLocation__time">Пн-Пт: с 9:00 до 20:00<br>Сб-Вс: с 10:00 до 18:00
+							</div><a class="sLocation__phone" href="tel:380986333595">+38 (098) 633 35 95</a><a class="sLocation__phone" href="tel:380577628733">+38 (057) 762 87 33</a>
+						</div>
+						<p>Это центр города, выход метро &laquo;Держпром&raquo;. Метро &laquo;Университет&raquo; и&nbsp;&laquo;Научная&raquo;&nbsp;&mdash; в&nbsp;10&nbsp;минутах ходьбы.</p>
+						<p>Много парковочных мест возле клиники, особенно после 12:00 и&nbsp;до&nbsp;20:00.</p>
+						<p>В&nbsp;будние дни лучше приезжать с&nbsp;утра, к&nbsp;открытию&nbsp;&mdash; в&nbsp;09:00. А&nbsp;ещё лучше даже немного заранее, чтобы не&nbsp;попасть в&nbsp;пробки. Около нас нет пробок и&nbsp;с&nbsp;11:00 до&nbsp;14:00, и&nbsp;вечером после 18:00.</p>
+					</div>
+					<div class="col">
+						<div class="sLocation__mapWrap"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2564.260884706492!2d36.222477515988366!3d50.00646522713663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4127a11fbb0aafbb%3A0xf1c5c471b09aed29!2z0YPQuy4g0K7RgNGLINCX0L7QudGE0LXRgNCwLCAzLCDQpdCw0YDRjNC60L7Qsiwg0KXQsNGA0YzQutC-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgNjEwMDA!5e0!3m2!1sru!2sua!4v1600716826626!5m2!1sru!2sua" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end sLocation-->
+		<footer class="footer block-with-lazy">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-sm-auto order-first"><a class="footer__logo" href="/">
+						<!-- picture-->
+						<picture> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/logo.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/logo.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/logo.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+								<source srcset="img/@1x/logo.png" loading="lazy" type="image/png"/><img src="img/@2x/logo.png" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture--></a>
+						<div class="footer__descr">Роботизированная стоматология в Харькове — работаем без малейшей боли, часто с пожизненной гарантией
+						</div>
+					</div>
+					<div class="col-sm-auto"><a class="footer__tel" href="tel:380577628733">+38 (057) 762 87 33</a>
+						<div class="footer__location">г.Харьков,<br> ул. Юри Зойфера, д.3
+						</div>
+						<div class="soc"><a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-fb ">
+								<use xlink:href="img/svg/sprite.svg#fb"></use>
+							</svg></a><a class="soc__item" href="#" target="_blank">
+							<svg class="icon icon-instagram ">
+								<use xlink:href="img/svg/sprite.svg#instagram"></use>
+							</svg></a>
+						</div>
+					</div>
+					<div class="col-lg-auto order-lg-first">
+						<div class="footer__nav">
+							<div class="footer__navTitle">Навигация
+							</div>
+							<ul>
+								<li><a href="#">ЧИСТКА ЗУБОВ</a></li>
+								<li><a href="#">ЛЕЧЕНИЕ ЗУБОВ</a></li>
+								<li><a href="#">ОТБЕЛИВАНИЕ ЗУБОВ</a></li>
+								<li><a href="#">ВИНИРЫ</a></li>
+								<li><a href="#">ИМПЛОНТАЦИЯ</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="footer__foot">
+					<div class="row justify-content-between">
+						<div class="col-auto">
+							<div class="footer__copyright">3D Clinic ® 2020. Любое использование либо копирование материалов или подборки материалов сайта допускается лишь с разрешения правообладателя и только со ссылкой на источник: 3dclinic.com.ua.
+							</div>
+						</div>
+						<div class="col-auto">
+							<div class="footer__copyright">2020 © стоматология - 3D Clinic<a class="footer__polite" href="#">Политика конфиденциальности</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--  start modals-->
+		<div class="modal-win" id="modal-call" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="text-center">
+						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+						</div>
+						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					</div>
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit"> 
+					</button>
+					<div class="form-wrap__polite">
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<!-- end modals-->
+		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
+		<script src="libs/jquery/jquery.min.js"></script>
+		<!-- modal libs-->
+		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
+		<!-- modal libs-->
+		<!-- slider libs-->
+		<script src="libs/swiper/js/swiper.min.js"></script>
+		<!-- /slider libs-->
+		<script src="libs/typed.js/lib/typed.min.js"></script>
+		<script src="libs2/baslider-master/js/baslider.js"></script>
+		<script src="libs/intl-tel-input/build/js/intlTelInput.min.js"></script>
+		<script src="js/common.js"></script>
+	</body>
+</html>
