@@ -11,6 +11,7 @@
 	&__slider {
 		display: flex;
 		align-items: center;
+		margin-bottom: 30px;
 	}
 
 	.examples-next, .examples-prev {
@@ -60,6 +61,27 @@
 		picture {
 			margin-bottom: rem(70);
 		}
+	}
+
+
+	ul{
+		list-style-type: none;
+	}
+	
+	li {
+		position: relative;
+		padding-left: 39px;
+		padding-bottom: 30px;
+	}
+
+	li::before {
+		content: "";
+		height: 4px;
+    width: 26px;
+		background-color: #2A03CC;;
+		position: absolute;
+		left: 0;
+		top: 9px;
 	}
 
 

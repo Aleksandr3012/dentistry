@@ -1,0 +1,123 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sGuarantees/_sGuarantees.pug
+include ../blocks/sExamples/_sExamples.pug
+include ../blocks/sWithFamily/_sWithFamily.pug
+include ../blocks/sLocation/_sLocation.pug
+include ../blocks/sSpecialist/_sSpecialist.pug
+include ../blocks/sMyths/_sMyths.pug
+include ../blocks/sReviews/_sReviews.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '3DCLINIC'
+	title= title
+block pagecontent
+	+header()
+		+topLine()
+		+top-nav(class='d-none d-lg-block')
+	+sForm-06(class='bg-light')
+	+sExamples-06()
+	+sGuarantees(class="sGuarantees-bgLight")
+		+b.section-title
+			h2(style='font-weight: normal;') А&nbsp;теперь подробнее: как проходит ультразвуковая чистка зубов в&nbsp;3D&nbsp;Clinic (хватит 1&nbsp;сеанса)
+
+		div
+			mixin item(i,h)
+				+e.item
+					.row
+						+e.col.col-lg-6
+							+e.img-wrap2
+								+e.img-wrap
+									img(src=`img/gif/sG-${i}.gif`, loading="lazy" alt="")
+								
+						.col-lg-6
+							+e.text-block
+								.h4!= h
+								block
+
+			+item(8, 'Тщательно исследуем каждый ваш зуб')
+				p Проводим PSR-скрининг-тест&nbsp;&mdash; оцениваем состояние дёсен, уровень кровоточивости, наличие зубного камня.
+
+				p На&nbsp;зубы наносится специальный раствор, который окрашивает зубной налет и&nbsp;микробную бляшку. Благодаря этому сразу видны трудные участки для очищения.
+
+			+item(9, `Удаляем зубные камни без боли`)
+				p Наше продвинутое устройство ProSmile Handy создаёт микровибрации, которые дробят все зубные камни даже в&nbsp;труднодоступных местах и&nbsp;при этом не&nbsp;повреждают зубы и&nbsp;дёсны.
+				
+				p Это не&nbsp;больно&nbsp;&mdash; мы&nbsp;тщательно за&nbsp;этим следим. Для этого мы&nbsp;регулируем силу колебаний устройства , устанавливаем неизношенные насадки и&nbsp;подогреваем воду.
+
+			+item(10, `Полируем зубы новейшими средствами`)
+				p Порошком-пудрой с&nbsp;глицином удаляем налёт на&nbsp;зубах. Эта улучшенная формула щадит зубную эмаль и&nbsp;эффективно борется с&nbsp;бактериями в&nbsp;зубодесневых карманах.
+				
+				p Полируем зубы щётками и&nbsp;резинками, прочищаем межзубные промежутки флоссами, а&nbsp;повреждённые дёсны заботливо обрабатываем спецпрепаратом
+
+			+item(11, `Фторируем зубы, усиливая защиту эмали`)
+				p Раствором фтора в&nbsp;виде геля или лака укрепляем естественное эмалевое покрытие, снижаем чувствительность зубов и&nbsp;не&nbsp;даём развиться кариесу.
+				
+				p Наш натуральный препарат аналогичен естественному гидроксиапатиту, который входит в&nbsp;состав костей и&nbsp;зубов. Его рекомендуют даже беременным.
+
+	+sWithFamily()
+	+sReviews()
+	+sSpecialist('sl')
+		.row
+			.col-lg-5
+				mixin slide(i)
+					.swiper-slide
+						+e.slide(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
+							picture
+								source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/technology-3.webp` type="image/webp")
+								img.swiper-lazy(src="#" data-src=`img/@2x/technology-3.jpg`, alt="")
+							+e.play
+								+icon('play')
+				+e.slider.swiper-container.specialistSlider-js
+					if sl
+						.specialistSlider-prev
+							+icon('sliderArrow')
+					.swiper-wrapper
+						if sl
+							+slide()
+							+slide()
+						else
+							+slide()
+					if sl
+						.specialistSlider-next
+							+icon('sliderArrow')
+
+			.col
+				+b.section-title
+					h2 Ультразвуковую чистку зубов проведёт Лозовая Анна Романовна
+				.row
+					+e.col.col-md-8.col-xl-auto
+						.h5 Врач-парадонтолог
+						p #[strong Стаж:] 5 лет
+						+e.text #[strong Специализация:] профессиональная гигиена полости рта, парадонтологическое лечение (поддесневой скейлинг, закрытый кюретаж) отбеливание.
+					.col-5.col-md
+						+e.certificate(href="img/@2x/certificate.jpg" data-fancybox="certificate")
+							+pic('certificate')
+						+e.allCertificate(href="#")
+							+icon('document')
+							span Все 24 сертификата
+					.col.col-md-12
+						+e.partners
+							mixin partnerItem(i)
+								+e.partnerItem
+									+pic(`partner-${i}.png`)
+							+partnerItem(1)
+							+partnerItem(2)
+							+partnerItem(3)
+							+partnerItem(4)
+							+partnerItem(5)
+					
+				+e.btn(href="#") Пройти vip-чистку зубов за&nbsp;1300 грн
+	//- +sMyths(class="bg-dark")
+	+sLocation()
+
+	+footer()
+
+
+	

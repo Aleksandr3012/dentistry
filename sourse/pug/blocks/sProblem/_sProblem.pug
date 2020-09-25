@@ -2,29 +2,32 @@ mixin sProblem()
 	// start sProblem
 	+b.SECTION.sProblem.section#sProblem&attributes(attributes)
 		.container
-			+b.section-title
-				h2 С&nbsp;этими проблемами к&nbsp;нам&nbsp;приходят чаще всего
-			+problemItem('1_1','Лозовая Анна Романовна','lg')(class="bg-primary problemItem-lg")
-				.h6 Сохраните зубы на долгие годы
-				.h4 Комплексная чистка
-			.row
-				.col-lg-6
-					+problemItem('1','Лозовая Анна Романовна')(class="bg-secondary")
-						.h6 Сделайте зубы, как у голливудских звёзд
-						.h4 Отбеливание зубов
-				.col-lg-6
-					+problemItem('2','Левицкая Виктория Витальевна')(class="--h6sm bg-primary")
-						.h6 Скройте недостатки зубов
-						.h4 Виниры
-				.col-lg-6
-					+problemItem('3','Лозовая Анна Романовна')(class="bg-primary")
-						.h6 Забудьте о кариесе, гингивите, пульпите
-						.h4 Лечение зубов
-				.col-lg-6
-					+problemItem('4','Шевцов Александр Александрович')(class="bg-secondary")
-						.h6 Поставьте импланты №1 — без боли и с гарантией
-						.h4 Импланты навсегда
-	// end sProblem
+			if block
+				block
+			else
+				+b.section-title
+					h2 С&nbsp;этими проблемами к&nbsp;нам&nbsp;приходят чаще всего
+				+problemItem('1_1','Лозовая Анна Романовна','lg')(class="bg-primary problemItem-lg")
+					.h6 Сохраните зубы на долгие годы
+					.h4 Комплексная чистка
+				.row
+					.col-lg-6
+						+problemItem('1','Лозовая Анна Романовна')(class="bg-secondary")
+							.h6 Сделайте зубы, как у голливудских звёзд
+							.h4 Отбеливание зубов
+					.col-lg-6
+						+problemItem('2','Левицкая Виктория Витальевна')(class="--h6sm bg-primary")
+							.h6 Скройте недостатки зубов
+							.h4 Виниры
+					.col-lg-6
+						+problemItem('3','Лозовая Анна Романовна')(class="bg-primary")
+							.h6 Забудьте о кариесе, гингивите, пульпите
+							.h4 Лечение зубов
+					.col-lg-6
+						+problemItem('4','Шевцов Александр Александрович')(class="bg-secondary")
+							.h6 Поставьте импланты №1 — без боли и с гарантией
+							.h4 Импланты навсегда
+		// end sProblem
 
 mixin problemItem(i,name,lg)
 	+b.problemItem(href="#")&attributes(attributes)

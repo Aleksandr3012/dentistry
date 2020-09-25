@@ -48,3 +48,88 @@ mixin sExamples()
 								+item('3','коронка')
 
 	// end sExamples
+
+
+mixin sExamples-04()
+	// start sExamples-04
+	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
+		.container
+			.row
+				.col-6
+					+e.slider
+						mixin slide(i)
+							.swiper-slide.swiper-no-swiping
+								+e.slide.ba-slider
+									picture
+										source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
+										img(src=`img/@2x/examples-${i}.jpg`, alt="")
+									.resize
+										picture
+											source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
+											img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
+									span.handle
+						.examples-prev
+							+icon('sliderArrow')
+						.swiper-container.examplesSlider-js
+							.swiper-wrapper
+								+slide('1')
+								+slide('2')
+								+slide('1')
+								+slide('2')
+						.examples-next
+							+icon('sliderArrow')
+				.col
+					+b.section-title
+						h2 Если у&nbsp;вас болит зуб, это сигнал о&nbsp;его нездоровье. А&nbsp;ещё о&nbsp;том, что зуб пока ещё можно спасти. Скорее всего, без сложных и&nbsp;дорогих операций. И&nbsp;без удаления.
+					p Во&nbsp;рту есть как полезные, так и&nbsp;патогенные бактерии. Если они в&nbsp;равных силах, то&nbsp;всё нормально&nbsp;&mdash; полезные помогают создавать условия, при которых патогенные погибают.
+					p Но&nbsp;когда патогенные скапливаются в&nbsp;одном месте, они образуют зубной налёт, а&nbsp;потом и&nbsp;камни. Развивается кариес и&nbsp;разрушается эмаль.
+					p Чем дольше тянуть с&nbsp;походом к&nbsp;стоматологу, тем серьёзнее станет поражение эмали и&nbsp;следующего за&nbsp;ним слоя&nbsp;&mdash; дентина. Болеть будет сильнее, лечение проходить дольше и&nbsp;дороже. И&nbsp;всё может закончиться удалением зуба и&nbsp;имплантом.
+					p А&nbsp;ведь всего лишь нужно было сходить на&nbsp;одну консультацию. Тем более сейчас вы&nbsp;убедитесь, что это совсем не&nbsp;страшно...
+
+	// end sExamples-04
+
+
+mixin sExamples-06()
+	// start sExamples-06
+	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
+		.container
+			.row
+				.col-6
+					+e.slider
+						mixin slide(i)
+							.swiper-slide.swiper-no-swiping
+								+e.slide.ba-slider
+									picture
+										source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
+										img(src=`img/@2x/examples-${i}.jpg`, alt="")
+									.resize
+										picture
+											source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
+											img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
+									span.handle
+						.examples-prev
+							+icon('sliderArrow')
+						.swiper-container.examplesSlider-js
+							.swiper-wrapper
+								+slide('1')
+								+slide('2')
+								+slide('1')
+								+slide('2')
+						.examples-next
+							+icon('sliderArrow')
+					ul
+						li Убираем неприятный запах изо рта
+						li Работаем с&nbsp;желтизной от&nbsp;никотина, кофе, чая, пищевых красителей
+						li Предупреждаем кариес, кровоточивость дёсен
+				.col
+					+b.section-title
+						h2 Зачем проходить ультразвуковую чистку зубов?
+					h5 Это лучшее средство сохранить зубы на&nbsp;всю жизнь
+					br
+					br
+					p Проведите языком по&nbsp;зубам. Если вы&nbsp;почувствовали что-то шероховатое, то&nbsp;это зубной налёт. Со&nbsp;временем он&nbsp;уплотняется, и&nbsp;образуется зубной камень.
+					p Эти камни развиваются у&nbsp;70% людей, даже, если регулярно чистить зубы. Скорее всего, они есть и&nbsp;у&nbsp;вас. В&nbsp;зеркале зубные камни можно и&nbsp;не&nbsp;увидеть&nbsp;&mdash; часто они скрываются в&nbsp;десневом кармане.
+					p Так вот, под этими камнями (или по&nbsp;их&nbsp;краям) любит развиваться кариес. Иногда это приводит к&nbsp;жутким болям (пульпит) или к&nbsp;потере зуба.
+					p Такой зубной камень обычной щёткой уже не&nbsp;удалить&nbsp;&mdash; нужно проходить ультразвуковую (кабинетную) чистку зубов.
+
+	// end sExamples-06

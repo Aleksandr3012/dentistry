@@ -132,6 +132,23 @@
 		}
 	}
 
+	.form03{
+		@include media-breakpoint-up(lg) {
+			max-width: rem(580) !important;
+			padding-right: 30px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-right: 70px;
+			max-width: rem(765) !important;
+		}
+	}
+
+	.btn06{
+		// padding-left: 3px;
+		// padding-right: 3px;
+		max-width: 330px;
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
