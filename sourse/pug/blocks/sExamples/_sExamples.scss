@@ -149,6 +149,32 @@
 		top: 9px;
 	}
 
+	.h4 {
+		margin-bottom: rem(30);
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(40);
+		.icon {
+			flex-shrink: 0;
+			color: $primary;
+			font-size: rem(30);
+			margin-right: rem(10);
+			@include media-breakpoint-up(sm) {
+				font-size: rem(40);
+				margin-right: rem(20);
+			}
+			display: block;
+		}
+
+		span {
+			font-size: $small;
+			letter-spacing: rem(-0.4);
+		}
+	}
+
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

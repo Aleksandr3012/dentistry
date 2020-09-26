@@ -11,6 +11,7 @@ include ../blocks/sLocation/_sLocation.pug
 include ../blocks/sSpecialist/_sSpecialist.pug
 include ../blocks/sMyths/_sMyths.pug
 include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sSafety/_sSafety.pug
 
 block variables
 	- let  mainPage= null
@@ -22,11 +23,11 @@ block pagecontent
 		+topLine()
 		+top-nav(class='d-none d-lg-block')
 	+sForm-05(class='bg-light')
-	+sExamples()
-	
+	+sExamples-05()
+	+sSafety(class='bg-light')
 	
 	//- +sContact()
-	+sGuarantees(class="sGuarantees-bgLight")
+	+sGuarantees
 	+sWithFamily()
 	+sReviews()
 	+sSpecialist('sl')

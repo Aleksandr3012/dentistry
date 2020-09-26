@@ -88,7 +88,7 @@ mixin sForm-04()
 
 mixin sForm-05()
 	// start sForm-05
-	+b.sForm.section#sForm&attributes(attributes)
+	+b.sForm--05.section#sForm&attributes(attributes)
 		.container
 			.row
 				+e.col.col-lg-auto
@@ -106,9 +106,9 @@ mixin sForm-05()
 						img(loading="lazy" src="img/svg/formArrow.svg", alt="")
 				+e.formCol.col-lg
 					+form-wrap()(class="--form-h")
-						+e.headline Определим, есть ли у вас противопоказания, и наглядно покажем какой цвет эмали будет после отбеливания
+						+e.headline Оставьте номер телефона и придите на бесплатную консультацию
 						+e.body
-							+e.text.h6 Гарантируем решение проблемы один раз и на всю жизнь
+							+e.text.h6 Определим, есть&nbsp;ли у&nbsp;вас противопоказания, и&nbsp;наглядно покажем какой цвет эмали будет после отбеливания
 							+input("+380 (99) 999-99-99",'tel')
 							+e.small Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
 							+e.btn(type="submit") Пройти на бесплатную консультацию

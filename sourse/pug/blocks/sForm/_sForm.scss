@@ -163,6 +163,32 @@
 			}
 		}
 	}
+
+	&--05 {
+		.sForm__date {
+			right: rem(-40);
+			top: 15rem;
+			@include media-breakpoint-up(md) {
+				top: 10rem;
+				right: 0;
+			}
+			@include media-breakpoint-up(lg) {
+				right: rem(10);
+				top: rem(320);
+			}
+			@include media-breakpoint-up(xl) {
+				top: rem(240);
+				right: rem(120);
+			}
+		}
+
+		.section-title {
+			p {
+				max-width: rem(420);
+			}
+		}
+	}
+
 	.form03{
 		@include media-breakpoint-up(lg) {
 			max-width: rem(580) !important;
