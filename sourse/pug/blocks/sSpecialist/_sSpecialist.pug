@@ -2,61 +2,63 @@ mixin sSpecialist(sl)
 	// start sSpecialist
 	+b.SECTION.sSpecialist.section#sSpecialist&attributes(attributes)
 		.container
-				
-			.row
-				.col-lg-5
-					mixin slide(i)
-						.swiper-slide
-							+e.slide(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
-								picture
-									source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/technology-3.webp` type="image/webp")
-									img.swiper-lazy(src="#" data-src=`img/@2x/technology-3.jpg`, alt="")
-								+e.play
-									+icon('play')
-					+e.slider.swiper-container.specialistSlider-js
-						if sl
-							.specialistSlider-prev
-								+icon('sliderArrow')
-						.swiper-wrapper
+			if block
+				block
+			else	
+				.row
+					.col-lg-5
+						mixin slide(i)
+							.swiper-slide
+								+e.slide(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
+									picture
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/technology-3.webp` type="image/webp")
+										img.swiper-lazy(src="#" data-src=`img/@2x/technology-3.jpg`, alt="")
+									+e.play
+										+icon('play')
+						+e.slider.swiper-container.specialistSlider-js
 							if sl
-								+slide()
-								+slide()
-							else
-								+slide()
-						if sl
-							.specialistSlider-next
-								+icon('sliderArrow')
+								.specialistSlider-prev
+									+icon('sliderArrow')
+							.swiper-wrapper
+								if sl
+									+slide()
+									+slide()
+								else
+									+slide()
+							if sl
+								.specialistSlider-next
+									+icon('sliderArrow')
 
-				.col
-					+b.section-title
-						h2 Имплантацию проведёт Шевцов Александр Александрович
-					.row
-						+e.col.col-md-8.col-xl-auto
-							.h5 Стоматолог-хирург
-							p #[strong Стаж:] 9 лет
-							+e.text #[strong Специализация:] челюстно-лицевая хирургия, имплантация. Установка имплантатов, костная и&nbsp;мягкотканная пластика, мукогингивальная хирургия (пластические операции на&nbsp;слизистой полости рта), атравматическое удаление зубов повышенной степени сложности.
-							+e.interests Интересы:
-							ul
-								li Активно занимается хоккеем;
-								li Любит красивые и быстрые машины
-						.col-5.col-md
-							+e.certificate(href="img/@2x/certificate.jpg" data-fancybox="certificate")
-								+pic('certificate')
-							+e.allCertificate(href="#")
-								+icon('document')
-								span Все 24 сертификата
-						.col.col-md-12
-							+e.partners
-								mixin partnerItem(i)
-									+e.partnerItem
-										+pic(`partner-${i}.png`)
-								+partnerItem(1)
-								+partnerItem(2)
-								+partnerItem(3)
-								+partnerItem(4)
-								+partnerItem(5)
-						
-					+e.btn(href="#") Записаться на консультацию
+					.col
+						+b.section-title
+							h2 Имплантацию проведёт Шевцов Александр Александрович
+						.row
+							+e.col.col-md-8.col-xl-auto
+								.h5 Стоматолог-хирург
+								p #[strong Стаж:] 9 лет
+								+e.text #[strong Специализация:] челюстно-лицевая хирургия, имплантация. Установка имплантатов, костная и&nbsp;мягкотканная пластика, мукогингивальная хирургия (пластические операции на&nbsp;слизистой полости рта), атравматическое удаление зубов повышенной степени сложности.
+								+e.interests Интересы:
+								ul
+									li Активно занимается хоккеем;
+									li Любит красивые и быстрые машины
+							.col-5.col-md
+								+e.certificate(href="img/@2x/certificate.jpg" data-fancybox="certificate")
+									+pic('certificate')
+								+e.allCertificate(href="#")
+									+icon('document')
+									span Все 24 сертификата
+							.col.col-md-12
+								+e.partners
+									mixin partnerItem(i)
+										+e.partnerItem
+											+pic(`partner-${i}.png`)
+									+partnerItem(1)
+									+partnerItem(2)
+									+partnerItem(3)
+									+partnerItem(4)
+									+partnerItem(5)
+							
+						+e.btn(href="#") Записаться на консультацию
 
 
 

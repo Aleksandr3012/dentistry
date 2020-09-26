@@ -55,9 +55,39 @@ mixin sForm-02()
 							+input("+380 (99) 999-99-99",'tel')
 							+e.small Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
 							+e.btn(type="submit") Записаться на&nbsp;консультацию
+	// end sForm-02
+
+
+mixin sForm-04()
+	// start sForm-04
+	+b.sForm.section#sForm&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-auto.form03
+					+b.section-title
+						+e.small Стоматология доказательной медицины #[span.text-primary Харькова]
+						h2 #[span.text-primary Лечим зубы под микроскопом с&nbsp;компьютерной анестезией] и&nbsp;с&nbsp;гарантией результата (лечим кариес, гингивит, пульпит, пародонтит, периодонтит)
+						strong Ставим пломбы из&nbsp;фотополимерных композитов. Сохраняем зубы даже тогда, когда другие стоматологи хотят их&nbsp;удалять
+					.h5 Но&nbsp;сначала поставим точный диагноз во&nbsp;время консультации:
+					ol
+						li #[strong Обследуем вашу ротовую] полость по&nbsp;передовым протоколам Universit&auml;t Bern (Швейцария)
+						li #[strong Проведём водные и&nbsp;воздушные пробы, а&nbsp;также Freeze test&nbsp;&mdash; это тест с&nbsp;использованием низких температур.] Делаем ренгтен-диагностику и&nbsp;специальным маркером окрашиваем все пораженные кариесом участки
+						li #[strong Консилиум врачей] во&nbsp;главе с&nbsp;вашим лечащим стоматологом составит план лечения и&nbsp;#[strong зафиксирует стоимость.] Меняться она не&nbsp;будет.
+					+e.arrow.d-none.d-xl-block
+						img(loading="lazy" src="img/svg/formArrow.svg", alt="")
+				+e.formCol.col-lg
+					+form-wrap()(class="--form-h")
+						+e.headline Оставьте свой номер телефона и&nbsp;запишитесь на&nbsp;консультацию по&nbsp;лечению зубов #[span.text-primary без боли]
+						+e.body
+							+e.text.h6 Иногда лечим зубы без сверления, по&nbsp;технологии #[b Icon]
+							+input("+380 (99) 999-99-99",'tel')
+							+e.small Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+							+e.btn(type="submit") Записаться на&nbsp;консультацию
+
+	// end sForm-04
 
 mixin sForm-05()
-	// start sForm
+	// start sForm-05
 	+b.sForm.section#sForm&attributes(attributes)
 		.container
 			.row
@@ -82,3 +112,36 @@ mixin sForm-05()
 							+input("+380 (99) 999-99-99",'tel')
 							+e.small Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
 							+e.btn(type="submit") Пройти на бесплатную консультацию
+
+	// end sForm-05
+
+
+mixin sForm-06()
+	// start sForm-06
+	+b.sForm.section#sForm&attributes(attributes)
+		.container
+			.row
+				+e.col.col-lg-auto
+					+b.section-title
+						+e.small Стоматология доказательной медицины #[span.text-primary Харькова]
+						h2 #[span.text-primary Ультразвуковая vip-чистка зубов] без боли по&nbsp;европейским протоколам с&nbsp;20% скидкой
+					.h5 За&nbsp;#[strong 1,5&ndash;2] часа (#[strong 1]&nbsp;сеанс каждые полгода):
+					ol
+						li Исследуем ротовую полость по&nbsp;передовым протоколам Бернского университета (Швейцария). Прокрашиваем зубы и&nbsp;составляем пародонтальную карту&nbsp;&mdash; это кардиограмма для зубов, которая #[strong помогает контролировать заболевания.]
+						li Удаляем все зубные камни новым распылителем ProSmile Handy #[strong без вреда для эмали и&nbsp;дёсен.]
+						li Удаляем зубной налёт порошком по&nbsp;типу #[strong Air Flow, с&nbsp;эффектом осветления]
+						li Проводим фторирование гелем с&nbsp;повышенным содержанием гидроксиапатита&nbsp;&mdash; это максимально #[strong укрепляет эмаль.]
+						li Подбираем нужные вам средства гигиены и&nbsp;#[strong проводим урок гигиены.] Вас научат правильно чистить зубы&nbsp;&mdash; только&nbsp;5% людей знают как это делать.
+					+e.date.d-none.d-sm-block до 16 сентября
+					+e.arrow.d-none.d-lg-block
+						img(loading="lazy" src="img/svg/formArrow.svg", alt="")
+				+e.formCol.col-lg
+					+form-wrap()(class="--form-h")
+						+e.headline Профессиональная гигиена полости рта (чистка ультразвуком)
+						+e.body
+							+e.text.h6 Научим чистить зубы дома так, чтобы стоматологи были не&nbsp;нужны
+							+input("+380 (99) 999-99-99",'tel')
+							+e.small Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных
+							+e.btn.btn06(type="submit") Пройти vip-чистку зубов со&nbsp;скидкой
+
+	// end sForm-06
