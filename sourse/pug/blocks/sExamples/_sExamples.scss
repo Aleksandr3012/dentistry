@@ -175,6 +175,30 @@
 		}
 	}
 
+	&__itemVeneers{
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(30);
+		.icon {
+			flex-shrink: 0;
+			color: #D97014;
+			font-size: rem(30);
+			margin-left: 0;
+			margin-right: rem(10);
+			@include media-breakpoint-up(lg) {
+				font-size: rem(40);
+				margin-left: rem(23);
+				margin-right: rem(52);
+			}
+			display: block;
+		}
+
+		span {
+			font-size: $small;
+			letter-spacing: rem(-0.4);
+		}
+	}
+
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

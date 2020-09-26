@@ -15,17 +15,16 @@ include ../blocks/sReviews/_sReviews.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '3DCLINIC'
+	- let  title= 'Виниры'
 	title= title
 block pagecontent
 	+header()
 		+topLine()
 		+top-nav(class='d-none d-lg-block')
-	+sForm-02(class='bg-light')
-	+sExamples()
-	
-	
-	//- +sContact()
+	+sForm-03(class='bg-light')
+	+sExamples-03()
+	+sSafety(class='bg-light')
+
 	+sGuarantees(class="sGuarantees-bgLight")
 	+sWithFamily()
 	+sReviews()

@@ -38,8 +38,64 @@ mixin sExamples()
 											//- 	source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
 										img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
 										//- span.handle
+						.examples-prev
+							+icon('sliderArrow')
+						.swiper-container.examplesSlider-js
+							.swiper-wrapper
+								+slide('1')
+								+slide('2')
+								+slide('1')
+								+slide('2')
+						.examples-next
+							+icon('sliderArrow')
 
 	// end sExamples
+
+
+mixin sExamples-03()
+	// start sExamples-03
+	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
+		.container
+			.row
+				.col
+					p(style='font-size: 14px;') Более прогрессивной технологии в&nbsp;мире ещё не&nbsp;существует
+					+b.section-title
+						h2 То&nbsp;есть через 3&nbsp;визита у&nbsp;вас будет совершенная улыбка и&nbsp;вы&nbsp;помолодеете на&nbsp;10&ndash;15 лет
+					p Винир&nbsp;&mdash; тонкий слой керамики (0,4&ndash;0,5&nbsp;мм), который наносится на&nbsp;переднюю поверхность зуба, как накладка на&nbsp;ноготь.
+					p Сначала керамику нагревают до&nbsp;состояния жидкого стекла, отливают в&nbsp;специальных формах и&nbsp;прессуют на&nbsp;фрезерном роботизированном станке по&nbsp;цифровой 3D-модели.
+					p Потом керамику специально протравливают и&nbsp;силанизируют. Благодаря адгезивной фиксации винир можно прикрепить к&nbsp;поверхности естественного зуба так, что они станут единым целым. С&nbsp;минимальным препарированием зуба.
+					.h4 Показания к&nbsp;установке виниров
+					mixin itemVeneers(i,t)
+						.col-6.align-self-center
+							+e.itemVeneers
+								+icon(`exp-reasons-${i}`)
+								span= t
+					.row
+						+itemVeneers('1','Промежутки между зубами')
+						+itemVeneers('2','Сколы и трещины')
+						+itemVeneers('3','Небольшая скученность зубов')
+						+itemVeneers('4','Некрасивые пломбы')
+						+itemVeneers('5','Желтоватая или серая эмаль')
+				.col-lg-6.order-lg-first
+					+e.slider
+						mixin slide(i)
+							.swiper-slide.swiper-no-swiping
+								+e.slide
+									.ba-slider
+										img(src=`img/@2x/examples-${i}.jpg`, alt="")
+										img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
+						.examples-prev
+							+icon('sliderArrow')
+						.swiper-container.examplesSlider-js
+							.swiper-wrapper
+								+slide('1')
+								+slide('2')
+								+slide('1')
+								+slide('2')
+						.examples-next
+							+icon('sliderArrow')
+
+	// end sExamples-03
 
 
 mixin sExamples-04()
