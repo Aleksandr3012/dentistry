@@ -24,6 +24,14 @@
 } // end.sProblem
 
 .problemItem {
+	&__coll{
+		display: flex;
+		align-items: center;
+	}
+	&__text-block{
+		margin-right: 20px;
+		margin-bottom: 50px;
+	}
 	display: block;
 	color: #fff !important;
 	position: relative;

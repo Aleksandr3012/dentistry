@@ -212,6 +212,7 @@
 	&__btn {
 		@extend .btn;
 		@extend .btn-primary;
+		position: relative;
 		max-width: 335px;
 		display: block;
 		width: 100%;
@@ -219,7 +220,24 @@
 		padding-top: rem(20);
 		padding-bottom: rem(19);
 		font-weight: normal;
-
+		@include media-breakpoint-down(sm){
+			font-size: 13px;
+		}
+		span{
+			position: absolute;
+			font-size: 13px;
+			right: 29px;
+    	bottom: 9px;
+			line-height: 0;
+			&::before{
+				content: '';
+				display: block;
+				border-bottom: 3px solid #ff1f3d;
+				width: 72px;
+				border-radius: 113%;
+				height: 15px;
+			}
+		}
 	}
 
 
