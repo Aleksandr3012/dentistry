@@ -233,7 +233,7 @@ var JSCCommon = {
 var $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl, _Swiper;
+	var _defaultSl, _Swiper, _Swiper2;
 
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
@@ -308,7 +308,23 @@ function eventHandler() {
 			loadPrevNextAmount: 5
 		}
 	});
+	var sQualification = new Swiper('.sQualification-slider-js', (_Swiper = {
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		loop: true
+	}, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "loopedSlides", 6), _defineProperty(_Swiper, "lazy", {
+		loadPrevNext: true,
+		loadPrevNextAmount: 2
+	}), _Swiper));
 	var qualificationThumb = new Swiper('.qualification-thumb-js', {
+		// mySwiper.thumbs.swiper	
+		// on: {
+		// 	click: function () {
+		// 		sQualification.slideTo(this.thumbs.swiper);
+		// 		console.log(this);
+		// 	},
+		// },
+		// slideChange
 		slidesPerView: 1,
 		spaceBetween: 5,
 		loop: true,
@@ -338,16 +354,21 @@ function eventHandler() {
 			loadPrevNextAmount: 6
 		}
 	});
-	var sQualification = new Swiper('.sQualification-slider-js', (_Swiper = {
-		slidesPerView: 'auto',
+	$('.qualification-thumb-js').on('click', '.swiper-slide', function () {
+		var index = $(this).data('swiper-slide-index');
+		sQualification.slideTo(index);
+	}); // ="0"
+
+	var sQualificationText = new Swiper('.sQualification-text-slider-js', (_Swiper2 = {
+		slidesPerView: 1,
 		spaceBetween: 0,
 		loop: true
-	}, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "loopedSlides", 6), _defineProperty(_Swiper, "thumbs", {
+	}, _defineProperty(_Swiper2, "loop", true), _defineProperty(_Swiper2, "loopedSlides", 6), _defineProperty(_Swiper2, "thumbs", {
 		swiper: qualificationThumb
-	}), _defineProperty(_Swiper, "lazy", {
+	}), _defineProperty(_Swiper2, "lazy", {
 		loadPrevNext: true,
 		loadPrevNextAmount: 2
-	}), _Swiper)); // modal window
+	}), _Swiper2)); // modal window
 	// typed
 	// let options = {
 	// 	strings: ['вы невероятны!', 'жизнь прекрасна!', 'вы офигенны!'],
