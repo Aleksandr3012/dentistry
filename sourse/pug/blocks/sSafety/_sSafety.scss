@@ -1,7 +1,60 @@
+// start .sSafety
+.sSafety {
+	padding-top: calc(var(--sPT) / 1.1);
+	
+	.section-title {
+		max-width: rem(600);
+		padding-bottom: calc(var(--sTPB) * 1.1);
+	}
 
-	// start .sSafety
-	.sSafety {
-		 
+	h2 {
+		letter-spacing: rem(-0.7);
+	}
+
+	 h4, p {
+		letter-spacing: rem(-0.5);
+	}
+
+	h5 {
+		line-height: 165%;
+		letter-spacing: rem(-0.7);
+		@include media-breakpoint-down(lg) {
+			margin-bottom: rem(20);
+			max-width: 80%;
+		}
+	}
+
+	p {
+		line-height: 165%;
+		margin-left: auto;
+		@include media-breakpoint-down(lg){
+			max-width: 80%;
+		}
+	}
+
+	&__row {
+		border-bottom: solid 1px #CECECE;
+		margin-bottom: rem(28);
+		padding-bottom: rem(8);
+	}
+
+	&__price {
+		padding-top: rem(6);
+	}
+
+	h4 {
+		margin-bottom: rem(26);
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		// margin-top: rem(5);
+	}
+
+
+
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
