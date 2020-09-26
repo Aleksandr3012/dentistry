@@ -348,7 +348,7 @@ function eventHandler() {
 		loadPrevNext: true,
 		loadPrevNextAmount: 2
 	}), _Swiper)); // modal window
-	//typed
+	// typed
 	// let options = {
 	// 	strings: ['вы невероятны!', 'жизнь прекрасна!', 'вы офигенны!'],
 	// 	typeSpeed: 70,
@@ -356,9 +356,17 @@ function eventHandler() {
 	// 	backSpeed: 50
 	// };
 	// let typed = new Typed('.typed-js', options);
-	//
 
-	$('.ba-slider').beforeAfter();
+	if ($('*').is('.typed-js')) {
+		var options = {
+			strings: ['вы невероятны!', 'жизнь прекрасна!', 'вы офигенны!'],
+			typeSpeed: 70,
+			loop: true,
+			backSpeed: 50
+		};
+		var typed = new Typed('.typed-js', options);
+	}
+
 	var swiper4 = new Swiper('.examplesSlider-js', {
 		// slidesPerView: 5,
 		slidesPerView: 1,
@@ -376,7 +384,18 @@ function eventHandler() {
 		navigation: {
 			nextEl: '.examples-next',
 			prevEl: '.examples-prev'
-		}
+		} // on: {
+		// 	init: function () {
+		// 		console.log('swiper initialized');
+		// 		$('.ba-slider').each(function () {
+		// 			$(this).beforeAfter();
+		// 		})
+		// 	},
+		// },
+
+	});
+	$('.ba-slider').each(function () {
+		$(this).beforeAfter();
 	});
 }
 

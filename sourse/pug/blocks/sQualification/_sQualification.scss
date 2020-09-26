@@ -102,6 +102,16 @@
 		letter-spacing: rem(-0.7);
 	}
 
+	&__textSlider {
+		overflow: hidden;
+
+		.swiper-slide {
+			&::before {
+				display: none;
+			}
+		}
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

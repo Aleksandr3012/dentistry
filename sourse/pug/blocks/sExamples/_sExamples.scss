@@ -1,11 +1,70 @@
 // start .sExamples
 .sExamples {
 	
+	.section-title {
+		// padding-bottom: calc(var(--sTPB) * 1.1);
+		max-width: rem(560);
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(-8);
+		}
+	}
+
+	.h5 {
+		line-height: 165%;
+		letter-spacing: rem(-0.6);
+		margin-bottom: 1.3rem;
+	}
+
+	p {
+		line-height: 165%;
+		letter-spacing: rem(-0.6);
+	}
+
+	h2 {
+		letter-spacing: rem(-0.7);
+	}
+
 	&__slide {
-		min-height: rem(357);
-		height: 100% !important;
-		width: rem(400);
-		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 200px;
+		@include media-breakpoint-up(sm) {
+			width: 332px;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 444px;
+		}
+		// width: 100%;
+		// height: 357px;
+		@include block(444,357);
+		.ba-slider {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+		}
+		// display: block;
+	}
+
+	&__text {
+		font-size: $small;
+		@include media-breakpoint-up(xl) {
+			padding-top: rem(30);
+		}
+		@include media-breakpoint-down(xl) {
+			text-align: center;
+		}
+	}
+
+	&__imgCol {
+		// @include media-breakpoint-up(xl) {
+			display: flex;
+			justify-content: center;
+		// }
 	}
 
 	&__slider {
@@ -54,11 +113,17 @@
 
 	&__col {
 		padding-top: rem(25);
+		@include media-breakpoint-down(lg) {
+			padding-bottom: rem(30);
+		}
 	}
 
 	&__row {
 		picture {
-			margin-bottom: rem(70);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(xl) {
+				margin-bottom: rem(70);
+			}
 		}
 	}
 

@@ -4,19 +4,40 @@ mixin sExamples()
 		.container
 				
 			.row
-				.col-6
+				.col
+					+b.section-title
+						h2 Приживаемость наших имплантов — 99,2%, а не 75—80%
+					.h5 А всё потому, что мы работаем только с #[span.text-primary премиум&#8209;имплантами,] только по передовым протоколам #[span.text-primary Бернского университета] и доверяем эту работу только #[span.text-primary стоматологам экстра-класса]
+					.row
+						.col-xl-6
+							p У&nbsp;каждого нашего импланта есть паспорт с&nbsp;идентификационным номером, что исключает подделку. Можно узнать всю историю своего импланта.
+							p Они созданы из&nbsp;роксолида&nbsp;&mdash; смеси титана и&nbsp;циркония. Он&nbsp;на&nbsp;40% прочнее титана, а&nbsp;сращение импланта с&nbsp;живой костью происходит в&nbsp;2&nbsp;раза быстрее!
+							p Роксолид биоинертен, то&nbsp;есть организм его не&nbsp;видит, поэтому и&nbsp;отторгнуть не&nbsp;может.
+						+e.col.col
+							mixin item(i,t)
+								.col.col-xl-12
+									.row
+										+e.imgCol.col-xl-5
+											+pic(`examples-sm-${i}.png`)
+										.col
+											+e.text= t
+							+e.row.row
+								+item('1','сам имплант')
+								+item('2','абатмент')
+								+item('3','коронка')
+				.col-lg-6.order-lg-first
 					+e.slider
 						mixin slide(i)
 							.swiper-slide.swiper-no-swiping
-								+e.slide.ba-slider
-									picture
-										source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
+								+e.slide
+									.ba-slider
+										//- picture
+										//- 	source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
 										img(src=`img/@2x/examples-${i}.jpg`, alt="")
-									.resize
-										picture
-											source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
-											img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
-									span.handle
+											//- picture
+											//- 	source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
+										img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
+										//- span.handle
 						.examples-prev
 							+icon('sliderArrow')
 						.swiper-container.examplesSlider-js
@@ -27,24 +48,4 @@ mixin sExamples()
 								+slide('2')
 						.examples-next
 							+icon('sliderArrow')
-				.col
-					+b.section-title
-						h2 Приживаемость наших имплантов — 99,2%, а не 75—80%
-					.h5 А всё потому, что мы работаем только с #[span.text-primary премиум-имплантами,] только по передовым протоколам #[span.text-primary Бернского университета] и доверяем эту работу только #[span.text-primary стоматологам экстра-класса]
-					.row
-						.col-xl-6
-							p У&nbsp;каждого нашего импланта есть паспорт с&nbsp;идентификационным номером, что исключает подделку. Можно узнать всю историю своего импланта.
-							p Они созданы из&nbsp;роксолида&nbsp;&mdash; смеси титана и&nbsp;циркония. Он&nbsp;на&nbsp;40% прочнее титана, а&nbsp;сращение импланта с&nbsp;живой костью происходит в&nbsp;2&nbsp;раза быстрее!
-							p Роксолид биоинертен, то&nbsp;есть организм его не&nbsp;видит, поэтому и&nbsp;отторгнуть не&nbsp;может.
-						+e.col.col
-							mixin item(i,t)
-								.col-xl-5
-									+pic(`examples-sm-${i}.png`)
-								.col.align-self-center
-									+e.text= t
-							+e.row.row
-								+item('1','сам имплант')
-								+item('2','абатмент')
-								+item('3','коронка')
-
 	// end sExamples
