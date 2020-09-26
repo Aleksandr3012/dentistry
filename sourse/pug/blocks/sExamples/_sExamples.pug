@@ -4,33 +4,10 @@ mixin sExamples()
 		.container
 				
 			.row
-				.col-6
-					+e.slider
-						mixin slide(i)
-							.swiper-slide.swiper-no-swiping
-								+e.slide.ba-slider
-									picture
-										source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
-										img(src=`img/@2x/examples-${i}.jpg`, alt="")
-									.resize
-										picture
-											source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
-											img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
-									span.handle
-						.examples-prev
-							+icon('sliderArrow')
-						.swiper-container.examplesSlider-js
-							.swiper-wrapper
-								+slide('1')
-								+slide('2')
-								+slide('1')
-								+slide('2')
-						.examples-next
-							+icon('sliderArrow')
 				.col
 					+b.section-title
 						h2 Приживаемость наших имплантов — 99,2%, а не 75—80%
-					.h5 А всё потому, что мы работаем только с #[span.text-primary премиум-имплантами,] только по передовым протоколам #[span.text-primary Бернского университета] и доверяем эту работу только #[span.text-primary стоматологам экстра-класса]
+					.h5 А всё потому, что мы работаем только с #[span.text-primary премиум&#8209;имплантами,] только по передовым протоколам #[span.text-primary Бернского университета] и доверяем эту работу только #[span.text-primary стоматологам экстра-класса]
 					.row
 						.col-xl-6
 							p У&nbsp;каждого нашего импланта есть паспорт с&nbsp;идентификационным номером, что исключает подделку. Можно узнать всю историю своего импланта.
@@ -38,14 +15,29 @@ mixin sExamples()
 							p Роксолид биоинертен, то&nbsp;есть организм его не&nbsp;видит, поэтому и&nbsp;отторгнуть не&nbsp;может.
 						+e.col.col
 							mixin item(i,t)
-								.col-xl-5
-									+pic(`examples-sm-${i}.png`)
-								.col.align-self-center
-									+e.text= t
+								.col.col-xl-12
+									.row
+										+e.imgCol.col-xl-5
+											+pic(`examples-sm-${i}.png`)
+										.col
+											+e.text= t
 							+e.row.row
 								+item('1','сам имплант')
 								+item('2','абатмент')
 								+item('3','коронка')
+				.col-lg-6.order-lg-first
+					+e.slider
+						mixin slide(i)
+							.swiper-slide.swiper-no-swiping
+								+e.slide
+									.ba-slider
+										//- picture
+										//- 	source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
+										img(src=`img/@2x/examples-${i}.jpg`, alt="")
+											//- picture
+											//- 	source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
+										img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
+										//- span.handle
 
 	// end sExamples
 
@@ -55,19 +47,21 @@ mixin sExamples-04()
 	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
 		.container
 			.row
-				.col-6
+				.col
+					+b.section-title
+						h2 Если у&nbsp;вас болит зуб, это сигнал о&nbsp;его нездоровье. А&nbsp;ещё о&nbsp;том, что зуб пока ещё можно спасти. Скорее всего, без сложных и&nbsp;дорогих операций. И&nbsp;без удаления.
+					p Во&nbsp;рту есть как полезные, так и&nbsp;патогенные бактерии. Если они в&nbsp;равных силах, то&nbsp;всё нормально&nbsp;&mdash; полезные помогают создавать условия, при которых патогенные погибают.
+					p Но&nbsp;когда патогенные скапливаются в&nbsp;одном месте, они образуют зубной налёт, а&nbsp;потом и&nbsp;камни. Развивается кариес и&nbsp;разрушается эмаль.
+					p Чем дольше тянуть с&nbsp;походом к&nbsp;стоматологу, тем серьёзнее станет поражение эмали и&nbsp;следующего за&nbsp;ним слоя&nbsp;&mdash; дентина. Болеть будет сильнее, лечение проходить дольше и&nbsp;дороже. И&nbsp;всё может закончиться удалением зуба и&nbsp;имплантом.
+					p А&nbsp;ведь всего лишь нужно было сходить на&nbsp;одну консультацию. Тем более сейчас вы&nbsp;убедитесь, что это совсем не&nbsp;страшно...
+				.col-lg-6.order-lg-first
 					+e.slider
 						mixin slide(i)
 							.swiper-slide.swiper-no-swiping
-								+e.slide.ba-slider
-									picture
-										source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
+								+e.slide
+									.ba-slider
 										img(src=`img/@2x/examples-${i}.jpg`, alt="")
-									.resize
-										picture
-											source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
-											img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
-									span.handle
+										img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
 						.examples-prev
 							+icon('sliderArrow')
 						.swiper-container.examplesSlider-js
@@ -78,15 +72,48 @@ mixin sExamples-04()
 								+slide('2')
 						.examples-next
 							+icon('sliderArrow')
-				.col
-					+b.section-title
-						h2 Если у&nbsp;вас болит зуб, это сигнал о&nbsp;его нездоровье. А&nbsp;ещё о&nbsp;том, что зуб пока ещё можно спасти. Скорее всего, без сложных и&nbsp;дорогих операций. И&nbsp;без удаления.
-					p Во&nbsp;рту есть как полезные, так и&nbsp;патогенные бактерии. Если они в&nbsp;равных силах, то&nbsp;всё нормально&nbsp;&mdash; полезные помогают создавать условия, при которых патогенные погибают.
-					p Но&nbsp;когда патогенные скапливаются в&nbsp;одном месте, они образуют зубной налёт, а&nbsp;потом и&nbsp;камни. Развивается кариес и&nbsp;разрушается эмаль.
-					p Чем дольше тянуть с&nbsp;походом к&nbsp;стоматологу, тем серьёзнее станет поражение эмали и&nbsp;следующего за&nbsp;ним слоя&nbsp;&mdash; дентина. Болеть будет сильнее, лечение проходить дольше и&nbsp;дороже. И&nbsp;всё может закончиться удалением зуба и&nbsp;имплантом.
-					p А&nbsp;ведь всего лишь нужно было сходить на&nbsp;одну консультацию. Тем более сейчас вы&nbsp;убедитесь, что это совсем не&nbsp;страшно...
 
 	// end sExamples-04
+
+mixin sExamples-05()
+	// start sExamples-05
+	+b.SECTION.sExamples--05.section#sExamples&attributes(attributes)
+		.container
+			.row
+				.col
+					+b.section-title
+						h2 Вы можете сделать у нас отбеливание даже за обеденный перерыв
+					p #[strong Технология такая:] сначала наносится гель с перекисью водорода в особой концентрации и фосфат кальция. Дальше включается лампа с ультрафиолетовым излучением. Тут важна волна определённой длины — 400—505 Нм.
+					p Это излучение запускает в твёрдых тканях зуба химическую реакцию — выделяется кислород, который, проникая в эмаль, разрушает пигмент и при этом не вредит самой эмали.
+					.h4 Всё это нужно, если вы не довольны цветом зубов из-за:
+					mixin item(i,t)
+						.col-6.align-self-center
+							+e.item
+								+icon(`examples-${i}`)
+								span= t
+					.row
+						+item('1','курения')
+						+item('2','генетических особенностей')
+						+item('3','употребления продуктов с красящими веществами')
+						+item('4','старения')
+				.col-lg-6.order-lg-first
+					+e.slider
+						mixin slide(i)
+							.swiper-slide.swiper-no-swiping
+								+e.slide
+									.ba-slider
+										img(src=`img/@2x/examples-${i}.jpg`, alt="")
+										img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
+						.examples-prev
+							+icon('sliderArrow')
+						.swiper-container.examplesSlider-js
+							.swiper-wrapper
+								+slide('1')
+								+slide('2')
+								+slide('1')
+								+slide('2')
+						.examples-next
+							+icon('sliderArrow')
 
 
 mixin sExamples-06()
@@ -94,19 +121,24 @@ mixin sExamples-06()
 	+b.SECTION.sExamples.section#sExamples&attributes(attributes)
 		.container
 			.row
-				.col-6
+				.col
+					+b.section-title
+						h2 Зачем проходить ультразвуковую чистку зубов?
+					h5 Это лучшее средство сохранить зубы на&nbsp;всю жизнь
+					br
+					br
+					p Проведите языком по&nbsp;зубам. Если вы&nbsp;почувствовали что-то шероховатое, то&nbsp;это зубной налёт. Со&nbsp;временем он&nbsp;уплотняется, и&nbsp;образуется зубной камень.
+					p Эти камни развиваются у&nbsp;70% людей, даже, если регулярно чистить зубы. Скорее всего, они есть и&nbsp;у&nbsp;вас. В&nbsp;зеркале зубные камни можно и&nbsp;не&nbsp;увидеть&nbsp;&mdash; часто они скрываются в&nbsp;десневом кармане.
+					p Так вот, под этими камнями (или по&nbsp;их&nbsp;краям) любит развиваться кариес. Иногда это приводит к&nbsp;жутким болям (пульпит) или к&nbsp;потере зуба.
+					p Такой зубной камень обычной щёткой уже не&nbsp;удалить&nbsp;&mdash; нужно проходить ультразвуковую (кабинетную) чистку зубов.
+				.col-lg-6.order-lg-first
 					+e.slider
 						mixin slide(i)
 							.swiper-slide.swiper-no-swiping
-								+e.slide.ba-slider
-									picture
-										source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
+								+e.slide
+									.ba-slider
 										img(src=`img/@2x/examples-${i}.jpg`, alt="")
-									.resize
-										picture
-											source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
-											img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
-									span.handle
+										img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
 						.examples-prev
 							+icon('sliderArrow')
 						.swiper-container.examplesSlider-js
@@ -121,15 +153,5 @@ mixin sExamples-06()
 						li Убираем неприятный запах изо рта
 						li Работаем с&nbsp;желтизной от&nbsp;никотина, кофе, чая, пищевых красителей
 						li Предупреждаем кариес, кровоточивость дёсен
-				.col
-					+b.section-title
-						h2 Зачем проходить ультразвуковую чистку зубов?
-					h5 Это лучшее средство сохранить зубы на&nbsp;всю жизнь
-					br
-					br
-					p Проведите языком по&nbsp;зубам. Если вы&nbsp;почувствовали что-то шероховатое, то&nbsp;это зубной налёт. Со&nbsp;временем он&nbsp;уплотняется, и&nbsp;образуется зубной камень.
-					p Эти камни развиваются у&nbsp;70% людей, даже, если регулярно чистить зубы. Скорее всего, они есть и&nbsp;у&nbsp;вас. В&nbsp;зеркале зубные камни можно и&nbsp;не&nbsp;увидеть&nbsp;&mdash; часто они скрываются в&nbsp;десневом кармане.
-					p Так вот, под этими камнями (или по&nbsp;их&nbsp;краям) любит развиваться кариес. Иногда это приводит к&nbsp;жутким болям (пульпит) или к&nbsp;потере зуба.
-					p Такой зубной камень обычной щёткой уже не&nbsp;удалить&nbsp;&mdash; нужно проходить ультразвуковую (кабинетную) чистку зубов.
 
 	// end sExamples-06

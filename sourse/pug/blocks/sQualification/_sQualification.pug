@@ -16,10 +16,25 @@ mixin sQualification()
 				
 			.row
 				+e.textCol.col-lg-7
-					+b.section-title
-						h2 Работаем только #[span.text-primary со стоматологами высочайшей квалификации]
-					p Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.
-					p Наш врач Шевцов А. А. — лектор компании Neodent (Straumann Groupe). Это помогает нам первыми узнавать обо всех исследованиях и проверенных инновациях в стоматологии..
+					+e.textSlider
+						.swiper-container.sQualification-slider-js
+							.swiper-wrapper
+								mixin textSlide()
+									.swiper-slide
+										+b.section-title
+											h2 Работаем только #[span.text-primary со стоматологами высочайшей квалификации]
+										p Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.
+										if block
+											block
+										else
+											p Наш врач Шевцов А. А. — лектор компании Neodent (Straumann Groupe). Это помогает нам первыми узнавать обо всех исследованиях и проверенных инновациях в стоматологии..
+								+textSlide()
+								+textSlide()
+									p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa possimus dolores cum adipisci? Perspiciatis in iste vitae dolore ipsum explicabo esse molestiae quisquam minima! Delectus quia reprehenderit est unde deleniti.
+								+textSlide()
+								+textSlide()
+								+textSlide()
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt dolore minima itaque earum! Suscipit aliquid dolorum distinctio, facilis animi incidunt et ex, voluptate sapiente eius alias in ipsum. Maiores, doloribus?
 					+e.tumbs
 						+e.tumbWrap
 							.qualification-thumb-prev
