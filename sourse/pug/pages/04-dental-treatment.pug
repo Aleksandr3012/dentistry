@@ -82,18 +82,20 @@ block pagecontent
 			+b.problemItem--02(href="#")&attributes(attributes)
 				.row
 					if lg
-						.col-sm-6
-							block
-							.h5 от X XXX грн
-						+e.btn--02
-							+icon('arrow-r')
+						+e.coll.col-sm-6
+							+e.text-block
+								block
+								.h5 от X XXX грн
+							+e.btn--02
+								+icon('arrow-r')
 						+pic(`disease-${i}`)
 					else
-						.col-sm-7
-							block
-							.h5 от X XXX грн
-						+e.btn--02
-							+icon('arrow-r')
+						+e.coll.col-sm-7
+							+e.text-block
+								block
+								.h5 от X XXX грн
+							+e.btn--02
+								+icon('arrow-r')
 						+pic(`disease-${i}`)
 		+problemItem('1')
 			.h4 Кариес
