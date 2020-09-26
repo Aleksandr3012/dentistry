@@ -31,13 +31,19 @@ mixin sExamples()
 							.swiper-slide.swiper-no-swiping
 								+e.slide
 									.ba-slider
-										//- picture
-										//- 	source(srcset=`img/@2x/webp/examples-${i}.webp` type="image/webp")
 										img(src=`img/@2x/examples-${i}.jpg`, alt="")
-											//- picture
-											//- 	source(srcset=`img/@2x/webp/examples-${i}-${i}.webp` type="image/webp")
 										img(src=`img/@2x/examples-${i}-${i}.jpg`, alt="")
-										//- span.handle
+						.examples-prev
+							+icon('sliderArrow')
+						.swiper-container.examplesSlider-js
+							.swiper-wrapper
+								+slide('1')
+								+slide('2')
+								+slide('1')
+								+slide('2')
+						.examples-next
+							+icon('sliderArrow')
+
 
 	// end sExamples
 
