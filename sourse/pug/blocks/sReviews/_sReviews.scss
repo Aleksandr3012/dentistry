@@ -79,32 +79,35 @@
 
 
 
-	&__feedback{
-		position: relative;
-		color: $white;
-		line-height: (20 / 16);
-		margin-left: rem(20);
-		max-width: rem(335);
-		@include media-breakpoint-up(md){
-			margin-bottom: rem(118);
+	blockquote{
+		p{
+			position: relative;
+			color: $white;
+			line-height: (20 / 16);
+			margin-left: rem(20);
+			max-width: rem(335);
+			@include media-breakpoint-up(md){
+				margin-bottom: rem(118);
+			}
+			margin-bottom: rem(150);
+
 		}
-		margin-bottom: rem(150);
 	}
 
-	&__feedback::before, 
-	&__feedback::after {
+	blockquote p::before, 
+	blockquote p::after {
 		position: absolute; 
 		font-size: rem(30); 
 		color: #aaa; 
 	}
-	&__feedback::before {
+	blockquote p::before {
 		content: '\301F';
 		top: rem(-24);
     left: rem(-21);
 		color: $secondary;
 	}
 
-	&__feedback::after {
+	blockquote p::after {
 		content: '\301F';
 		bottom: rem(-1);
     right: rem(-26);

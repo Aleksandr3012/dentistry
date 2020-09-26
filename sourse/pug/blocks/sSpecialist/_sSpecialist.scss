@@ -168,6 +168,7 @@
 		display: flex;
 		align-items: center;
 		color: $body-color;
+		margin-bottom: rem(20);
 
 		.icon {
 			font-size: rem(30);
@@ -193,7 +194,8 @@
 			margin-right: rem(30);
 		}
 		@include media-breakpoint-up(xl) {
-			margin-right: rem(67);
+			margin-right: rem(60);
+			min-width: rem(65);
 		}
 		&:last-child {
 			@include media-breakpoint-up(md) {

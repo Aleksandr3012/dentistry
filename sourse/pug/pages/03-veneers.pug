@@ -11,6 +11,7 @@ include ../blocks/sLocation/_sLocation.pug
 include ../blocks/sSpecialist/_sSpecialist.pug
 include ../blocks/sMyths/_sMyths.pug
 include ../blocks/sReviews/_sReviews.pug
+include ../blocks/sSafety/_sSafety.pug
 
 block variables
 	- let  mainPage= null
@@ -23,13 +24,102 @@ block pagecontent
 		+top-nav(class='d-none d-lg-block')
 	+sForm-03(class='bg-light')
 	+sExamples-03()
-	+sSafety(class='bg-light')
+	+sSafety-03(class='bg-light')
 
-	+sGuarantees(class="sGuarantees-bgLight")
+	+sGuarantees()
+		+b.section-title
+			h2(style='font-weight: normal;') А&nbsp;теперь подробнее: как у&nbsp;нас проходит установка виниров
+
+		div
+			mixin item(i,h)
+				+e.item
+					.row
+						+e.col.col-lg-6
+							+e.img-wrap2
+								+e.img-wrap
+									img(src=`img/gif/sG-${i}.gif`, loading="lazy" alt="")
+								
+						.col-lg-6
+							+e.text-block
+								.h4!= h
+								block
+
+			+item(15, 'Создание цифрового дизайна улыбки (Digital Smile Design)')
+				p Это как заказать платье у&nbsp;модельера по&nbsp;вашей фигуре. В&nbsp;программе рисуется, планируется новая улыбка&nbsp;&mdash; какие-то зубы удлиняются, какие-то укорачиваются.
+
+			+item(16, `Восковое моделирование и примерка`)
+				p На&nbsp;основе слепка и&nbsp;3D&nbsp;моделирования зубной техник в&nbsp;лаборатории изготавливает диагностическую модель, напечатанную на&nbsp;3Д&nbsp;принтере. Она корректируется воском до&nbsp;нужной формы.
+				
+				p Дальше эта модель переносится на&nbsp;зубы пациента с&nbsp;помощью силиконового ключа и&nbsp;снова делается серия фотографий.
+
+			+item(17, `Обточка зубов (иногда не требуется), установка временных виниров`)
+				p Удаляем минимум эмали с&nbsp;фронтальной поверхности зуба.
+				
+				p На&nbsp;основе напечатанной 3D&nbsp;модели создается восковый прототип ваших зубов&nbsp;&mdash; временные виниры. Это ненадолго, ходить с&nbsp;ними придётся от&nbsp;3&nbsp;до&nbsp;10&nbsp;дней. Эстетически они ничем не&nbsp;отличаются от&nbsp;обычных зубов&nbsp;&mdash; разницы никто не&nbsp;заметит. А&nbsp;ещё они отлично защитят ваши зубы от&nbsp;внешних воздействий и&nbsp;снизят их&nbsp;чувствительность.
+
+				p Без красивых зубов не&nbsp;отпустим!
+
+			+item(18, `Изготовление виниров от 3-х дней, адгезивная фиксация`)
+				p На&nbsp;основе восковой модели отливается форма, и&nbsp;изнутри выплавляется воск&nbsp;&mdash; туда закачивают керамическую массу. Дальше она твердеет и&nbsp;благодаря комбинации давления и&nbsp;высокой температуры становится сверхпрочной.
+				
+				p Следующий шаг&nbsp;&mdash; поверхность эмали зуба и&nbsp;поверхность винира проходит сложную спец.обработку в&nbsp;несколько этапов. И, наконец, винир приклеивается к&nbsp;зубу&nbsp;&mdash; между ними толщина пространства 40&nbsp;микрон&nbsp;&mdash; меньше толщины волоса.
+
 	+sWithFamily()
 	+sReviews()
 	+sSpecialist('sl')
-	+sMyths(class="bg-dark")
+		.row
+			.col-lg-5
+				mixin slide(i)
+					.swiper-slide
+						+e.slide(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
+							picture
+								source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/technology-3.webp` type="image/webp")
+								img.swiper-lazy(src="#" data-src=`img/@2x/technology-3.jpg`, alt="")
+							+e.play
+								+icon('play')
+				+e.slider.swiper-container.specialistSlider-js
+					if sl
+						.specialistSlider-prev
+							+icon('sliderArrow')
+					.swiper-wrapper
+						if sl
+							+slide()
+							+slide()
+						else
+							+slide()
+					if sl
+						.specialistSlider-next
+							+icon('sliderArrow')
+
+			.col
+				+b.section-title
+					h2 Виниры будет устанавливать Левицкая Виктория Витальевна
+				.row
+					+e.col.col-md-8.col-xl-auto
+						.h5 Врач-ортодонт, ортопед-гнатолог
+						p #[strong Стаж:] 17 лет
+						+e.text #[strong Специализация:] эстететическая стоматология&nbsp;&mdash; прямые реставрации, непрямые реставрации ( виниры, коронки, микропротезирование). Протезирование на&nbsp;имплантах. Съёмное протезирование . Исправление прикуса с&nbsp;помощью Элайнеров Invisalign, брекет системы.
+						+e.text #[strong Лечит:] патологии височно-нижнечелюстного сустава миорелаксирующими каппами, инъекциями ботулотоксина.
+					.col-5.col-md
+						+e.certificate(href="img/@2x/certificate.jpg" data-fancybox="certificate")
+							+pic('certificate')
+						+e.allCertificate(href="#")
+							+icon('document')
+							span Все 24 сертификата
+					.col.col-md-12
+						+e.partners
+							mixin partnerItem(i)
+								+e.partnerItem
+									+pic(`partner-${i}.png`)
+							+partnerItem(1)
+							+partnerItem(2)
+							+partnerItem(3)
+							+partnerItem(4)
+							+partnerItem(5)
+					
+				+e.btn(href="#" style="padding-left: 0px; padding-right: 0px;") Записаться на бесплатную консультацию
+
+	+sMyths-03(class="bg-dark")
 	+sLocation()
 
 	+footer()

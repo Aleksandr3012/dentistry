@@ -16,7 +16,7 @@ include ../blocks/sSafety/_sSafety.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '3DCLINIC'
+	- let  title= 'Отбеливание'
 	title= title
 block pagecontent
 	+header()
@@ -28,10 +28,99 @@ block pagecontent
 	
 	//- +sContact()
 	+sGuarantees
+		+b.section-title
+			h2(style='font-weight: normal;') А&nbsp;теперь подробнее: как у&nbsp;нас проходит отбеливание зубов
+
+		div
+			mixin item(i,h)
+				+e.item
+					.row
+						+e.col.col-lg-6
+							+e.img-wrap2
+								+e.img-wrap
+									img(src=`img/gif/sG-${i}.gif`, loading="lazy" alt="")
+								
+						.col-lg-6
+							+e.text-block
+								.h4!= h
+								block
+
+			+item(4, 'Создаём пациенту максимальную защиту')
+				p Пациенту одеваем специальные очки&nbsp;&mdash; они защищают глаза от&nbsp;излучаемого света.
+
+				p Слизистую рта обрабатываем специальным защитным кремом с&nbsp;витамином&nbsp;Е, а&nbsp;на&nbsp;дёсны наносим гель, который не&nbsp;даёт повредиться мягким тканям.
+				
+				p Используем изоляционную систему. Вы&nbsp;в&nbsp;безопасности. Вы&nbsp;в&nbsp;надёжных руках.
+
+			+item(12, `Обрабатываем зубы специальным гелем`)
+				p Этот гель содержит карбамид и&nbsp;перекись водорода в&nbsp;малой концентрации.
+				
+				p Причём у&nbsp;него уровень кислотности от&nbsp;7,5 до&nbsp;8,5&nbsp;&mdash; это не&nbsp;даёт эмали повредиться.
+
+			+item(13, `Включаем лампу Philips ZOOM — 3—4 сета по 15 минут`)
+				p ZOOM плотно прилегает к&nbsp;передним зубам и&nbsp;излучает ультрафиолет с&nbsp;определённой длиной волны.
+				
+				p Перекись водорода расщепляется, и&nbsp;активируется кислород. Через 15&nbsp;минут лампу выключают, гель удаляют, наносят новый гель и&nbsp;снова включают ZOOM. И&nbsp;так 3&ndash;4&nbsp;раза, пока ваши зубы не&nbsp;достигнут оговоренного цвета.
+
+			+item(14, `Укрепляем эмаль, дарим индивидуальные капы`)
+				p После процедуры стоматолог обрабатывает зубы запатентованным гелем с&nbsp;кальцием Relief ACP. Это укрепляет зубные ткани, снижает чувствительность, сохраняет результаты отбеливания.
+				
+				p Врач даёт вам индивидуальные капы — их делают в зуботехнической лаборатории на основе слепка ваших зубов.
+				
+
 	+sWithFamily()
 	+sReviews()
-	+sSpecialist('sl')
-	+sMyths(class="bg-dark")
+	+sSpecialist()
+				.row
+					.col-lg-5
+						mixin slide(i)
+							.swiper-slide
+								+e.slide(href="https://youtu.be/5xWnpM7f2gc" data-fancybox="video")
+									picture
+										source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/technology-3.webp` type="image/webp")
+										img.swiper-lazy(src="#" data-src=`img/@2x/technology-3.jpg`, alt="")
+									+e.play
+										+icon('play')
+						+e.slider.swiper-container.specialistSlider-js
+							if sl
+								.specialistSlider-prev
+									+icon('sliderArrow')
+							.swiper-wrapper
+								if sl
+									+slide()
+									+slide()
+								else
+									+slide()
+							if sl
+								.specialistSlider-next
+									+icon('sliderArrow')
+
+					.col
+						+b.section-title
+							h2 Отбеливание зубов проведёт Лозовая Анна Романовна
+						.row
+							+e.col.col-md-8.col-xl-auto
+								.h5 Врач-парадонтолог
+								p #[strong Стаж:] 5 лет
+								+e.text #[strong Специализация:] профессиональная гигиена полости рта, парадонтологическое лечение (поддесневой скейлинг, закрытый кюретаж) отбеливание.
+							.col-5.col-md
+								+e.certificate(href="img/@2x/certificate.jpg" data-fancybox="certificate")
+									+pic('certificate')
+								+e.allCertificate(href="#")
+									+icon('document')
+									span Все 24 сертификата
+							.col.col-md-12
+								+e.partners
+									mixin partnerItem(i)
+										+e.partnerItem
+											+pic(`partner-${i}.png`)
+									+partnerItem(1)
+									+partnerItem(2)
+									+partnerItem(3)
+									+partnerItem(4)
+									+partnerItem(5)
+							
+	//- +sMyths(class="bg-dark")
 	+sLocation()
 
 	+footer()
