@@ -5,7 +5,7 @@ mixin qualification-thumb(imgNum,t)
 		+e.name= t
 
 mixin sQualification-slide()
-	.swiper-slide
+	.swiper-slide.swiper-no-swiping
 		+e.slide-img
 			img.res-i.swiper-lazy(src="#" data-src=`img/@2x/technology-3.jpg` alt="")
 
@@ -17,10 +17,10 @@ mixin sQualification()
 			.row
 				+e.textCol.col-lg-7
 					+e.textSlider
-						.swiper-container.sQualification-slider-js
+						.swiper-container.sQualification-text-slider-js
 							.swiper-wrapper
 								mixin textSlide()
-									.swiper-slide
+									.swiper-slide.swiper-no-swiping
 										+b.section-title
 											h2 Работаем только #[span.text-primary со стоматологами высочайшей квалификации]
 										p Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.

@@ -65,6 +65,22 @@
 		}
 	}
 
+	&__wrap {
+		@include media-breakpoint-up(sm) {
+			display: flex;
+			justify-content: space-between;
+		}
+		max-width: rem(490);
+
+		@include media-breakpoint-down(sm) {
+			.sLocation__time {
+				padding-top: rem(30);
+				padding-left: 24px;
+				margin-bottom: rem(20);
+			}
+		}
+	}
+
 
 
 

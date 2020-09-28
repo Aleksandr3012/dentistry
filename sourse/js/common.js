@@ -311,8 +311,34 @@ function eventHandler() {
 			loadPrevNextAmount: 5,
 		},
 	});
+	
+
+	let sQualification = new Swiper('.sQualification-slider-js', {
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		loop: true,
+		loop: true,
+		loopedSlides: 6,
+
+		// thumbs: {
+		// 	swiper: qualificationThumb,
+		// },
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 2,
+		},
+	});
 
 	let qualificationThumb = new Swiper('.qualification-thumb-js', {
+		// mySwiper.thumbs.swiper	
+		// on: {
+		// 	click: function () {
+				
+		// 		sQualification.slideTo(this.thumbs.swiper);
+		// 		console.log(this);
+		// 	},
+		// },
+		// slideChange
 		slidesPerView: 1,
 		spaceBetween: 5,
 		loop: true,
@@ -346,13 +372,18 @@ function eventHandler() {
 		},
 	});
 
-	let sQualification = new Swiper('.sQualification-slider-js', {
-		slidesPerView: 'auto',
+	$('.qualification-thumb-js').on('click', '.swiper-slide',function(){
+		let index = $(this).data('swiper-slide-index');
+		sQualification.slideTo(index);
+	})
+
+	// ="0"
+	let sQualificationText = new Swiper('.sQualification-text-slider-js', {
+		slidesPerView: 1,
 		spaceBetween: 0,
 		loop: true,
 		loop: true,
 		loopedSlides: 6,
-
 		thumbs: {
 			swiper: qualificationThumb,
 		},

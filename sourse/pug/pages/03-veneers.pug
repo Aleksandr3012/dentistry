@@ -14,7 +14,7 @@ include ../blocks/sReviews/_sReviews.pug
 include ../blocks/sSafety/_sSafety.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'vinLines'
 block title
 	- let  title= 'Виниры'
 	title= title
@@ -120,7 +120,7 @@ block pagecontent
 				+e.btn(href="#" style="padding-left: 0px; padding-right: 0px;") Записаться на бесплатную консультацию
 
 	+sMyths-03(class="bg-dark")
-	+sLocation()
+	+sLocation('t')
 
 	+footer()
 

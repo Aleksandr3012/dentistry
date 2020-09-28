@@ -14,7 +14,7 @@ include ../blocks/sReviews/_sReviews.pug
 include ../blocks/sProblem/_sProblem.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'dentLines'
 block title
 	- let  title= 'Лечение зубов'
 	title= title
@@ -167,7 +167,7 @@ block pagecontent
 					
 				+e.btn(href="#") Записаться на консультацию
 	//- +sMyths(class="bg-dark")
-	+sLocation()
+	+sLocation('t')
 
 	+footer()
 
