@@ -200,10 +200,9 @@
 		}
 	}
 
-	.btn06{
-		// padding-left: 3px;
-		// padding-right: 3px;
-		max-width: 330px;
+	.btnW{
+		max-width: 341px;
+		font-size: rem(14);
 	}
 
 	@include media-breakpoint-up(xl) {}

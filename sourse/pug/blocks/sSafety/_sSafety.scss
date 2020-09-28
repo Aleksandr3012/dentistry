@@ -36,7 +36,12 @@
 		}
 	}
 
-	&__row {
+	// &__row {
+	// 	border-bottom: solid 1px #CECECE;
+	// 	margin-bottom: rem(28);
+	// 	padding-bottom: rem(8);
+	// }
+	&__row:not(:last-child) {
 		border-bottom: solid 1px #CECECE;
 		margin-bottom: rem(28);
 		padding-bottom: rem(8);
