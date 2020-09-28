@@ -135,22 +135,6 @@
 			letter-spacing: rem(-0.8);
 		}
 		
-		&__item:not(:last-child):nth-child(even) &__img-wrap2 {
-			&::before {
-				@include media-breakpoint-up(lg) {
-					transform: rotate(149.1deg);
-					top: 14.75rem;
-				}
-			}
-		}
-		&__item:not(:last-child):nth-child(odd) &__img-wrap2 {
-			&::before {
-				@include media-breakpoint-up(lg) {
-					transform: rotate(45.22deg);
-					top: 12.25rem;
-				}
-			}
-		}
 	}
 	.sGuarantees__item {
 		&:nth-child(1) {
