@@ -14,7 +14,7 @@ include ../blocks/sReviews/_sReviews.pug
 include ../blocks/sSafety/_sSafety.pug
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'inner-page'
 block title
 	- let  title= 'Отбеливание'
 	title= title
@@ -27,7 +27,7 @@ block pagecontent
 	+sSafety(class='bg-light')
 	
 	//- +sContact()
-	+sGuarantees
+	+sGuarantees()
 		+b.section-title
 			h2(style='font-weight: normal;') А&nbsp;теперь подробнее: как у&nbsp;нас проходит отбеливание зубов
 

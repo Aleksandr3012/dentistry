@@ -27,8 +27,14 @@
 	&__slide {
 		margin-left: auto;
 		margin-right: auto;
-		width: 200px;
+		width: 290px;
 		@include media-breakpoint-up(sm) {
+			width: 332px;
+		}
+		@include media-breakpoint-up(md) {
+			width: 500px;
+		}
+		@include media-breakpoint-up(lg) {
 			width: 332px;
 		}
 		@include media-breakpoint-up(xl) {
@@ -75,8 +81,12 @@
 
 	.examples-next, .examples-prev {
 		flex-shrink: 0;
-		width: 45px;
-		height: 45px;
+		width: 35px;
+		height: 35px;
+		@include media-breakpoint-up(sm) {
+			width: 45px;
+			height: 45px;
+		}
 		border-radius: 50%;
 		display: flex;
 		align-items: center;
@@ -92,6 +102,11 @@
 
 	.examples-prev {
 		background-color: #e5e5e5;
+		@include media-breakpoint-down(md) {
+			margin-right: rem(-35);
+			position: relative;
+			z-index: 5;
+		}
 		.icon {
 			margin-right: 2px;
 		}
@@ -102,6 +117,11 @@
 
 	.examples-next {
 		background: #2A03CC;
+		@include media-breakpoint-down(md) {
+			margin-left: rem(-35);
+			position: relative;
+			z-index: 5;
+		}
 		.icon {
 			margin-left: 2px;
 			transform: rotate(180deg);
@@ -211,3 +231,32 @@
 	//
 	@include media-breakpoint-down(xl) {}
 } // end.sExamples
+
+.ba-control-bar {
+	position: relative;
+
+	.ba-left-arrow, .ba-control-handle, .ba-right-arrow{
+		display: block !important;
+		opacity: 1 !important;
+	}
+
+	.ba-control-handle {
+		width: 16px;
+		height: 90px;
+		background: #FFFFFF;
+		margin-left: 20px;
+		// margin-right: 0;
+		margin-top: rem(-47);
+	}
+
+	.ba-left-arrow {
+		// left: -15px;
+		margin-right: rem(50);
+		@include triangle(15px 12px, #fff transparent, left);
+	}
+
+	.ba-right-arrow {
+		right: -18px;
+		@include triangle(15px 12px, #fff transparent, right);
+	}
+}

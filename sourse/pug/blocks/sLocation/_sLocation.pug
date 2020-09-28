@@ -1,4 +1,4 @@
-mixin sLocation()
+mixin sLocation(t)
 	// start sLocation
 	+b.SECTION.sLocation#sLocation&attributes(attributes)
 		.container
@@ -6,11 +6,19 @@ mixin sLocation()
 				+e.col.col-lg-6
 					+b.section-title
 						h2 3D clinic
-					.h5 Харьков,<br> ул. Юри Зойфера, д.3 (Анри Барбюса, д.&nbsp;3)
-					+e.contactWrap
-						+e.time Пн-Пт: с 9:00 до 20:00<br>Сб-Вс: с 10:00 до 18:00
-						+e.phone(href="tel:380986333595") +38 (098) 633 35 95
-						+e.phone(href="tel:380577628733") +38 (057) 762 87 33
+					if t
+						+e.wrap
+							.h5 Харьков,<br> ул. Юри Зойфера, д.3 (Анри Барбюса, д.&nbsp;3)
+							+e.time Пн-Пт: с 9:00 до 20:00<br>Сб-Вс: с 10:00 до 18:00
+						+e.contactWrap
+							+e.phone(href="tel:380986333595") +38 (098) 633 35 95
+							+e.phone(href="tel:380577628733") +38 (057) 762 87 33
+					else
+						.h5 Харьков,<br> ул. Юри Зойфера, д.3 (Анри Барбюса, д.&nbsp;3)
+						+e.contactWrap
+							+e.time Пн-Пт: с 9:00 до 20:00<br>Сб-Вс: с 10:00 до 18:00
+							+e.phone(href="tel:380986333595") +38 (098) 633 35 95
+							+e.phone(href="tel:380577628733") +38 (057) 762 87 33
 					p Это центр города, выход метро &laquo;Держпром&raquo;. Метро &laquo;Университет&raquo; и&nbsp;&laquo;Научная&raquo;&nbsp;&mdash; в&nbsp;10&nbsp;минутах ходьбы.
 					p Много парковочных мест возле клиники, особенно после 12:00 и&nbsp;до&nbsp;20:00.
 					p В&nbsp;будние дни лучше приезжать с&nbsp;утра, к&nbsp;открытию&nbsp;&mdash; в&nbsp;09:00. А&nbsp;ещё лучше даже немного заранее, чтобы не&nbsp;попасть в&nbsp;пробки. Около нас нет пробок и&nbsp;с&nbsp;11:00 до&nbsp;14:00, и&nbsp;вечером после 18:00.
