@@ -8,6 +8,10 @@
 		text-transform: uppercase;
 	}
 
+	.fz{
+		font-size: rem(25);
+	}
+
 	.section-title {
 		padding-bottom: calc(var(--sTPB) * 1.2);
 	}
@@ -23,6 +27,13 @@
 		padding-left: 24px;
 		padding-bottom: rem(45);
 		padding-top: rem(20);
+	}
+
+	.pl{
+		@include media-breakpoint-up(sm){
+			padding-left: 0;
+		}
+		padding-left: 24px;
 	}
 
 	&__time {
