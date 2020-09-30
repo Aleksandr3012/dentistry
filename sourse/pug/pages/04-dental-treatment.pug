@@ -78,39 +78,30 @@ block pagecontent
 	+sProblem()
 		+b.section-title
 			h2 Эти заболевания лечим и диагностируем чаще всего
-		mixin problemItem(i,lg)
-			+b.problemItem--02(href="#")&attributes(attributes)
+		mixin problemItem(i,pr)
+			+b.problemItem--02.link-modal(href=`#promlem-${pr}`)&attributes(attributes)
 				.row
-					if lg
-						+e.coll.col-sm-6
-							+e.text-block
-								block
-								.h5 от X XXX грн
-							+e.btn--02
-								+icon('arrow-r')
-						+pic(`disease-${i}`)
-					else
-						+e.coll.col-sm-7
-							+e.text-block
-								block
-								.h5 от X XXX грн
-							+e.btn--02
-								+icon('arrow-r')
-						+pic(`disease-${i}`)
-		+problemItem('1')
+					+e.coll.col-sm-6
+						+e.text-block
+							block
+							.h5 от X XXX грн
+						+e.btn--02
+							+icon('arrow-r')
+					+pic(`disease-${i}`)
+		+problemItem('1','caries')
 			.h4 Кариес
 		.row
 			.col-lg-6
-				+problemItem('2')
+				+problemItem('2','gingivitis')
 					.h4 Гингивит
 			.col-lg-6
-				+problemItem('3')
+				+problemItem('3','periodontitis')
 					.h4 Пародонтит
 			.col-lg-6
-				+problemItem('4')
+				+problemItem('4','pulpitis')
 					.h4 Пульпит
 			.col-lg-6
-				+problemItem('5')
+				+problemItem('5','periodontitis-2')
 					.h4 Периодонтит
 	//- +sWithFamily()
 	+sReviews()
