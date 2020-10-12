@@ -47,9 +47,11 @@
 	}
 
 }
-
+.modal-win{
+	max-width: rem(500);
+}
 .modal-problem {
-	display: inline-flex !important;
+ 
 	align-items: center;
 	justify-content: center;
 	width: 100vw;

@@ -91,7 +91,7 @@
 								<use xlink:href="img/svg/sprite.svg#call"></use>
 							</svg></a>
 						</div>
-						<div class="col-auto d-none d-md-block"><a class="topLine__btn" href="#">Записаться на прием</a>
+						<div class="col-auto d-none d-md-block"><a class="topLine__btn link-modal" href="#modal-call">Записаться на прием</a>
 						</div>
 					</div>
 				</div>
@@ -680,178 +680,188 @@
 				</div>
 			</div>
 		</footer>
-		<!--  start modals-->
-		<div class="modal-win" id="modal-call" style="display: none">
-			<div class="form-wrap">
-				<form>
-					<input type="hidden" name="example-input-field"/>
-					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
-					<input class="utm_source" type="hidden" name="utm_source"/>
-					<input class="utm_term" type="hidden" name="utm_term"/>
-					<input class="utm_medium" type="hidden" name="utm_medium"/>
-					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
+		<div class="d-none">
+			<!--  start modals-->
+			<div class="modal-win" id="modal-call" style="display: none">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="form-wrap__head">
+							<div class="h4 strong">Записаться на консультацию   </div>
 						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
-					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
-					</div>
-					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
-					</button>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="+380 (99) 999-99-99" name="tel"/>
+							<div class="small">Телефон нужен, чтобы договориться о времени записи</div>
+						</div>
+						<!-- +e.input-wrap-->
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__h4 h5 pt-2">Когда вам перезвонить?</div>
+						<label class="custom-input h6">
+							<input class="custom-input__input custom-input__input-radio" checked="" type="radio" name="time" required="required" value="В течение 30 минут"/><span class="custom-input__lab custom-input__lab-radio"></span>В течение 30 минут
 						</label>
-					</div>
-				</form>
+						<label class="custom-input h6">
+							<input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="С 9-00 до 12-00"/><span class="custom-input__lab custom-input__lab-radio"></span>С 9-00 до 12-00
+						</label>
+						<label class="custom-input h6">
+							<input class="custom-input__input custom-input__input-radio" type="radio" name="time" required="required" value="С 12-00 до 18-00"/><span class="custom-input__lab custom-input__lab-radio"></span>С 12-00 до 18-00
+						</label>
+						<div class="wrap-polite">
+							<div class="small mb-4">Оставляя телефон, вы&nbsp;соглашаетесь на&nbsp;обработку персональных данных</div>
+						</div>
+						<button class="form-wrap__btn btn btn-primary w-100">Отправить</button>
+					</form>
+				</div>
 			</div>
-		</div>
-		<!-- #modal-call-->
-		<div class="modal-win modal-problem" id="promlem-caries" style="display: none">
-			<div class="modal-win__content">
-				<div class="container">
-					<div class="modal-win__title h2">Кариес
-					</div>
-					<div class="row">
-						<div class="mb-3 col-md-6 col-lg-4">
-							<div class="modal-win__head">
-								<!-- picture-->
-								<picture> 
-									<noscript class="loading-lazy">
-										<source srcset="img/@2x/webp/imgfishsquare.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
-										<source srcset="img/@1x/webp/imgfishsquare.webp" loading="lazy" type="image/webp"/>
-										<source srcset="img/@2x/imgfishsquare.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
-										<source srcset="img/@1x/imgfishsquare.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/imgfishsquare.jpg" loading="lazy" alt=""/>
-									</noscript>
-								</picture>
-								<!-- /picture-->
-								<div class="h5 text-secondary">Стадия «белого пятна»</div>
+			<!-- #modal-call-->
+			<div class="modal-win modal-problem" id="promlem-caries" style="display: none">
+				<div class="modal-win__content">
+					<div class="container">
+						<div class="modal-win__title h2">Кариес
+						</div>
+						<div class="row">
+							<div class="mb-3 col-md-6 col-lg-4">
+								<div class="modal-win__head">
+									<!-- picture-->
+									<picture> 
+										<noscript class="loading-lazy">
+											<source srcset="img/@2x/webp/imgfishsquare.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/imgfishsquare.webp" loading="lazy" type="image/webp"/>
+											<source srcset="img/@2x/imgfishsquare.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+											<source srcset="img/@1x/imgfishsquare.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/imgfishsquare.jpg" loading="lazy" alt=""/>
+										</noscript>
+									</picture>
+									<!-- /picture-->
+									<div class="h5 text-secondary">Стадия «белого пятна»</div>
+								</div>
+								<p><strong>Применяем технологию Icon — никакого сверления!</strong></p>
+								<p>Никак не&nbsp;беспокоит. Чаще всего случайно обнаруживает стоматолог.</p>
+								<p>Наносим специальный гель, который за&nbsp;2&nbsp;минуты удаляет поверхностный слой. Потом смываем его, высушиваем зуб и&nbsp;промываем его раствором этанола. Дальше наносим слой инфильтрата и&nbsp;зуб становится суперустойчивым к&nbsp;кариесу и&nbsp;микротрещинам.</p>
 							</div>
-							<p><strong>Применяем технологию Icon — никакого сверления!</strong></p>
-							<p>Никак не&nbsp;беспокоит. Чаще всего случайно обнаруживает стоматолог.</p>
-							<p>Наносим специальный гель, который за&nbsp;2&nbsp;минуты удаляет поверхностный слой. Потом смываем его, высушиваем зуб и&nbsp;промываем его раствором этанола. Дальше наносим слой инфильтрата и&nbsp;зуб становится суперустойчивым к&nbsp;кариесу и&nbsp;микротрещинам.</p>
-						</div>
-						<div class="mb-3 col-md-6 col-lg-4">
-							<div class="modal-win__head">
-								<!-- picture-->
-								<picture> 
-									<noscript class="loading-lazy">
-										<source srcset="img/@2x/webp/imgfishsquare.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
-										<source srcset="img/@1x/webp/imgfishsquare.webp" loading="lazy" type="image/webp"/>
-										<source srcset="img/@2x/imgfishsquare.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
-										<source srcset="img/@1x/imgfishsquare.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/imgfishsquare.jpg" loading="lazy" alt=""/>
-									</noscript>
-								</picture>
-								<!-- /picture-->
-								<div class="h5 text-secondary">Начальный кариес</div>
+							<div class="mb-3 col-md-6 col-lg-4">
+								<div class="modal-win__head">
+									<!-- picture-->
+									<picture> 
+										<noscript class="loading-lazy">
+											<source srcset="img/@2x/webp/imgfishsquare.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/imgfishsquare.webp" loading="lazy" type="image/webp"/>
+											<source srcset="img/@2x/imgfishsquare.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+											<source srcset="img/@1x/imgfishsquare.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/imgfishsquare.jpg" loading="lazy" alt=""/>
+										</noscript>
+									</picture>
+									<!-- /picture-->
+									<div class="h5 text-secondary">Начальный кариес</div>
+								</div>
+								<p>Тоже чаще всего протекает безболезненно. Иногда есть реакция на&nbsp;холод или тепло.</p>
+								<p>Пятна на&nbsp;эмали увеличиваются и&nbsp;проникают глубже в&nbsp;зуб. Тут уже не&nbsp;просто ослабленная эмаль&nbsp;&mdash; она начинает разрушаться.</p>
+								<p>Сверлить придётся. Но&nbsp;вы&nbsp;уже знаете, что с&nbsp;нами это не&nbsp;больно, обычно за&nbsp;1&nbsp;сеанс и&nbsp;с&nbsp;гарантией результата. Окружим вас заботой и&nbsp;комфортом.</p>
 							</div>
-							<p>Тоже чаще всего протекает безболезненно. Иногда есть реакция на&nbsp;холод или тепло.</p>
-							<p>Пятна на&nbsp;эмали увеличиваются и&nbsp;проникают глубже в&nbsp;зуб. Тут уже не&nbsp;просто ослабленная эмаль&nbsp;&mdash; она начинает разрушаться.</p>
-							<p>Сверлить придётся. Но&nbsp;вы&nbsp;уже знаете, что с&nbsp;нами это не&nbsp;больно, обычно за&nbsp;1&nbsp;сеанс и&nbsp;с&nbsp;гарантией результата. Окружим вас заботой и&nbsp;комфортом.</p>
-						</div>
-						<div class="mb-3 col-lg-4">
-							<div class="modal-win__head">
-								<!-- picture-->
-								<picture> 
-									<noscript class="loading-lazy">
-										<source srcset="img/@2x/webp/imgfishsquare.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
-										<source srcset="img/@1x/webp/imgfishsquare.webp" loading="lazy" type="image/webp"/>
-										<source srcset="img/@2x/imgfishsquare.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
-										<source srcset="img/@1x/imgfishsquare.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/imgfishsquare.jpg" loading="lazy" alt=""/>
-									</noscript>
-								</picture>
-								<!-- /picture-->
-								<div class="h5 text-secondary">Средний и глубокий кариес</div>
+							<div class="mb-3 col-lg-4">
+								<div class="modal-win__head">
+									<!-- picture-->
+									<picture> 
+										<noscript class="loading-lazy">
+											<source srcset="img/@2x/webp/imgfishsquare.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+											<source srcset="img/@1x/webp/imgfishsquare.webp" loading="lazy" type="image/webp"/>
+											<source srcset="img/@2x/imgfishsquare.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+											<source srcset="img/@1x/imgfishsquare.jpg" loading="lazy" type="image/jpg"/><img src="img/@2x/imgfishsquare.jpg" loading="lazy" alt=""/>
+										</noscript>
+									</picture>
+									<!-- /picture-->
+									<div class="h5 text-secondary">Средний и глубокий кариес</div>
+								</div>
+								<p>Вначале разрушается верхняя часть дентина, а&nbsp;потом поражаются мягкие ткани вплоть до&nbsp;пульпы. Это очень близко к&nbsp;корню зуба и&nbsp;нервам!</p>
+								<p>Теперь кариес можно увидеть в&nbsp;зеркале. Зуб реагирует на&nbsp;сладкое&nbsp;/ солёное. Есть &laquo;дырка&raquo;, которую можно нащупать языком. Потребуется тщательно удалить все поражённые ткани.</p>
+								<p>Тут очень важна квалификация стоматолога, качество пломбировочного материала и&nbsp;соблюдение протоколов. Мы&nbsp;работает по&nbsp;передовым протоколам Бернского университета.</p>
 							</div>
-							<p>Вначале разрушается верхняя часть дентина, а&nbsp;потом поражаются мягкие ткани вплоть до&nbsp;пульпы. Это очень близко к&nbsp;корню зуба и&nbsp;нервам!</p>
-							<p>Теперь кариес можно увидеть в&nbsp;зеркале. Зуб реагирует на&nbsp;сладкое&nbsp;/ солёное. Есть &laquo;дырка&raquo;, которую можно нащупать языком. Потребуется тщательно удалить все поражённые ткани.</p>
-							<p>Тут очень важна квалификация стоматолога, качество пломбировочного материала и&nbsp;соблюдение протоколов. Мы&nbsp;работает по&nbsp;передовым протоколам Бернского университета.</p>
-						</div>
-					</div><a class="modal-win__btn btn btn-primary" href="#">Записаться на консультацию </a>
+						</div><a class="modal-win__btn btn btn-primary" href="#">Записаться на консультацию </a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="modal-win modal-problem" id="promlem-gingivitis" style="display: none">
-			<div class="modal-win__content">
-				<div class="container">
-					<div class="modal-win__title h2">Гингивит
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="h5">Это воспаление дёсен. Вызывает красноту и&nbsp;кровоточивость, но&nbsp;вначале может протекать бессимптомно.</div>
-							<div class="h5">Основные причины&nbsp;&mdash; плохая гигиена полости рта, хроническая травма, эндокринные нарушения.</div>
+			<div class="modal-win modal-problem" id="promlem-gingivitis" style="display: none">
+				<div class="modal-win__content">
+					<div class="container">
+						<div class="modal-win__title h2">Гингивит
 						</div>
-						<div class="col-md-5">
-							<p>Встречается у 97% взрослого населения.</p>
-							<p>Заболевание не&nbsp;опасное, если его не&nbsp;запускать. В&nbsp;противном случае может привести к&nbsp;потери зуба.</p>
-							<p>Легко лечится пародонтологом&nbsp;&mdash; чаще всего лечение ограничивается кабинетной чисткой зубов и&nbsp;рекомендациями по&nbsp;домашнему уходу за&nbsp;всей полостью рта. По&nbsp;опыту, 95% людей не&nbsp;умеют ПРАВИЛЬНО чистить зубы.</p>
-							<p>Дальнейшее лечение уже зависит от&nbsp;степени запущенности болезни у&nbsp;конкретного пациента.</p><a class="modal-win__btn mt-3 btn btn-primary" href="#">Записаться на консультацию </a>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="h5">Это воспаление дёсен. Вызывает красноту и&nbsp;кровоточивость, но&nbsp;вначале может протекать бессимптомно.</div>
+								<div class="h5">Основные причины&nbsp;&mdash; плохая гигиена полости рта, хроническая травма, эндокринные нарушения.</div>
+							</div>
+							<div class="col-md-5">
+								<p>Встречается у 97% взрослого населения.</p>
+								<p>Заболевание не&nbsp;опасное, если его не&nbsp;запускать. В&nbsp;противном случае может привести к&nbsp;потери зуба.</p>
+								<p>Легко лечится пародонтологом&nbsp;&mdash; чаще всего лечение ограничивается кабинетной чисткой зубов и&nbsp;рекомендациями по&nbsp;домашнему уходу за&nbsp;всей полостью рта. По&nbsp;опыту, 95% людей не&nbsp;умеют ПРАВИЛЬНО чистить зубы.</p>
+								<p>Дальнейшее лечение уже зависит от&nbsp;степени запущенности болезни у&nbsp;конкретного пациента.</p><a class="modal-win__btn mt-3 btn btn-primary" href="#">Записаться на консультацию </a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="modal-win modal-problem" id="promlem-periodontitis" style="display: none">
-			<div class="modal-win__content">
-				<div class="container">
-					<div class="modal-win__title h2">Пародонтит
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="h5">Воспаляются дёсна, слизистая оболочка и атрофируется костная ткань.</div>
-							<div class="h5">Итог — зубы расшатываются и выпадают.</div>
-							<div class="h5">Это серьёзное заболевание влияет на весь организм — по крови откладываются бляшки на стенках сосудов, поэтому первой страдает сердечно-сосудистая система.</div>
-							<div class="h5">Может повышаться температура, мучить слабость. Но пародонтит лечится!</div>
+			<div class="modal-win modal-problem" id="promlem-periodontitis" style="display: none">
+				<div class="modal-win__content">
+					<div class="container">
+						<div class="modal-win__title h2">Пародонтит
 						</div>
-						<div class="col-md-5">
-							<p>Если пародонтит не&nbsp;осложнён, то&nbsp;он&nbsp;лечится консервативно&nbsp;&mdash; можно убрать ультразвуком (специальными насадками), убрать из&nbsp;карманов ткань, которая разрастается, сгладить неровности корней зубов...</p>
-							<p>Если пациент пришёл поздно, то&nbsp;лечение хирургическое: отслаивается лоскут и&nbsp;убираются карманы&nbsp;&mdash; углубления между зубом и&nbsp;десной. Если останется хотя&nbsp;бы один карман, бактерия Porphyromonas gingivalis будет быстро разрастаться.</p>
-							<p>Поэтому тут особо важно наше европейское оборудование и&nbsp;высочайшая квалификация стоматолога. А&nbsp;ещё помогает консилиум врачей разных специальностей, который мы&nbsp;обязательно организовываем.</p><a class="modal-win__btn mt-3 btn btn-primary" href="#">Записаться на консультацию </a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="modal-win modal-problem" id="promlem-pulpitis" style="display: none">
-			<div class="modal-win__content">
-				<div class="container">
-					<div class="modal-win__title h2">Пульпит
-					</div>
-					<div class="row">
-						<div class="col-md-5">
-							<div class="h5">Это нелеченный кариес, добравшийся до пульпы.</div>
-							<div class="h5">Пульпа&nbsp;&mdash; источник жизни зуба, там проходят нервные окончания, кровеносные и&nbsp;лимфатические сосуды. Всё это питает твёрдую часть зуба минералами и&nbsp;витаминами.</div>
-						</div>
-						<div class="col-md-5">
-							<p>Мы&nbsp;применяем все передовые сохраняющие методики, чтобы спасти зуб и&nbsp;не&nbsp;удалять нерв.</p>
-							<p>Если быстро прийти к&nbsp;нам, то&nbsp;точно сможем спасти нерв.</p>
-							<p>Если у&nbsp;вас серозная стадия (определить сможет только стоматолог), то&nbsp;вскрываем нерв, промываем, накладываем биокерамику и&nbsp;спасаем зуб.</p>
-							<p>Пульпит&nbsp;&mdash; это не&nbsp;приговор. Главное&nbsp;&mdash; действовать быстро.</p><a class="modal-win__btn mt-3 btn btn-primary" href="#">Записаться на консультацию </a>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="h5">Воспаляются дёсна, слизистая оболочка и атрофируется костная ткань.</div>
+								<div class="h5">Итог — зубы расшатываются и выпадают.</div>
+								<div class="h5">Это серьёзное заболевание влияет на весь организм — по крови откладываются бляшки на стенках сосудов, поэтому первой страдает сердечно-сосудистая система.</div>
+								<div class="h5">Может повышаться температура, мучить слабость. Но пародонтит лечится!</div>
+							</div>
+							<div class="col-md-5">
+								<p>Если пародонтит не&nbsp;осложнён, то&nbsp;он&nbsp;лечится консервативно&nbsp;&mdash; можно убрать ультразвуком (специальными насадками), убрать из&nbsp;карманов ткань, которая разрастается, сгладить неровности корней зубов...</p>
+								<p>Если пациент пришёл поздно, то&nbsp;лечение хирургическое: отслаивается лоскут и&nbsp;убираются карманы&nbsp;&mdash; углубления между зубом и&nbsp;десной. Если останется хотя&nbsp;бы один карман, бактерия Porphyromonas gingivalis будет быстро разрастаться.</p>
+								<p>Поэтому тут особо важно наше европейское оборудование и&nbsp;высочайшая квалификация стоматолога. А&nbsp;ещё помогает консилиум врачей разных специальностей, который мы&nbsp;обязательно организовываем.</p><a class="modal-win__btn mt-3 btn btn-primary" href="#">Записаться на консультацию </a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="modal-win modal-problem" id="promlem-periodontitis-2" style="display: none">
-			<div class="modal-win__content">
-				<div class="container">
-					<div class="modal-win__title h2">Периодонтит
-					</div>
-					<div class="row">
-						<div class="col-md-4">
-							<div class="h5">Это распространённое осложнение кариеса и&nbsp;пульпита. Долго не&nbsp;лечили зуб, нерв распался и&nbsp;инфекция вышла за&nbsp;пределы корня.</div>
+			<div class="modal-win modal-problem" id="promlem-pulpitis" style="display: none">
+				<div class="modal-win__content">
+					<div class="container">
+						<div class="modal-win__title h2">Пульпит
 						</div>
-						<div class="col-md-5">
-							<p>Первый этап&nbsp;&mdash; консервативное лечение. Убираем некротизированные ткани канала, промываем, дезинфицируем канал. В&nbsp;итоге перекрыть доступы токсинам, которые находятся за&nbsp;пределами канала&nbsp;&mdash; им&nbsp;нечего кушать и&nbsp;они самоликвидируются.</p>
-							<p>Дальше возможно и&nbsp;хирургическое лечение.</p>
-							<p>Мы&nbsp;сделаем всё, чтобы лечение проходило безболезненно, быстро и&nbsp;без потери зуба.</p><a class="modal-win__btn mt-3 btn btn-primary" href="#">Записаться на консультацию </a>
+						<div class="row">
+							<div class="col-md-5">
+								<div class="h5">Это нелеченный кариес, добравшийся до пульпы.</div>
+								<div class="h5">Пульпа&nbsp;&mdash; источник жизни зуба, там проходят нервные окончания, кровеносные и&nbsp;лимфатические сосуды. Всё это питает твёрдую часть зуба минералами и&nbsp;витаминами.</div>
+							</div>
+							<div class="col-md-5">
+								<p>Мы&nbsp;применяем все передовые сохраняющие методики, чтобы спасти зуб и&nbsp;не&nbsp;удалять нерв.</p>
+								<p>Если быстро прийти к&nbsp;нам, то&nbsp;точно сможем спасти нерв.</p>
+								<p>Если у&nbsp;вас серозная стадия (определить сможет только стоматолог), то&nbsp;вскрываем нерв, промываем, накладываем биокерамику и&nbsp;спасаем зуб.</p>
+								<p>Пульпит&nbsp;&mdash; это не&nbsp;приговор. Главное&nbsp;&mdash; действовать быстро.</p><a class="modal-win__btn mt-3 btn btn-primary" href="#">Записаться на консультацию </a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="modal-win modal-problem" id="promlem-periodontitis-2" style="display: none">
+				<div class="modal-win__content">
+					<div class="container">
+						<div class="modal-win__title h2">Периодонтит
+						</div>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="h5">Это распространённое осложнение кариеса и&nbsp;пульпита. Долго не&nbsp;лечили зуб, нерв распался и&nbsp;инфекция вышла за&nbsp;пределы корня.</div>
+							</div>
+							<div class="col-md-5">
+								<p>Первый этап&nbsp;&mdash; консервативное лечение. Убираем некротизированные ткани канала, промываем, дезинфицируем канал. В&nbsp;итоге перекрыть доступы токсинам, которые находятся за&nbsp;пределами канала&nbsp;&mdash; им&nbsp;нечего кушать и&nbsp;они самоликвидируются.</p>
+								<p>Дальше возможно и&nbsp;хирургическое лечение.</p>
+								<p>Мы&nbsp;сделаем всё, чтобы лечение проходило безболезненно, быстро и&nbsp;без потери зуба.</p><a class="modal-win__btn mt-3 btn btn-primary" href="#">Записаться на консультацию </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end modals-->
 		</div>
-		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
 		<!-- modal libs-->

@@ -5,13 +5,15 @@
 		box-sizing: border-box;
 		border-radius: 10px;
 	}
-
+	&__h4{
+		padding-bottom: 1rem;
+	}
  	&__input-wrap{
 			// @extend .form-group;
 			
 		}
 		&__input{
-			// @extend .form-control;
+			@extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
  	}
@@ -149,13 +151,18 @@
 
 	&__input[type="radio"] + &__lab{ 
 		border-radius: 50%;
+		width: rem(26);
+		height: rem(26);
+		top: rem(-5);
 		&::after{ 
 			border-radius: 50%;
+			width: rem(10);
+			height: rem(10);
+			background-color: #ffffff;
 		}
 	}
 
-	&__input:checked + &__lab{
-		background-color: $success;
+	&__input:checked + &__lab{ 
 		 
 		&::after{
 	
