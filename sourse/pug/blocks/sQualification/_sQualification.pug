@@ -8,7 +8,8 @@ mixin sQualification-slide()
 	.swiper-slide.swiper-no-swiping
 		+e.slide-img
 			img.res-i.swiper-lazy(src="#" data-src=`img/@2x/technology-3.jpg` alt="")
-
+			+e.play(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="video-team")
+				+icon('play')
 mixin sQualification()
 	// start sQualification
 	+b.SECTION.sQualification#sQualification&attributes(attributes)
@@ -21,6 +22,7 @@ mixin sQualification()
 							.swiper-wrapper
 								mixin textSlide()
 									.swiper-slide.swiper-no-swiping
+									
 										+b.section-title
 											h2 Работаем только #[span.text-primary со стоматологами высочайшей квалификации]
 										p Они минимум 2 раза в год учатся новому на профильных конференциях, ездят стажироваться у зарубежных специалистов.

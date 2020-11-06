@@ -1,5 +1,41 @@
 // start .sQualification
 .sQualification {
+	.sQualification-text-slider-js{
+		 
+	}
+	.swiper-slide.swiper-no-swiping {
+		position: relative;
+
+	}
+h2{
+	padding-right: rem(86);
+}
+.swiper-slide-active &__play {
+	opacity: 1;
+}
+	&__play{
+		position: absolute;
+		z-index: 2;
+		
+		background-color: #ff1f3d;
+		border-radius: 50%;
+		width: 86px;
+		height: 86px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include mt;
+		@include a-cent;
+		opacity: 0;
+		.icon{
+			color: #fff;
+			font-size: 1.875rem;
+			margin-left: 3px;
+		}
+		&:hover{
+			transform: translate(-50%, -50%) scale(1.1);
+		}
+	}
 	background-color: $light;
 
 
