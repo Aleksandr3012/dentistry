@@ -53,6 +53,10 @@
 			right: 0;
 			margin: auto;
 		}
+
+		&::before {
+			padding-bottom: 61%;
+		}
 		// display: block;
 	}
 
