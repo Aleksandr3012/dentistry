@@ -123,7 +123,7 @@ h2{
 		overflow: hidden;
 		border: solid 7px transparent;
 		margin-bottom: rem(20);
-		@include block(120,120)
+		@include block(120,120);
 		img {
 			height: 105%;
 			width: 105%;
