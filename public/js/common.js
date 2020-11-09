@@ -314,7 +314,7 @@ function eventHandler() {
 		loop: true
 	}, _defineProperty(_Swiper, "loop", true), _defineProperty(_Swiper, "loopedSlides", 6), _defineProperty(_Swiper, "lazy", {
 		loadPrevNext: true,
-		loadPrevNextAmount: 2
+		loadPrevNextAmount: 3
 	}), _Swiper));
 	var qualificationThumb = new Swiper('.qualification-thumb-js', {
 		// mySwiper.thumbs.swiper	

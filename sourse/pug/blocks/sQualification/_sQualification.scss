@@ -1,5 +1,6 @@
 // start .sQualification
 .sQualification {
+	// overflow: hidden;
 	.sQualification-text-slider-js{
 		 
 	}
@@ -160,10 +161,35 @@ h2{
 	@include media-breakpoint-only(xl) {}
 	//
 	@include media-breakpoint-down(xl) {}
+
+	&__slider {
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			min-height: rem(700);
+		}
+	}
+
+	&__slide-img {
+		height: 100%;
+	}
 } // end.sQualification
 
 .sQualification-slider-js {
-	// overflow: visible;
+	@include media-breakpoint-up(lg) {
+
+		position: absolute;
+		left: 0;
+		top: 0;
+		@each $breakpoint, $container-max-width in $container-max-widths {
+			@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+				--containerW: #{$container-max-width};
+			}
+		};
+		width: calc(100% + (100vw - var(--containerW)) / 1.9);
+		max-width: var(--containerW);
+		height: 100%;
+	}
+	overflow: visible;
 	// margin-top: calc(-1 * var(--sPT));
 	// height: 110%;
 	@include media-breakpoint-up(lg) {
@@ -181,6 +207,7 @@ h2{
 	}
 
 	.swiper-slide {
+		width: 100%;
 		&::before {
 			content: '';
 			position: absolute;
@@ -192,6 +219,7 @@ h2{
 		img {
 			@include media-breakpoint-up(lg) {
 				height: 100%;
+				width: 100%;
 				object-fit: cover;
 			}
 		}

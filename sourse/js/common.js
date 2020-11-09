@@ -325,7 +325,7 @@ function eventHandler() {
 		// },
 		lazy: {
 			loadPrevNext: true,
-			loadPrevNextAmount: 2,
+			loadPrevNextAmount: 3,
 		},
 	});
 
