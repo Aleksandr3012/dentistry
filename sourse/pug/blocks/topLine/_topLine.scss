@@ -48,15 +48,17 @@
 	}
 
 	&__phone {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
-		font-size: 23px;
-		@include media-breakpoint-up(xl) {
-			font-size: $h2-font-size;
-		}
+		// font-size: 23px;
+		// @include media-breakpoint-up(xl) {
+		// 	font-size: $h5-font-size;
+		// }
+		@extend .h5;
+		// margin-bottom: 0;
 		margin-bottom: 11px;
 
-		span {
+		a {
 			color: $dark;
 			font-weight: 700;
 			@include mt;
@@ -64,7 +66,7 @@
 		}
 
 		.icon {
-			font-size: rem(42);
+			font-size: rem(32);
 			@include media-breakpoint-up(lg) {
 				color: $secondary;
 			}

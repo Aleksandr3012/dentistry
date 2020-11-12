@@ -420,15 +420,15 @@ function eventHandler() {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		loop: true,
-		effect: "fade",
+		// effect: "fade",
 		loadPrevNext: true,
 		shortSwipes: false,
 		preloadImages: false,
 		// Enable lazy loading
-		lazy: {
-			loadPrevNext: true,
-			loadPrevNextAmount: 1,
-		},
+		// lazy: {
+		// 	loadPrevNext: true,
+		// 	loadPrevNextAmount: 1,
+		// },
 		navigation: {
 			nextEl: '.examples-next',
 			prevEl: '.examples-prev',
@@ -446,7 +446,9 @@ function eventHandler() {
 		$('.ba-slider').each(function () {
 			$(this).beforeAfter();
 		})
-	
+	$(".sGuarantees__img-wrap").click(function () {
+		$(this).addClass('hide-btn').find('video')[0].play()
+	})
 	
 };
 if (document.readyState !== 'loading') {

@@ -13,9 +13,14 @@ mixin topLine()
 						+icon('location')
 						span #[b Адрес:] г.Харьков, ул.&nbsp;Юри Зойфера, д.3
 				.col-auto
-					+e.phone.d-none.d-lg-flex(href='tel:+380577628733')
+					+e.phone.d-none.d-lg-flex
 						+icon('phone')
-						span +38 (057) 762 87 33
+						div
+							a(href='tel:+380577628733') +38 (057) 762 87 33
+							br
+							a(href='tel:+380577628733') +38 (057) 762 87 33
+					+e.phone.d-lg-none(href='tel:+380577628733')
+						+icon('call')
 					+e.phone.d-lg-none(href='tel:+380577628733')
 						+icon('call')
 						//- img.res-i(src="img/svg/call.svg", alt="")

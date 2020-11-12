@@ -35,8 +35,14 @@ block pagecontent
 						+e.col.col-lg-6
 							+e.img-wrap2
 								+e.img-wrap
-									img(src=`img/gif/sG-${i}.gif`, loading="lazy" alt="")
-								
+									video#bgvid.fillItUp.video(  loop='loop')
+										source(src='video/video.mp4' loading='lazy' type='video/mp4')
+										source(src='video/video.ogv' loading='lazy' type='video/ogv')
+										source(src='video/video.webm' loading='lazy' type='video/webm')
+									span.sReviews__iconWrap
+										svg.icon.icon-play
+											use(xlink:href='img/svg/sprite.svg#play')
+
 						.col-lg-6
 							+e.text-block
 								.h4!= h
