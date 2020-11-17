@@ -50,6 +50,13 @@
 	&__col {
 		position: relative;
 		display: flex;
+			@include media-breakpoint-down(sm) {
+				flex-direction: column;
+			}
+			@include media-breakpoint-up(sm) {
+		margin-bottom: 0;
+			}
+			margin-bottom: 2rem;
 		@include media-breakpoint-up(lg) {
 			flex-direction: column;
 		}
@@ -60,10 +67,20 @@
 		}
 
 		picture {
+			@include media-breakpoint-down(sm){
+				order: -1;
+			}
 			border-radius: 50%;
 			overflow: hidden;
-			max-width: rem(360);
-			max-height: rem(360);
+				@include media-breakpoint-up(sm){
+					max-width: rem(360);
+					max-height: rem(360);
+					margin-bottom: 0;
+
+				}
+				margin-bottom: 2rem;
+				max-width: rem(220);
+				max-height: rem(220);
 			img {
 				width: 100%;
 				height: 100%;
