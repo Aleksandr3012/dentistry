@@ -112,7 +112,10 @@
 		}
 		&:nth-child(2) {
 			picture {
-				max-width: rem(310);
+					@include media-breakpoint-up(sm){
+
+						max-width: rem(310);
+					}
 			}
 			.sWithFamily__text {
 				@include media-breakpoint-up(lg) {
@@ -128,7 +131,10 @@
 		&:nth-child(3) {
 			padding-top: rem(18);
 			picture {
-				max-width: rem(210);
+					@include media-breakpoint-up(sm){
+
+						max-width: rem(210);
+					}
 			}
 			.sWithFamily__text {
 				@include media-breakpoint-up(lg) {
